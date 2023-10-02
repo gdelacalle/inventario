@@ -7,7 +7,7 @@
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
             <div class="modal-body">
-                <form id="editInv<?php echo $fila['id']; ?>" method="POST">
+                <form id="FormEditarInv<?php echo $fila['id']; ?>" method="POST">
                     <div class="row">
                         <div class="col-sm-2">
                             <div class="mb-3">
@@ -73,7 +73,7 @@
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
                     <br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="editarInv(<?php echo $fila['id']; ?>)">Guardar</button>
+                        <button type="button" class="btn btn-primary" onclick="EditarInv(<?php echo $fila['id']; ?>)">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
                     <?php include "../includes/footer.php"; ?>
@@ -84,8 +84,8 @@
 </div>
 
 <script>
-    function editarInv(id) {
-        var datosFormulario = $("#editInv" + id).serialize();
+    function EditarInv(id) {
+        var datosFormulario = $("#FormEditarInv" + id).serialize();
         $.ajax({
             url: "../includes/functions.php",
             type: "POST",

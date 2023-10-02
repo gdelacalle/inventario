@@ -39,7 +39,7 @@
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
                     <br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="insertarCmp(<?php echo $fila['id']; ?>)">Guardar</button>
+                        <button type="button" class="btn btn-primary" onclick="CompraInv(<?php echo $fila['id']; ?>)">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>         
                     <input type="hidden" id="cmp_estado" name="cmp_estado" class="form-control" value="0">
@@ -52,7 +52,7 @@
 </div>
 
 <script>
-    function insertarCmp(id) {
+    function CompraInv(id) {
         var datosFormulario = $("#FormCompraInv" + id).serialize();
         $.ajax({
             url: "../includes/functions.php",

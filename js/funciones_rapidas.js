@@ -38,6 +38,7 @@ function modificar_mp(datos){
     $('#id_categoria').val(categoria);
 }
 
+
 function comprar_mp(datos){
     
     dato=datos.split('||');

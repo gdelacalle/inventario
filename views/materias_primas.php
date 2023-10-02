@@ -58,13 +58,13 @@ session_start();
                                     <td><?php echo $fila['peso']; ?></td>
                                     <td><?php echo $fila['categoria']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_act_mp" onclick="actualizar_mp('<?php echo $datos2; ?>')">
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_act_mp" onclick="actualizar_mp('<?php echo $datos; ?>')">
                                     Actualiar <i class="fa fa-retweet"></i></button>
 
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_mp" onclick="modificar_mp('<?php echo $datos; ?>')">
                                     Editar <i class="fa fa-edit "></i></button>
 
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_comprar_mp" onclick="comprar_mp('<?php echo $datos2; ?>')">
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_comprar_mp" onclick="comprar_mp('<?php echo $datos; ?>')">
                                     Compra <i class="fa fa-plus"></i></button>
                                     
                                     <a href="../includes/eliminar_inv.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">

@@ -44,7 +44,6 @@ session_start();
                             GROUP BY i.id ORDER BY i.codigo ASC");
                             while ($fila = mysqli_fetch_assoc($result)){
                                 $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid'];
-                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid'];
                             ?>
                                 <tr>
                                     <td><?php echo $fila['id']; ?></td>
@@ -56,7 +55,7 @@ session_start();
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_inv" onclick="modificar_productos('<?php echo $datos; ?>')">
                                     Editar <i class="fa fa-edit "></i></button>
 
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_comprar_inv" onclick="comprar_productos('<?php echo $datos2; ?>')">
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_comprar_inv" onclick="comprar_productos('<?php echo $datos; ?>')">
                                     Compra <i class="fa fa-plus"></i></button>
                                     
                                     <a href="../includes/eliminar_inv.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">

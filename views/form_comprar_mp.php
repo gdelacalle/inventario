@@ -7,7 +7,7 @@
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
             <div class="modal-body">
-               <form id="MpForm">
+               <form id="MpForm<?php echo $fila['id']; ?>" method="POST">
                     <div class="row">
                         <div class="col-sm-2">
                             <div class="mb-3">
