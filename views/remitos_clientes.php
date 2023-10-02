@@ -62,7 +62,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                         <?php
                             include("../includes/db.php");
                             //Codigo para mostrar categorias desde otra tabla
-                            $sqlp = "SELECT * FROM inventario WHERE id_categoria IN (4, 2, 56) ORDER BY producto ASC";
+                            $sqlp = "SELECT * FROM inventario WHERE id_categoria IN (4, 2, 56, 57) ORDER BY producto ASC";
                             $resultadop = mysqli_query($conexion, $sqlp);
                             while ($consulta = mysqli_fetch_array($resultadop)) {
                                 echo '<option value="' . $consulta['id'] . '">' . $consulta['producto'] . '</option>';
@@ -79,7 +79,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                         <?php
                             include("../includes/db.php");
                             //Codigo para mostrar categorias desde otra tabla
-                            $sql = "SELECT * FROM equivalencias WHERE id_categoria IN (4, 2) ORDER BY seccion ASC";
+                            $sql = "SELECT * FROM equivalencias WHERE id_categoria IN (4, 2, 56, 57) ORDER BY seccion ASC";
                             $resultado = mysqli_query($conexion, $sql);
                             while ($consulta = mysqli_fetch_array($resultado)) {
                                 echo '<option value="' . $consulta['seccion'] . '">' . $consulta['seccion'] . '</option>';
