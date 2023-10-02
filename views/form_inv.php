@@ -104,7 +104,7 @@
                             title: 'Éxito',
                             text: 'Los datos se guardaron correctamente'
                         }).then(function() {
-                              window.location = "inventario.php"; // Redirecciona al usuario a la página deseada
+                              //window.location = "inventario.php"; // Redirecciona al usuario a la página deseada
                         });
                     } else {
                         Swal.fire({

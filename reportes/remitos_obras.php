@@ -20,7 +20,8 @@ $idobra = $_GET['id'];
 
 require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso )as decimal(10,2))as total, p.id,
-cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,i.id as id_producto
+cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,
+i.id as id_producto,p.cant_proceso,p.cant_terminadas,p.cant_obra
 FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
 ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_obra = $idobra GROUP BY p.id ORDER BY p.id ASC");
 
@@ -31,19 +32,20 @@ $descripcion=$fila['descripcion'];
 ?>
 <h4>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h6>
 
-<center>REMITO DE MATERIALES A OBRA</center>
-<h6>Entrega el Material:<class style="text-transform: uppercase; color: black;"> <?php echo $_SESSION['usuario']?>
-<h6>OBRA: <?php echo $descripcion; ?></h6>
-<h5>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h5>
-<h5>
+<center>DETALLE DE ITEMS DE ESTRUCTURA DE LA OBRA</center>
+<h5>OBRA:<class style="text-transform: uppercase; color: black;"> <?php echo $descripcion; ?>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <tr>
                     <td>ID</td>
                     <td>Producto</td>
                     <th>Sección</th>
-                    <th>Cantidad</th>   
+                    <th>Cantidad</th>
+                    <th>Proceso</th>
+                    <th>Terminado</th>
+                    <th>Entregado</th>
                     <th>Medida</th> 
                     <th>Unidad</th> 
                     <th>Peso x Unidad</th>
@@ -55,6 +57,9 @@ $descripcion=$fila['descripcion'];
                     <td><?php echo $fila['producto']; ?></td>
                     <td><center><?php echo $fila['seccion']; ?></td>
                     <td><center><?php echo $fila['cantidad']; ?></td>
+                    <td><center><?php echo $fila['cant_proceso']; ?></td>
+                    <td><center><?php echo $fila['cant_terminadas']; ?></td>
+                    <td><center><?php echo $fila['cant_obra']; ?></td>
                     <td><center><?php echo $fila['metros']; ?></td>
                     <td><center><?php echo $fila['unidad']; ?></td>
                     <td><center><?php echo $fila['peso']; ?></td>
@@ -64,7 +69,7 @@ $descripcion=$fila['descripcion'];
                 <?php endwhile?>
                 <br>
 </table></h5>
-<h5>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h5>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <center><h2>Total: <?php echo $granTotal; ?> KGs</h2></center>
 
 <?php

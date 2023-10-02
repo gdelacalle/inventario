@@ -52,7 +52,7 @@ $_SESSION['id'] = $id
                     
                     $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, p.id, cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,e.id as sid
                     FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
-                    ON p.id_producto = i.id AND e.id = p.id_seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");   
+                    ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");   
                 while ($fila = mysqli_fetch_assoc($result)) :                       
                 ?>
                 <tr>

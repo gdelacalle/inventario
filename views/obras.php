@@ -67,10 +67,12 @@ if ($permiso == "3") {
                                         <i class="fa fa-random"></i></a>
                                     </td>
                                 </tr>
-                                
+                                <?php include "editar_obras.php"; ?>
+        <?php include "cambiar_estado.php"; ?>
                             <?php } ?>
                         </tbody>
                     </table>
+                    
                     <?php include "../includes/footer.php"; ?>
 
                     <script>
@@ -105,8 +107,7 @@ if ($permiso == "3") {
             </div>
         </div>
 
-        <?php include "editar_obras.php"; ?>
-        <?php include "cambiar_estado.php"; ?>
+     
 </body>
 <?php include "form_obras.php"; ?>
 <?php include "cambiar_estado.php"; ?>
