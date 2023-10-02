@@ -28,7 +28,6 @@ $result1 = mysqli_query($conexion, "SELECT descripcion FROM obras WHERE id = $id
 $fila = mysqli_fetch_assoc($result1);
 $descripcion=$fila['descripcion'];
 
-$obra='obras.descripcion';
 ?>
 <h4>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666
