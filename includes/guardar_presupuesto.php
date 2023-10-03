@@ -12,4 +12,5 @@ $query = mysqli_query($conexion, "DELETE FROM presupuestotemporal WHERE id_obra 
 
 header("Location: ../views/detalles_presupuesto.php?id=$obrass");
 
+
 ?>

@@ -19,7 +19,7 @@ $pesoxunidad=0;
 include "../includes/db.php";
 include "../includes/header.php"; 
 $id_obra = $_GET['id'];
-echo '<input id="num" type="hidden" name="numremito" value="'.$id_obra.'">'
+//echo '<input id="num" type="hidden" name="numremito" value="'.$id_obra.'">'
 
 ?>
 <div class="row">
@@ -78,7 +78,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id_obra.'">'
                         <?php
                             include("../includes/db.php");
                             //Codigo para mostrar categorias desde otra tabla
-                            $sqlp = "SELECT * FROM inventario WHERE id_categoria IN (4, 2) ORDER BY producto ASC";
+                            $sqlp = "SELECT * FROM inventario WHERE id_categoria IN (4, 2, 56, 57) ORDER BY producto ASC";
                             $resultadop = mysqli_query($conexion, $sqlp);
                             while ($consulta = mysqli_fetch_array($resultadop)) {
                                 echo '<option value="' . $consulta['id'] . '">' . $consulta['producto'] . '</option>';
