@@ -55,6 +55,9 @@ session_start();
                                     <a href="../views/remitos_clientes.php?id=<?php echo $fila['id']?>" class="btn btn-success">
                                     Remito <i class="fa fa-reply-all"></i></a>
 
+                                    <a href="../reportes/detalle_remitos_clientes.php?id=<?php echo $fila['id']?>" class="btn btn-info">
+                                    Historico <i class="fa fa-reply-all"></i></a>
+
                                     <a href="../includes/eliminar_clientes.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
                                     Eliminar <i class="fa fa-trash "></i></a>
                                 </td>
