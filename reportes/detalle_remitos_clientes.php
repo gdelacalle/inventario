@@ -15,7 +15,7 @@ $_SESSION['id'] = $id
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-            <h4 class="text-center">Detalles de remitos por Cliente</h4>
+            <h4 class="text-center">Detalle de Remitos por Cliente</h4>
             <div class="row">
                 <div class="col-sm-2">
                     <div class="mb-1">

@@ -23,7 +23,7 @@ $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.pes
 cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,
 i.id as id_producto,p.cant_proceso,p.cant_terminadas,p.cant_obra
 FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
-ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_obra = $idobra GROUP BY p.id ORDER BY p.id ASC");
+ON p.id_producto = i.id AND e.id = p.id_seccion AND p.id_obra = $idobra GROUP BY p.id ORDER BY p.id ASC");
 
 $result1 = mysqli_query($conexion, "SELECT descripcion FROM obras WHERE id = $idobra");
 $fila = mysqli_fetch_assoc($result1);
