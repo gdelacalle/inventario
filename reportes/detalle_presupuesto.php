@@ -8,9 +8,11 @@ $id = $_GET['id'];
 $obras=$_GET['id_obra'];
 require_once("../includes/db.php");
 
-$result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, p.id, cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente
+$result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, p.id, 
+cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,
+e.id as sid
 FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
-ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");
+ON p.id_producto = i.id AND e.id = p.seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");
 
 $result2 = mysqli_query($conexion, "SELECT o.descripcion
 FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
@@ -18,6 +20,7 @@ ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_
 $fila2 = mysqli_fetch_assoc($result2);
 $obras=$fila2['descripcion'];
 ?>
+
 
 <h4>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666</h6> 

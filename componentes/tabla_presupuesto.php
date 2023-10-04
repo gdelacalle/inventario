@@ -11,7 +11,6 @@
                 <tr>       
                     <th>Obra</th>
                     <th>Producto</th>
-                    <th>sid</th>
                     <th>Sección</th>
                     <th>Cantidad</th>
                     <th>Medida</th>
@@ -30,7 +29,9 @@
                 $total=0;
                 
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as totalpeso, p.id,cast((e.peso*p.metros)as decimal(10,2)) as pesoxunidad,e.id as sid,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente
+                    $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, 
+                    p.id, cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,
+                    o.id_cliente
                     FROM presupuestotemporal as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
                     ON p.id_producto = i.id  AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");   
                 while ($fila = mysqli_fetch_assoc($result)) :                       
@@ -38,7 +39,6 @@
                 <tr>
                     <td width="20%"><?php echo $fila['descripcion']; ?></td>
                     <td width="20%"><?php echo $fila['producto']; ?></td>
-                    <td width="20%"><?php echo $fila['sid']; ?></td>
                     <td width="20%"><?php echo $fila['seccion']; ?></td>
                     <td width="5%"><?php echo $fila['cantidad']; ?></td>
                     <td width="5%"><?php echo $fila['metros']; ?></td>
