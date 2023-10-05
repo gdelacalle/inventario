@@ -43,7 +43,7 @@ $id = $_GET['id'];
                                 </select>
                             </div>
                         </div> 
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <div class="mb-3">
                                 <label for="id_obra">Detalle</label><br>
                                 <select name="detalle" id="detalle" class="form-control"readonly >
