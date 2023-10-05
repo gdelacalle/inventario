@@ -16,7 +16,7 @@ btnSub.addEventListener('submit', (function (e) {
             document.getElementById("alert").innerHTML = valHtml;
             setTimeout(() => {
                 document.getElementById("alert").innerHTML = ``;
-            }, 2500);
+            }, 1500);
         }
 
     })

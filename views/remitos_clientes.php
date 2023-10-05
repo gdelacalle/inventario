@@ -115,7 +115,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
 
                     <button type="submit" class="btn btn-warning" id="id" name="id">Agregar</button>
                     <input type="hidden" name="accion" value="remito_cliente">
-                <a href="../reportes/imprimirremitocliente.php?numero=<?php echo $numremito['num'] ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
+                <a target="_blank" href="../reportes/imprimirremitocliente.php?numero=<?php echo $numremito['num'] ?>"target="_blank" class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
                     
                 </div>
             </div>
@@ -205,7 +205,6 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                             if (result.isConfirmed) {
                             Swal.fire(
                                     'Generando Remito',
-                                    'success',
                                     )
                             }
                                 document.location.href = href;

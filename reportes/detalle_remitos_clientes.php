@@ -17,12 +17,24 @@ $_SESSION['id'] = $id
             <div class="card-header py-3">
             <h4 class="text-center">Detalle de Remitos por Cliente</h4>
             <div class="row">
-                <div class="col-sm-2">
-                    <div class="mb-1">
-                        <label for="descripcion" class="form-label">Cliente</label>
-                        <input type="text" id="id" name="id" class="form-control" value="<?php echo $id; ?>" readonly>
-                    </div>
-                </div>
+                <div class="col-sm-4">
+                            <div class="mb-6">
+                            <input type="hidden" id="id" name="id" class="form-control" value="<?php echo $id; ?>" readonly>
+
+                                <label for="id_clientes">Cliente</label>
+                                <select name="id_clientes" id="id_clientes" class="form-control" readonly>
+                                    <?php
+                                    include("../includes/db.php");
+                                    $sql = "SELECT * FROM clientes WHERE id = $id";
+                                    $resultado = mysqli_query($conexion, $sql);
+                                    while ($consulta = mysqli_fetch_array($resultado)) {
+                                        $selected = $fila['id'] === $consulta['id'] ? 'selected' : '';
+                                        echo '<option value="' . $consulta['id'] . '">' . $consulta['nombre'].' '.$consulta['apellido'].'</option>';
+                                    }
+                                    ?> 
+                                </select>
+                            </div>
+                        </div>      
             <div class="table-responsive">
         <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="thead-dark">
@@ -41,7 +53,8 @@ $_SESSION['id'] = $id
                 ?>
                 <tr>
                     <td width="15%"><center><?php echo $fila['fecha']; ?></center></td>
-                    <td width="15%"><center><?php echo $fila['numero']; ?></center></td>
+                    <td width="15%"><center><a target="_blank" class="nav-link" href="../reportes/imprimirremitocliente.php?numero=<?php echo $fila['numero']; ?>">
+                        <?php echo $fila['numero']; ?></center></td>
 
                 </tr>
                 <?php endwhile;?>  
