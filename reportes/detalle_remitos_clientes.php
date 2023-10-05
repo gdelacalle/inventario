@@ -20,7 +20,7 @@ $_SESSION['id'] = $id
                 <div class="col-sm-2">
                     <div class="mb-1">
                         <label for="descripcion" class="form-label">Cliente</label>
-                        <input type="text" id="descripcion" name="descripcion" class="form-control" value="<?php echo $id; ?>" readonly>
+                        <input type="text" id="id" name="id" class="form-control" value="<?php echo $id; ?>" readonly>
                     </div>
                 </div>
             <div class="table-responsive">

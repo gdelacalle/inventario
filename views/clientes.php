@@ -24,9 +24,7 @@ session_start();
                                 <th>id</th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
-                                <th>CUIT</th>
                                 <th>Telefono</th>
-                                <th>Correo</th>
                                 <th>Direccion</th>
                                 <th>Acciones</th>
                             </tr>
@@ -44,9 +42,7 @@ session_start();
                                     <td><?php echo $fila['id']; ?></td>
                                     <td><?php echo $fila['nombre']; ?></td>
                                     <td><?php echo $fila['apellido']; ?></td>
-                                    <td><?php echo $fila['cuit']; ?></td>
                                     <td><?php echo $fila['telefono']; ?></td>
-                                    <td><?php echo $fila['correo']; ?></td>
                                     <td><?php echo $fila['direccion']; ?></td>
                                 <td>
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_clientes" onclick="modificar_clientes('<?php echo $datos; ?>')">
