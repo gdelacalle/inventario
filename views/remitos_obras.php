@@ -33,8 +33,6 @@ $id = $_GET['id'];
                                 <select name="id_obra" id="id_obra" class="form-control"readonly >
                                     <?php
                                     include("../includes/db.php");
-                                    
-                                    // Codigo para mostrar categorias desde otra tabla
                                     $sql = "SELECT * FROM obras WHERE id = '$id'";
                                     $resultado = mysqli_query($conexion, $sql);
                                     while ($consulta = mysqli_fetch_array($resultado)) {
@@ -45,25 +43,27 @@ $id = $_GET['id'];
                                 </select>
                             </div>
                         </div> 
-                        <?php
-                            include("../includes/db.php");        
-                        // Codigo para mostrar categorias desde otra tabla
-                                $sql = "SELECT * FROM obras WHERE id = '$id'";
-                                $resultado = mysqli_query($conexion, $sql);
-                                while ($consulta = mysqli_fetch_array($resultado)) {
-                                    $selected = $fila['id'] === $consulta['id'] ? 'selected' : '';
-                                        echo '<option value="' . $consulta['id'] . '" ' . $selected . '>' . $consulta['descripcion'] . '</option>';
-                                }
-                        ?>
-                        
-                        <div class="col-sm-4">
-                            <div class="mb-1">
-                                <label for="detalle" class="form-label">Detalle</label>
-                                <input type="text" id="detalle" name="detalle" class="form-control" value="<?php echo $fila['descripcion']; ?>" required>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="id_obra">Detalle</label><br>
+                                <select name="detalle" id="detalle" class="form-control"readonly >
+                                    <?php
+                                    include("../includes/db.php");        
+                                    $sql = "SELECT * FROM obras WHERE id = '$id'";
+                                    $resultado = mysqli_query($conexion, $sql);
+                                    while ($consulta = mysqli_fetch_array($resultado)) {
+                                        $selected = $fila['id'] === $consulta['id'] ? 'selected' : '';
+                                        echo '<option value="' . $consulta['detalle'] . '" ' . $selected . '>' . $consulta['detalle'] . '</option>';
+                                    }
+                                    ?>
+                                </select>
                             </div>
-                        </div> 
+                        </div>
+                        
             <div class="col-sm-2">
                 <br>
+                <br>
+
                 <a href="../reportes/imprimirremitoobra.php?id=<?php echo $id ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
             </div>
             <div class="card-body">

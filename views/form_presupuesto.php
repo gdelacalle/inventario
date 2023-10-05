@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="mb-3">
-                                <label for="descripcion" class="form-label">Descripción</label>
+                                <label for="descripcion" class="form-label">Nombre de la Obra</label>
                                 <input type="text" id="descripcion" name="descripcion" class="form-control" required>
                             </div>
                         </div>
@@ -33,12 +33,20 @@
                                     </select>
                                 </div>
                         </div>
+
                         <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="fechaalta">Fecha de Alta</label>
                                 <input type="date" name="fecha_alta" id="fecha_alta" class="form-control" pattern="\d{4}-\d{2}-\d{2}"> 
                             </div>
-                        </div>                                            
+                        </div>   
+                        <div class="col-sm-12">
+                            <div class="mb-3">
+                                <label for="detalle" class="form-label">Descripcion Breve</label>
+                                <input type="text" id="detalle" name="detalle" class="form-control" required>
+                            </div>
+                        </div>  
+                    </div>                                       
                     <input type="hidden" name="accion" value="insertar_nuevo_presupuesto">           
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>

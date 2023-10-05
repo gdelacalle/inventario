@@ -395,8 +395,8 @@ function insertar_nuevo_presupuesto()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO obras (descripcion, fecha_alta, id_cliente,estado) 
-    VALUES ('$descripcion','$fecha_alta','$id_cliente','PENDIENTE')";
+    $consulta = "INSERT INTO obras (descripcion, fecha_alta, id_cliente,estado,detalle) 
+    VALUES ('$descripcion','$fecha_alta','$id_cliente','PENDIENTE','$detalle')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
         $response = array(

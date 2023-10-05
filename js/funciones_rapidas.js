@@ -80,3 +80,28 @@ function modificar_clientes(datos){
     $('#direccion').val(direccion);
 }
 
+function modificar_equivalencia(datos){
+    
+    dato=datos.split('||');
+	id=dato[0];
+	e1=dato[1];
+	e2=dato[2];
+	b=dato[3];
+    h1=dato[4];
+    h2=dato[5];
+    peso=dato[6];
+    id_categoria=dato[7];
+    seccion=dato[8];
+
+    $('#id').val(id);
+    $('#e1').val(e2);
+    $('#e2').val(e2);
+    $('#b').val(b);
+    $('#h1').val(h1);
+    $('#h2').val(h2);
+    $('#peso').val(peso);
+    $('#id_categoria').val(id_categoria);
+    $('#seccion').val(seccion);
+
+}
+

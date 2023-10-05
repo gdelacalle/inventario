@@ -3,7 +3,9 @@ error_reporting(0);
 session_start();
 ?>
 <?php include "../includes/header.php"; ?>
-
+<script type='text/javascript' src="../js/jquery-3.5.1.js"></script>
+<script type='text/javascript' src="../js/funciones_rapidas.js"></script>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <body id="page-top">
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -36,7 +38,8 @@ session_start();
                             $result = mysqli_query($conexion, "SELECT e.id,e.seccion, e.e1, e.e2, e.h1, e.h2, e.b,e.peso, c.categoria
                             FROM equivalencias as e INNER JOIN categorias as c 
                             WHERE e.id_categoria = c.id ");
-                            while ($fila = mysqli_fetch_assoc($result)) :
+                            while ($fila = mysqli_fetch_assoc($result)) {
+                                $datos=$fila['id']."||".$fila['seccion'];
                             ?>
                                 <tr>
                                     <td><?php echo $fila['seccion']; ?></td>
@@ -48,14 +51,14 @@ session_start();
                                     <td><?php echo $fila['categoria']; ?></td>
                                     <td><?php echo $fila['peso']; ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarequivalencia<?php echo $fila['id']; ?>">
-                                            <i class="fa fa-edit "></i>
-                                        </button>
+                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia" onclick="modificar_equivalencia('<?php echo $datos; ?>')">
+                                    Editar <i class="fa fa-edit "></i></button>
+
                                         <a href="../includes/eliminar_equivalencia.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
                                             <i class="fa fa-trash "></i></a>
                                     </td>
                                 </tr>
-                            <?php endwhile; ?>
+                                <?php } ?> 
                         </tbody>
                     </table>
 
@@ -100,9 +103,10 @@ session_start();
     <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
+    <?php include "editar_equivalencias.php"; ?>
+
 </body>
 <?php include "form_equivalencias.php"; ?>
-<?php include "editar_equivalencias.php"; ?>
 
 <?php include "../includes/footer.php"; ?>
 

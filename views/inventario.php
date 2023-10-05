@@ -96,6 +96,7 @@ session_start();
 <?php include "editar_inv.php"; ?>
 <?php include "form_comprar_inv.php"; ?>
 
+
 </body>
 <script>
     // Función para exportar la tabla a un archivo Excel
