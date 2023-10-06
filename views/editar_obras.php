@@ -25,7 +25,6 @@
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
                     </div>
             </div>
-            
                     <div class="container">
 
                     <div class="modal-footer">
@@ -38,6 +37,8 @@
         </div>
     </div>
 </div>
+
+
 
 <script>
     function editarObra(id) {
