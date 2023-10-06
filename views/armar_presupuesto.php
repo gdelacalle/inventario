@@ -13,6 +13,9 @@ if ($permiso == "3") {
     die();
 }
 
+
+//PRUEBA DE QUE FUNCIONA LA SINCRONIZACION CON GITHUB
+
 $granTotal=0;
 $cliente=0;
 $pesoxunidad=0;
