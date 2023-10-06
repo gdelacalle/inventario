@@ -30,11 +30,7 @@
                 
                 
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, 
-                    p.id, cast((e.peso*p.metros) as decimal(10,2)) as peso,e.id as sid,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,
-                    o.descripcion,p.id_seccion as sid,o.id_cliente FROM presupuestotemporal as p INNER JOIN inventario as i INNER JOIN equivalencias as e 
-                    INNER JOIN obras as o ON p.id_producto = i.id AND p.seccion = e.seccion AND p.id_obra = $id 
-                    GROUP BY p.id ORDER BY p.id ASC");   
+                    $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as totalpeso, p.id, cast((e.peso*p.metros) as decimal(10,2)) as peso,p.cantidad,p.metros,p.unidad, p.id_seccion as sid, e.seccion,i.producto,o.descripcion, o.id_cliente FROM presupuestotemporal as p, equivalencias as e, inventario as i, obras as o WHERE p.id_seccion=e.id and p.id_producto=i.id and p.id_obra=o.id and p.id_obra = 106 GROUP BY p.id ORDER BY p.id ASC");   
                 while ($fila = mysqli_fetch_assoc($result)) :                       
                 ?>
                 <tr>
@@ -46,12 +42,12 @@
                     <td width="5%"><?php echo $fila['metros']; ?></td>
                     <td width="5%"><?php echo $fila['unidad']; ?></td>
                     <td width="10%"><?php echo $fila['peso']; ?></td>
-                    <td width="10%"><?php echo $fila['total']; ?></td>
+                    <td width="10%"><?php echo $fila['totalpeso']; ?></td>
                     <td><a href="../includes/eliminar_item_presupuesto.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-del"><i class="fa fa-trash "></i></a></td>
                 </tr>
                 <?php $granTotal += $fila['totalpeso'];?>
                 <?php $cliente = $fila['id_cliente'];?>
-                <?php $pesounidad = $fila['pesoxunidad'];?>
+                <?php $pesounidad = $fila['peso'];?>
                 <?php $total = $fila['totalpeso'];?>
                 <?php endwhile;?>  
                 <?php
