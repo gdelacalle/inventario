@@ -37,9 +37,6 @@
         </div>
     </div>
 </div>
-
-
-
 <script>
     function editarObra(id) {
         var datosFormulario = $("#editObra" + id).serialize();
