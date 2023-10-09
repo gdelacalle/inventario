@@ -31,24 +31,28 @@ function modificar_mp(datos){
 	producto=dato[2];
 	existencia=dato[3];
 	categoria=dato[4];
+    unidad=dato[5];
+    peso=dato[6];
 
-    $('#codigo').val(codigo);
-    $('#producto').val(producto);
-    $('#cantidad').val(existencia);
-    $('#id_categoria').val(categoria);
+    $('#iecodigo').val(codigo);
+    $('#ieproducto').val(producto);
+    $('#iecantidad').val(existencia);
+    $('#seid_categoria').val(categoria);
+    $('#seunidad').val(unidad);
+    $('#iepesounitario').val(peso);
 }
 
 
 function comprar_mp(datos){
-    
+    id=dato[0];
     dato=datos.split('||');
 	codigo=dato[1];
 	producto=dato[2];
-	existencia=dato[3];
 	
-    $('#codigo').val(codigo);
-    $('#producto').val(producto);
-    $('#cantidad').val(existencia);
+	
+    $('#icodigo').val(codigo);
+    $('#iproducto').val(producto);
+    $('#iid').val(id);
 }
 
 function actualizar_mp(datos){
