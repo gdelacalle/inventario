@@ -1,0 +1,3938 @@
+{
+  "ftp://v0070449@estructurasvega.com@estructurasvega.com:21": {
+    "backups": {},
+    "DATOS": {},
+    "public_html": {
+      ".DS_Store": {
+        "type": "-",
+        "size": 8196,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".htaccess": {
+        "type": "-",
+        "size": 733,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".htaccess.181027153217.orig": {
+        "type": "-",
+        "size": 335,
+        "lmtime": 0,
+        "modified": false
+      },
+      ".php.ini": {
+        "type": "-",
+        "size": 65,
+        "lmtime": 0,
+        "modified": false
+      },
+      "aspnet": {},
+      "aspnet_client": {},
+      "database.sql": {
+        "type": "-",
+        "size": 422253,
+        "lmtime": 0,
+        "modified": false
+      },
+      "index.php": {
+        "type": "-",
+        "size": 420,
+        "lmtime": 0,
+        "modified": false
+      },
+      "index2.html": {
+        "type": "-",
+        "size": 412,
+        "lmtime": 0,
+        "modified": false
+      },
+      "installer-data.sql": {
+        "type": "-",
+        "size": 422253,
+        "lmtime": 0,
+        "modified": false
+      },
+      "installer-log.txt": {
+        "type": "-",
+        "size": 6818,
+        "lmtime": 0,
+        "modified": false
+      },
+      "inventario": {
+        ".git": {},
+        ".vscode": {},
+        "assets": {
+          "bower_components": {
+            "jquery": {
+              ".bower.json": {
+                "type": "-",
+                "size": 744,
+                "lmtime": 1416384460000,
+                "modified": false
+              },
+              "bower.json": {
+                "type": "-",
+                "size": 424,
+                "lmtime": 1416384460000,
+                "modified": false
+              },
+              "dist": {
+                "jquery.js": {
+                  "type": "-",
+                  "size": 247351,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "jquery.min.js": {
+                  "type": "-",
+                  "size": 84280,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "jquery.min.map": {
+                  "type": "-",
+                  "size": 127323,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                }
+              },
+              "MIT-LICENSE.txt": {
+                "type": "-",
+                "size": 1099,
+                "lmtime": 1416384460000,
+                "modified": false
+              },
+              "src": {
+                "ajax": {
+                  "jsonp.js": {
+                    "type": "-",
+                    "size": 2516,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "load.js": {
+                    "type": "-",
+                    "size": 1669,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "parseJSON.js": {
+                    "type": "-",
+                    "size": 222,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "parseXML.js": {
+                    "type": "-",
+                    "size": 485,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "script.js": {
+                    "type": "-",
+                    "size": 1271,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "nonce.js": {
+                      "type": "-",
+                      "size": 73,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "rquery.js": {
+                      "type": "-",
+                      "size": 40,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  },
+                  "xhr.js": {
+                    "type": "-",
+                    "size": 3427,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "ajax.js": {
+                  "type": "-",
+                  "size": 21719,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "attributes": {
+                  "attr.js": {
+                    "type": "-",
+                    "size": 3484,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "classes.js": {
+                    "type": "-",
+                    "size": 4155,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "prop.js": {
+                    "type": "-",
+                    "size": 1934,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "support.js": {
+                    "type": "-",
+                    "size": 970,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "val.js": {
+                    "type": "-",
+                    "size": 3925,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "attributes.js": {
+                  "type": "-",
+                  "size": 200,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "callbacks.js": {
+                  "type": "-",
+                  "size": 5506,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "core": {
+                  "access.js": {
+                    "type": "-",
+                    "size": 1210,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "init.js": {
+                    "type": "-",
+                    "size": 3410,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "parseHTML.js": {
+                    "type": "-",
+                    "size": 938,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "ready.js": {
+                    "type": "-",
+                    "size": 2381,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "rsingleTag.js": {
+                      "type": "-",
+                      "size": 91,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  }
+                },
+                "core.js": {
+                  "type": "-",
+                  "size": 11667,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "css": {
+                  "addGetHookIf.js": {
+                    "type": "-",
+                    "size": 590,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "curCSS.js": {
+                    "type": "-",
+                    "size": 1462,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "defaultDisplay.js": {
+                    "type": "-",
+                    "size": 1866,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "hiddenVisibleSelectors.js": {
+                    "type": "-",
+                    "size": 380,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "support.js": {
+                    "type": "-",
+                    "size": 3075,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "swap.js": {
+                    "type": "-",
+                    "size": 555,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "cssExpand.js": {
+                      "type": "-",
+                      "size": 70,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "getStyles.js": {
+                      "type": "-",
+                      "size": 127,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "isHidden.js": {
+                      "type": "-",
+                      "size": 355,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "rmargin.js": {
+                      "type": "-",
+                      "size": 45,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "rnumnonpx.js": {
+                      "type": "-",
+                      "size": 113,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  }
+                },
+                "css.js": {
+                  "type": "-",
+                  "size": 12747,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "data": {
+                  "accepts.js": {
+                    "type": "-",
+                    "size": 383,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "Data.js": {
+                    "type": "-",
+                    "size": 4889,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "data_priv.js": {
+                      "type": "-",
+                      "size": 66,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "data_user.js": {
+                      "type": "-",
+                      "size": 66,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  }
+                },
+                "data.js": {
+                  "type": "-",
+                  "size": 4929,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "deferred.js": {
+                  "type": "-",
+                  "size": 4414,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "deprecated.js": {
+                  "type": "-",
+                  "size": 223,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "dimensions.js": {
+                  "type": "-",
+                  "size": 1776,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "effects": {
+                  "animatedSelector.js": {
+                    "type": "-",
+                    "size": 225,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "Tween.js": {
+                    "type": "-",
+                    "size": 3031,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "effects.js": {
+                  "type": "-",
+                  "size": 16974,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "event": {
+                  "alias.js": {
+                    "type": "-",
+                    "size": 1094,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "support.js": {
+                    "type": "-",
+                    "size": 123,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "event.js": {
+                  "type": "-",
+                  "size": 24479,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "exports": {
+                  "amd.js": {
+                    "type": "-",
+                    "size": 1006,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "global.js": {
+                    "type": "-",
+                    "size": 641,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "intro.js": {
+                  "type": "-",
+                  "size": 1405,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "jquery.js": {
+                  "type": "-",
+                  "size": 557,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "manipulation": {
+                  "support.js": {
+                    "type": "-",
+                    "size": 986,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "rcheckableType.js": {
+                      "type": "-",
+                      "size": 59,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  },
+                  "_evalUrl.js": {
+                    "type": "-",
+                    "size": 240,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "manipulation.js": {
+                  "type": "-",
+                  "size": 15024,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "offset.js": {
+                  "type": "-",
+                  "size": 5481,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "outro.js": {
+                  "type": "-",
+                  "size": 5,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "queue": {
+                  "delay.js": {
+                    "type": "-",
+                    "size": 561,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "queue.js": {
+                  "type": "-",
+                  "size": 3090,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "selector-native.js": {
+                  "type": "-",
+                  "size": 4434,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "selector-sizzle.js": {
+                  "type": "-",
+                  "size": 294,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "selector.js": {
+                  "type": "-",
+                  "size": 33,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "serialize.js": {
+                  "type": "-",
+                  "size": 3214,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "sizzle": {
+                  "dist": {
+                    "sizzle.js": {
+                      "type": "-",
+                      "size": 58579,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "sizzle.min.js": {
+                      "type": "-",
+                      "size": 18574,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    },
+                    "sizzle.min.map": {
+                      "type": "-",
+                      "size": 28986,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  }
+                },
+                "traversing": {
+                  "findFilter.js": {
+                    "type": "-",
+                    "size": 2464,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "var": {
+                    "rneedsContext.js": {
+                      "type": "-",
+                      "size": 110,
+                      "lmtime": 1416384460000,
+                      "modified": false
+                    }
+                  }
+                },
+                "traversing.js": {
+                  "type": "-",
+                  "size": 4559,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                },
+                "var": {
+                  "arr.js": {
+                    "type": "-",
+                    "size": 36,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "class2type.js": {
+                    "type": "-",
+                    "size": 64,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "concat.js": {
+                    "type": "-",
+                    "size": 63,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "hasOwn.js": {
+                    "type": "-",
+                    "size": 92,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "indexOf.js": {
+                    "type": "-",
+                    "size": 64,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "pnum.js": {
+                    "type": "-",
+                    "size": 80,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "push.js": {
+                    "type": "-",
+                    "size": 61,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "rnotwhite.js": {
+                    "type": "-",
+                    "size": 42,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "slice.js": {
+                    "type": "-",
+                    "size": 62,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "strundefined.js": {
+                    "type": "-",
+                    "size": 50,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "support.js": {
+                    "type": "-",
+                    "size": 99,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  },
+                  "toString.js": {
+                    "type": "-",
+                    "size": 86,
+                    "lmtime": 1416384460000,
+                    "modified": false
+                  }
+                },
+                "wrap.js": {
+                  "type": "-",
+                  "size": 1468,
+                  "lmtime": 1416384460000,
+                  "modified": false
+                }
+              }
+            }
+          },
+          "css": {
+            "main.css": {
+              "type": "-",
+              "size": 8002,
+              "lmtime": 1585683068000,
+              "modified": false
+            },
+            "main.css.map": {
+              "type": "-",
+              "size": 3107,
+              "lmtime": 1416384460000,
+              "modified": false
+            }
+          },
+          "img": {
+            "logo.png": {
+              "type": "-",
+              "size": 19980,
+              "lmtime": 1585680560000,
+              "modified": false
+            },
+            "Thumbs.db": {
+              "type": "-",
+              "size": 7680,
+              "lmtime": 1585684617421,
+              "modified": false
+            }
+          },
+          "js": {
+            "main.js": {
+              "type": "-",
+              "size": 2704,
+              "lmtime": 1585685150000,
+              "modified": false
+            },
+            "min": {
+              "main-min.js": {
+                "type": "-",
+                "size": 2021,
+                "lmtime": 1416384460000,
+                "modified": false
+              }
+            }
+          },
+          "scss": {
+            "main.scss": {
+              "type": "-",
+              "size": 5416,
+              "lmtime": 1416384460000,
+              "modified": false
+            },
+            "_normalize.scss": {
+              "type": "-",
+              "size": 7797,
+              "lmtime": 1416384460000,
+              "modified": false
+            }
+          }
+        },
+        "componentes": {
+          "tabla_presupuesto.php": {
+            "type": "-",
+            "size": 3183,
+            "lmtime": 1696845899779.5923,
+            "modified": false
+          },
+          "tabla_remito.php": {
+            "type": "-",
+            "size": 3065,
+            "lmtime": 1696849325587.9739,
+            "modified": false
+          },
+          "tabla_sel_items.php": {
+            "type": "-",
+            "size": 1346,
+            "lmtime": 1690464868000,
+            "modified": false
+          }
+        },
+        "composer.json": {
+          "type": "-",
+          "size": 59,
+          "lmtime": 1690996179786.4978,
+          "modified": false
+        },
+        "composer.lock": {
+          "type": "-",
+          "size": 10557,
+          "lmtime": 1690996179000,
+          "modified": false
+        },
+        "consultas": {
+          "insert_remito.php": {
+            "type": "-",
+            "size": 596,
+            "lmtime": 1695680325448.015,
+            "modified": false
+          }
+        },
+        "css": {
+          "bootstrap.min.css": {
+            "type": "-",
+            "size": 232691,
+            "lmtime": 1685460154000,
+            "modified": false
+          },
+          "profile.css": {
+            "type": "-",
+            "size": 1724,
+            "lmtime": 1689606132000,
+            "modified": false
+          },
+          "sb-admin-2.css": {
+            "type": "-",
+            "size": 211163,
+            "lmtime": 1689610292000,
+            "modified": false
+          },
+          "sb-admin-2.min.css": {
+            "type": "-",
+            "size": 170743,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "style.css": {
+            "type": "-",
+            "size": 674,
+            "lmtime": 1689606278000,
+            "modified": false
+          }
+        },
+        "images": {
+          "bg1.jpg": {
+            "type": "-",
+            "size": 1614075,
+            "lmtime": 1622047738000,
+            "modified": false
+          },
+          "bg2.jpg": {
+            "type": "-",
+            "size": 541042,
+            "lmtime": 1622047738000,
+            "modified": false
+          },
+          "bg3.jpg": {
+            "type": "-",
+            "size": 499174,
+            "lmtime": 1622047738000,
+            "modified": false
+          },
+          "bg4.jpg": {
+            "type": "-",
+            "size": 259986,
+            "lmtime": 1622047738000,
+            "modified": false
+          },
+          "ipn.jpg": {
+            "type": "-",
+            "size": 8551,
+            "lmtime": 1690820730000,
+            "modified": false
+          },
+          "perfilc.jpg": {
+            "type": "-",
+            "size": 22913,
+            "lmtime": 1690820610000,
+            "modified": false
+          },
+          "Sin t�tulo.png": {
+            "type": "-",
+            "size": 8872,
+            "lmtime": 0,
+            "modified": false
+          },
+          "vigaipn.png": {
+            "type": "-",
+            "size": 171651,
+            "lmtime": 1690818270000,
+            "modified": false
+          }
+        },
+        "img": {
+          "logo1.jpg": {
+            "type": "-",
+            "size": 24892,
+            "lmtime": 1576094336000,
+            "modified": false
+          },
+          "undraw_posting_photo.svg": {
+            "type": "-",
+            "size": 37285,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "undraw_profile.svg": {
+            "type": "-",
+            "size": 2820,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "undraw_profile_1.svg": {
+            "type": "-",
+            "size": 2163,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "undraw_profile_2.svg": {
+            "type": "-",
+            "size": 2630,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "undraw_profile_3.svg": {
+            "type": "-",
+            "size": 2733,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "undraw_rocket.svg": {
+            "type": "-",
+            "size": 3147,
+            "lmtime": 1619659912000,
+            "modified": false
+          }
+        },
+        "includes": {
+          "db.php": {
+            "type": "-",
+            "size": 280,
+            "lmtime": 1689101104000,
+            "modified": false
+          },
+          "eliminar_cat.php": {
+            "type": "-",
+            "size": 217,
+            "lmtime": 1690558492000,
+            "modified": false
+          },
+          "eliminar_clientes.php": {
+            "type": "-",
+            "size": 226,
+            "lmtime": 1693849422000,
+            "modified": false
+          },
+          "eliminar_cod.php": {
+            "type": "-",
+            "size": 217,
+            "lmtime": 1688255352000,
+            "modified": false
+          },
+          "eliminar_detalle_obra.php": {
+            "type": "-",
+            "size": 218,
+            "lmtime": 1691584368000,
+            "modified": false
+          },
+          "eliminar_equivalencia.php": {
+            "type": "-",
+            "size": 223,
+            "lmtime": 1690816988000,
+            "modified": false
+          },
+          "eliminar_inv.php": {
+            "type": "-",
+            "size": 232,
+            "lmtime": 1688191580000,
+            "modified": false
+          },
+          "eliminar_item_presupuesto.php": {
+            "type": "-",
+            "size": 274,
+            "lmtime": 1692210254000,
+            "modified": false
+          },
+          "eliminar_obras.php": {
+            "type": "-",
+            "size": 222,
+            "lmtime": 1689253576000,
+            "modified": false
+          },
+          "eliminar_presupuesto.php": {
+            "type": "-",
+            "size": 307,
+            "lmtime": 1692192236000,
+            "modified": false
+          },
+          "eliminar_prov.php": {
+            "type": "-",
+            "size": 228,
+            "lmtime": 1688252308000,
+            "modified": false
+          },
+          "eliminar_remitosclientestmp.php": {
+            "type": "-",
+            "size": 273,
+            "lmtime": 1694542062000,
+            "modified": false
+          },
+          "eliminar_remitostmp.php": {
+            "type": "-",
+            "size": 224,
+            "lmtime": 1690543534000,
+            "modified": false
+          },
+          "eliminar_user.php": {
+            "type": "-",
+            "size": 225,
+            "lmtime": 1688252266000,
+            "modified": false
+          },
+          "footer.php": {
+            "type": "-",
+            "size": 1231,
+            "lmtime": 1690378180000,
+            "modified": false
+          },
+          "functions.php": {
+            "type": "-",
+            "size": 21733,
+            "lmtime": 1696891594977.2195,
+            "modified": false
+          },
+          "functionss.php": {
+            "type": "-",
+            "size": 20872,
+            "lmtime": 1694692256000,
+            "modified": false
+          },
+          "guardar_presupuesto.php": {
+            "type": "-",
+            "size": 419,
+            "lmtime": 1696337921800.49,
+            "modified": false
+          },
+          "header.php": {
+            "type": "-",
+            "size": 12318,
+            "lmtime": 1696501459170.1858,
+            "modified": false
+          },
+          "reporte_productos.php": {
+            "type": "-",
+            "size": 2073,
+            "lmtime": 1693920616000,
+            "modified": false
+          },
+          "reporte_proveedores.php": {
+            "type": "-",
+            "size": 2142,
+            "lmtime": 1690301860000,
+            "modified": false
+          },
+          "sesion": {
+            "cerrarSesion.php": {
+              "type": "-",
+              "size": 95,
+              "lmtime": 1685486008000,
+              "modified": false
+            },
+            "login.php": {
+              "type": "-",
+              "size": 1790,
+              "lmtime": 1696499693430.2507,
+              "modified": false
+            },
+            "registros.php": {
+              "type": "-",
+              "size": 6356,
+              "lmtime": 1690475158000,
+              "modified": false
+            },
+            "sesionValidate.php": {
+              "type": "-",
+              "size": 1328,
+              "lmtime": 1694990688782.333,
+              "modified": false
+            },
+            "validar.php": {
+              "type": "-",
+              "size": 979,
+              "lmtime": 1685466158000,
+              "modified": false
+            }
+          }
+        },
+        "index.php": {
+          "type": "-",
+          "size": 48,
+          "lmtime": 1685416172349.2278,
+          "modified": false
+        },
+        "inventario.sql": {
+          "type": "-",
+          "size": 177955,
+          "lmtime": 1696846271767.975,
+          "modified": false
+        },
+        "inventario2.sql": {
+          "type": "-",
+          "size": 165261,
+          "lmtime": 1696846271775.9868,
+          "modified": false
+        },
+        "js": {
+          "bootstrap.bundle.min.js": {
+            "type": "-",
+            "size": 80496,
+            "lmtime": 1673328322000,
+            "modified": false
+          },
+          "demo": {
+            "chart-area-demo.js": {
+              "type": "-",
+              "size": 3569,
+              "lmtime": 1619659912000,
+              "modified": false
+            },
+            "chart-bar-demo.js": {
+              "type": "-",
+              "size": 3189,
+              "lmtime": 1619659912000,
+              "modified": false
+            },
+            "chart-pie-demo.js": {
+              "type": "-",
+              "size": 1057,
+              "lmtime": 1619659912000,
+              "modified": false
+            },
+            "datatables-demo.js": {
+              "type": "-",
+              "size": 103,
+              "lmtime": 1619659912000,
+              "modified": false
+            }
+          },
+          "edit.js": {
+            "type": "-",
+            "size": 775,
+            "lmtime": 1689273892000,
+            "modified": false
+          },
+          "funciones_rapidas.js": {
+            "type": "-",
+            "size": 2127,
+            "lmtime": 1696891595116.5654,
+            "modified": false
+          },
+          "jquery-3.5.1.js": {
+            "type": "-",
+            "size": 287630,
+            "lmtime": 1601770211341.7273,
+            "modified": false
+          },
+          "jquery-ui.js": {
+            "type": "-",
+            "size": 529159,
+            "lmtime": 1679668768000,
+            "modified": false
+          },
+          "jquery.min.js": {
+            "type": "-",
+            "size": 86350,
+            "lmtime": 1690888562000,
+            "modified": false
+          },
+          "JsBarcode.all.min.js": {
+            "type": "-",
+            "size": 48732,
+            "lmtime": 1537934460000,
+            "modified": false
+          },
+          "login.js": {
+            "type": "-",
+            "size": 926,
+            "lmtime": 1696499675049.9587,
+            "modified": false
+          },
+          "sb-admin-2.js": {
+            "type": "-",
+            "size": 1780,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "sb-admin-2.min.js": {
+            "type": "-",
+            "size": 1265,
+            "lmtime": 1619659912000,
+            "modified": false
+          },
+          "searchcliente.js": {
+            "type": "-",
+            "size": 978,
+            "lmtime": 1689615860000,
+            "modified": false
+          },
+          "validacion.js": {
+            "type": "-",
+            "size": 1260,
+            "lmtime": 1689273956000,
+            "modified": false
+          }
+        },
+        "package": {
+          "dist": {
+            "bootstrap.min.js": {
+              "type": "-",
+              "size": 60044,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.all.js": {
+              "type": "-",
+              "size": 145307,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.all.min.js": {
+              "type": "-",
+              "size": 68816,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.css": {
+              "type": "-",
+              "size": 30300,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.js": {
+              "type": "-",
+              "size": 120497,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.min.css": {
+              "type": "-",
+              "size": 24552,
+              "lmtime": 1673328322000,
+              "modified": false
+            },
+            "sweetalert2.min.js": {
+              "type": "-",
+              "size": 44006,
+              "lmtime": 1673328322000,
+              "modified": false
+            }
+          },
+          "jquery-3.6.0.min.js": {
+            "type": "-",
+            "size": 89501,
+            "lmtime": 1673328322000,
+            "modified": false
+          },
+          "LICENSE": {
+            "type": "-",
+            "size": 1097,
+            "lmtime": 1673328322000,
+            "modified": false
+          },
+          "package.json": {
+            "type": "-",
+            "size": 2923,
+            "lmtime": 1673328322000,
+            "modified": false
+          },
+          "README.md": {
+            "type": "-",
+            "size": 7759,
+            "lmtime": 1673328322000,
+            "modified": false
+          },
+          "sweetalert2.d.ts": {
+            "type": "-",
+            "size": 31232,
+            "lmtime": 1673328322000,
+            "modified": false
+          }
+        },
+        "reportes": {
+          "detalle_presupuesto.php": {
+            "type": "-",
+            "size": 3010,
+            "lmtime": 1696504206208.706,
+            "modified": false
+          },
+          "detalle_remitos_clientes.php": {
+            "type": "-",
+            "size": 3107,
+            "lmtime": 1696502959955.8352,
+            "modified": false
+          },
+          "imprimirdetallepresupuesto.php": {
+            "type": "-",
+            "size": 771,
+            "lmtime": 1694180412000,
+            "modified": false
+          },
+          "imprimirremitocliente.php": {
+            "type": "-",
+            "size": 664,
+            "lmtime": 1694180374000,
+            "modified": false
+          },
+          "imprimirremitoobra.php": {
+            "type": "-",
+            "size": 645,
+            "lmtime": 1696254015391.204,
+            "modified": false
+          },
+          "remitoobra.html": {
+            "type": "-",
+            "size": 4070,
+            "lmtime": 1691669500000,
+            "modified": false
+          },
+          "remitos_clientes.php": {
+            "type": "-",
+            "size": 3661,
+            "lmtime": 1696849417086.2014,
+            "modified": false
+          },
+          "remitos_obras.php": {
+            "type": "-",
+            "size": 4106,
+            "lmtime": 1696459570574.4714,
+            "modified": false
+          }
+        },
+        "vendor": {
+          "autoload.php": {
+            "type": "-",
+            "size": 771,
+            "lmtime": 1694177234000,
+            "modified": false
+          },
+          "bootstrap": {
+            "js": {
+              "bootstrap.bundle.js": {
+                "type": "-",
+                "size": 236864,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.bundle.js.map": {
+                "type": "-",
+                "size": 409586,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.bundle.min.js": {
+                "type": "-",
+                "size": 84378,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.bundle.min.js.map": {
+                "type": "-",
+                "size": 316181,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.js": {
+                "type": "-",
+                "size": 144033,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.js.map": {
+                "type": "-",
+                "size": 254480,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.min.js": {
+                "type": "-",
+                "size": 63467,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "bootstrap.min.js.map": {
+                "type": "-",
+                "size": 192479,
+                "lmtime": 1669953264000,
+                "modified": false
+              }
+            }
+          },
+          "composer": {
+            "autoload_classmap.php": {
+              "type": "-",
+              "size": 288,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "autoload_namespaces.php": {
+              "type": "-",
+              "size": 139,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "autoload_psr4.php": {
+              "type": "-",
+              "size": 482,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "autoload_real.php": {
+              "type": "-",
+              "size": 1137,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "autoload_static.php": {
+              "type": "-",
+              "size": 1869,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "ClassLoader.php": {
+              "type": "-",
+              "size": 16378,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "installed.json": {
+              "type": "-",
+              "size": 10760,
+              "lmtime": 1690992790000,
+              "modified": false
+            },
+            "installed.php": {
+              "type": "-",
+              "size": 2534,
+              "lmtime": 1690992790000,
+              "modified": false
+            },
+            "InstalledVersions.php": {
+              "type": "-",
+              "size": 16143,
+              "lmtime": 1690992790000,
+              "modified": false
+            },
+            "LICENSE": {
+              "type": "-",
+              "size": 1070,
+              "lmtime": 1690992792000,
+              "modified": false
+            },
+            "platform_check.php": {
+              "type": "-",
+              "size": 925,
+              "lmtime": 1690992792000,
+              "modified": false
+            }
+          },
+          "datatables": {
+            "dataTables.bootstrap4.css": {
+              "type": "-",
+              "size": 5888,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "dataTables.bootstrap4.js": {
+              "type": "-",
+              "size": 4706,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "dataTables.bootstrap4.min.css": {
+              "type": "-",
+              "size": 5229,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "dataTables.bootstrap4.min.js": {
+              "type": "-",
+              "size": 2098,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.dataTables.js": {
+              "type": "-",
+              "size": 450410,
+              "lmtime": 1689609166000,
+              "modified": false
+            },
+            "jquery.dataTables.min.js": {
+              "type": "-",
+              "size": 83602,
+              "lmtime": 1689607930000,
+              "modified": false
+            }
+          },
+          "dompdf": {
+            "dompdf": {
+              "AUTHORS.md": {
+                "type": "-",
+                "size": 485,
+                "lmtime": 1675774308000,
+                "modified": false
+              },
+              "composer.json": {
+                "type": "-",
+                "size": 1309,
+                "lmtime": 1675774308000,
+                "modified": false
+              },
+              "lib": {
+                "Cpdf.php": {
+                  "type": "-",
+                  "size": 221116,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "fonts": {
+                  "Courier-Bold.afm": {
+                    "type": "-",
+                    "size": 15827,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Courier-BoldOblique.afm": {
+                    "type": "-",
+                    "size": 15887,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Courier-Oblique.afm": {
+                    "type": "-",
+                    "size": 15938,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Courier.afm": {
+                    "type": "-",
+                    "size": 15826,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-Bold.ttf": {
+                    "type": "-",
+                    "size": 705684,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-Bold.ufm": {
+                    "type": "-",
+                    "size": 213432,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-BoldOblique.ttf": {
+                    "type": "-",
+                    "size": 643292,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-BoldOblique.ufm": {
+                    "type": "-",
+                    "size": 197682,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-Oblique.ttf": {
+                    "type": "-",
+                    "size": 635416,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans-Oblique.ufm": {
+                    "type": "-",
+                    "size": 187007,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans.ttf": {
+                    "type": "-",
+                    "size": 757076,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans.ufm": {
+                    "type": "-",
+                    "size": 226679,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSans.ufm.json": {
+                    "type": "-",
+                    "size": 273582,
+                    "lmtime": 1690995154000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-Bold.ttf": {
+                    "type": "-",
+                    "size": 331992,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-Bold.ufm": {
+                    "type": "-",
+                    "size": 119821,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-BoldOblique.ttf": {
+                    "type": "-",
+                    "size": 253580,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-BoldOblique.ufm": {
+                    "type": "-",
+                    "size": 98124,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-Oblique.ttf": {
+                    "type": "-",
+                    "size": 251932,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono-Oblique.ufm": {
+                    "type": "-",
+                    "size": 98107,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono.ttf": {
+                    "type": "-",
+                    "size": 340712,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSansMono.ufm": {
+                    "type": "-",
+                    "size": 119770,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-Bold.ttf": {
+                    "type": "-",
+                    "size": 356088,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-Bold.ufm": {
+                    "type": "-",
+                    "size": 136331,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-BoldItalic.ttf": {
+                    "type": "-",
+                    "size": 347460,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-BoldItalic.ufm": {
+                    "type": "-",
+                    "size": 133558,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-Italic.ttf": {
+                    "type": "-",
+                    "size": 345996,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif-Italic.ufm": {
+                    "type": "-",
+                    "size": 133199,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif.ttf": {
+                    "type": "-",
+                    "size": 380132,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "DejaVuSerif.ufm": {
+                    "type": "-",
+                    "size": 136367,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Helvetica-Bold.afm": {
+                    "type": "-",
+                    "size": 72244,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Helvetica-Bold.afm.json": {
+                    "type": "-",
+                    "size": 12873,
+                    "lmtime": 1690993630000,
+                    "modified": false
+                  },
+                  "Helvetica-BoldOblique.afm": {
+                    "type": "-",
+                    "size": 72340,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Helvetica-Oblique.afm": {
+                    "type": "-",
+                    "size": 77591,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Helvetica-Oblique.afm.json": {
+                    "type": "-",
+                    "size": 12882,
+                    "lmtime": 1690995154000,
+                    "modified": false
+                  },
+                  "Helvetica.afm": {
+                    "type": "-",
+                    "size": 77492,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Helvetica.afm.json": {
+                    "type": "-",
+                    "size": 12864,
+                    "lmtime": 1690993630000,
+                    "modified": false
+                  },
+                  "installed-fonts.dist.json": {
+                    "type": "-",
+                    "size": 2224,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "mustRead.html": {
+                    "type": "-",
+                    "size": 1040,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Symbol.afm": {
+                    "type": "-",
+                    "size": 9953,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Times-Bold.afm": {
+                    "type": "-",
+                    "size": 66987,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Times-Bold.afm.json": {
+                    "type": "-",
+                    "size": 12862,
+                    "lmtime": 1690993428000,
+                    "modified": false
+                  },
+                  "Times-BoldItalic.afm": {
+                    "type": "-",
+                    "size": 62173,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Times-Italic.afm": {
+                    "type": "-",
+                    "size": 69143,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Times-Roman.afm": {
+                    "type": "-",
+                    "size": 63026,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Times-Roman.afm.json": {
+                    "type": "-",
+                    "size": 12858,
+                    "lmtime": 1690993428000,
+                    "modified": false
+                  },
+                  "ZapfDingbats.afm": {
+                    "type": "-",
+                    "size": 9752,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "res": {
+                  "broken_image.png": {
+                    "type": "-",
+                    "size": 618,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "broken_image.svg": {
+                    "type": "-",
+                    "size": 581,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "html.css": {
+                    "type": "-",
+                    "size": 7434,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                }
+              },
+              "LICENSE.LGPL": {
+                "type": "-",
+                "size": 24352,
+                "lmtime": 1675774308000,
+                "modified": false
+              },
+              "README.md": {
+                "type": "-",
+                "size": 7652,
+                "lmtime": 1675774308000,
+                "modified": false
+              },
+              "src": {
+                "Adapter": {
+                  "CPDF.php": {
+                    "type": "-",
+                    "size": 27579,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "GD.php": {
+                    "type": "-",
+                    "size": 25178,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "PDFLib.php": {
+                    "type": "-",
+                    "size": 42954,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Canvas.php": {
+                  "type": "-",
+                  "size": 14588,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "CanvasFactory.php": {
+                  "type": "-",
+                  "size": 1508,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Cellmap.php": {
+                  "type": "-",
+                  "size": 28297,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Css": {
+                  "AttributeTranslator.php": {
+                    "type": "-",
+                    "size": 17736,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Color.php": {
+                    "type": "-",
+                    "size": 10698,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Style.php": {
+                    "type": "-",
+                    "size": 114936,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Stylesheet.php": {
+                    "type": "-",
+                    "size": 61703,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Dompdf.php": {
+                  "type": "-",
+                  "size": 40321,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Exception": {
+                  "ImageException.php": {
+                    "type": "-",
+                    "size": 571,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Exception.php": {
+                  "type": "-",
+                  "size": 551,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "FontMetrics.php": {
+                  "type": "-",
+                  "size": 18058,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Frame": {
+                  "Factory.php": {
+                    "type": "-",
+                    "size": 8237,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "FrameListIterator.php": {
+                    "type": "-",
+                    "size": 1944,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "FrameTree.php": {
+                    "type": "-",
+                    "size": 9004,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "FrameTreeIterator.php": {
+                    "type": "-",
+                    "size": 1565,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Frame.php": {
+                  "type": "-",
+                  "size": 30943,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "FrameDecorator": {
+                  "AbstractFrameDecorator.php": {
+                    "type": "-",
+                    "size": 22557,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Block.php": {
+                    "type": "-",
+                    "size": 6123,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Image.php": {
+                    "type": "-",
+                    "size": 3061,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Inline.php": {
+                    "type": "-",
+                    "size": 3827,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "ListBullet.php": {
+                    "type": "-",
+                    "size": 2823,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "ListBulletImage.php": {
+                    "type": "-",
+                    "size": 2790,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "NullFrameDecorator.php": {
+                    "type": "-",
+                    "size": 726,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Page.php": {
+                    "type": "-",
+                    "size": 24868,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Table.php": {
+                    "type": "-",
+                    "size": 10066,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableCell.php": {
+                    "type": "-",
+                    "size": 3383,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRow.php": {
+                    "type": "-",
+                    "size": 571,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRowGroup.php": {
+                    "type": "-",
+                    "size": 2047,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Text.php": {
+                    "type": "-",
+                    "size": 5068,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "FrameReflower": {
+                  "AbstractFrameReflower.php": {
+                    "type": "-",
+                    "size": 22554,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Block.php": {
+                    "type": "-",
+                    "size": 34548,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Image.php": {
+                    "type": "-",
+                    "size": 7972,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Inline.php": {
+                    "type": "-",
+                    "size": 6064,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "ListBullet.php": {
+                    "type": "-",
+                    "size": 1198,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "NullFrameReflower.php": {
+                    "type": "-",
+                    "size": 695,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Page.php": {
+                    "type": "-",
+                    "size": 5974,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Table.php": {
+                    "type": "-",
+                    "size": 17290,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableCell.php": {
+                    "type": "-",
+                    "size": 4987,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRow.php": {
+                    "type": "-",
+                    "size": 2143,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRowGroup.php": {
+                    "type": "-",
+                    "size": 2042,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Text.php": {
+                    "type": "-",
+                    "size": 20658,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Helpers.php": {
+                  "type": "-",
+                  "size": 38547,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Image": {
+                  "Cache.php": {
+                    "type": "-",
+                    "size": 10467,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "JavascriptEmbedder.php": {
+                  "type": "-",
+                  "size": 929,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "LineBox.php": {
+                  "type": "-",
+                  "size": 10221,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Options.php": {
+                  "type": "-",
+                  "size": 31945,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "PhpEvaluator.php": {
+                  "type": "-",
+                  "size": 1289,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                },
+                "Positioner": {
+                  "Absolute.php": {
+                    "type": "-",
+                    "size": 4668,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "AbstractPositioner.php": {
+                    "type": "-",
+                    "size": 1139,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Block.php": {
+                    "type": "-",
+                    "size": 861,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Fixed.php": {
+                    "type": "-",
+                    "size": 3628,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Inline.php": {
+                    "type": "-",
+                    "size": 1511,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "ListBullet.php": {
+                    "type": "-",
+                    "size": 1332,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "NullPositioner.php": {
+                    "type": "-",
+                    "size": 495,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableCell.php": {
+                    "type": "-",
+                    "size": 673,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRow.php": {
+                    "type": "-",
+                    "size": 747,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Renderer": {
+                  "AbstractRenderer.php": {
+                    "type": "-",
+                    "size": 41632,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Block.php": {
+                    "type": "-",
+                    "size": 2676,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Image.php": {
+                    "type": "-",
+                    "size": 2628,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Inline.php": {
+                    "type": "-",
+                    "size": 4335,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "ListBullet.php": {
+                    "type": "-",
+                    "size": 7100,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableCell.php": {
+                    "type": "-",
+                    "size": 6395,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "TableRowGroup.php": {
+                    "type": "-",
+                    "size": 848,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  },
+                  "Text.php": {
+                    "type": "-",
+                    "size": 5184,
+                    "lmtime": 1675774308000,
+                    "modified": false
+                  }
+                },
+                "Renderer.php": {
+                  "type": "-",
+                  "size": 8514,
+                  "lmtime": 1675774308000,
+                  "modified": false
+                }
+              },
+              "VERSION": {
+                "type": "-",
+                "size": 6,
+                "lmtime": 1675774308000,
+                "modified": false
+              }
+            }
+          },
+          "fontawesome-free": {
+            "css": {
+              "all.css": {
+                "type": "-",
+                "size": 73625,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "all.min.css": {
+                "type": "-",
+                "size": 59344,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "brands.css": {
+                "type": "-",
+                "size": 732,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "brands.min.css": {
+                "type": "-",
+                "size": 675,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fontawesome.css": {
+                "type": "-",
+                "size": 71990,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fontawesome.min.css": {
+                "type": "-",
+                "size": 57912,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "regular.css": {
+                "type": "-",
+                "size": 734,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "regular.min.css": {
+                "type": "-",
+                "size": 677,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "solid.css": {
+                "type": "-",
+                "size": 727,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "solid.min.css": {
+                "type": "-",
+                "size": 669,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "svg-with-js.css": {
+                "type": "-",
+                "size": 8077,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "svg-with-js.min.css": {
+                "type": "-",
+                "size": 6359,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "v4-shims.css": {
+                "type": "-",
+                "size": 41312,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "v4-shims.min.css": {
+                "type": "-",
+                "size": 26702,
+                "lmtime": 1669953264000,
+                "modified": false
+              }
+            },
+            "webfonts": {
+              "fa-brands-400.eot": {
+                "type": "-",
+                "size": 134346,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-brands-400.svg": {
+                "type": "-",
+                "size": 747545,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-brands-400.ttf": {
+                "type": "-",
+                "size": 134040,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-brands-400.woff": {
+                "type": "-",
+                "size": 90060,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-brands-400.woff2": {
+                "type": "-",
+                "size": 76764,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-regular-400.eot": {
+                "type": "-",
+                "size": 34034,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-regular-400.svg": {
+                "type": "-",
+                "size": 144714,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-regular-400.ttf": {
+                "type": "-",
+                "size": 33736,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-regular-400.woff": {
+                "type": "-",
+                "size": 16276,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-regular-400.woff2": {
+                "type": "-",
+                "size": 13276,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-solid-900.eot": {
+                "type": "-",
+                "size": 203030,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-solid-900.svg": {
+                "type": "-",
+                "size": 918991,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-solid-900.ttf": {
+                "type": "-",
+                "size": 202744,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-solid-900.woff": {
+                "type": "-",
+                "size": 101652,
+                "lmtime": 1669953264000,
+                "modified": false
+              },
+              "fa-solid-900.woff2": {
+                "type": "-",
+                "size": 78196,
+                "lmtime": 1669953264000,
+                "modified": false
+              }
+            }
+          },
+          "jquery": {
+            "jquery.js": {
+              "type": "-",
+              "size": 288580,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.min.js": {
+              "type": "-",
+              "size": 89501,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.min.map": {
+              "type": "-",
+              "size": 137960,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.slim.js": {
+              "type": "-",
+              "size": 235341,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.slim.min.js": {
+              "type": "-",
+              "size": 72372,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.slim.min.map": {
+              "type": "-",
+              "size": 110315,
+              "lmtime": 1669953264000,
+              "modified": false
+            }
+          },
+          "jquery-easing": {
+            "jquery.easing.compatibility.js": {
+              "type": "-",
+              "size": 1656,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.easing.js": {
+              "type": "-",
+              "size": 4047,
+              "lmtime": 1669953264000,
+              "modified": false
+            },
+            "jquery.easing.min.js": {
+              "type": "-",
+              "size": 2532,
+              "lmtime": 1669953264000,
+              "modified": false
+            }
+          },
+          "masterminds": {
+            "html5": {
+              "bin": {
+                "entities.php": {
+                  "type": "-",
+                  "size": 638,
+                  "lmtime": 1683719912000,
+                  "modified": false
+                }
+              },
+              "composer.json": {
+                "type": "-",
+                "size": 1026,
+                "lmtime": 1683719912000,
+                "modified": false
+              },
+              "CREDITS": {
+                "type": "-",
+                "size": 687,
+                "lmtime": 1683719912000,
+                "modified": false
+              },
+              "LICENSE.txt": {
+                "type": "-",
+                "size": 2973,
+                "lmtime": 1683719912000,
+                "modified": false
+              },
+              "README.md": {
+                "type": "-",
+                "size": 9825,
+                "lmtime": 1683719912000,
+                "modified": false
+              },
+              "RELEASE.md": {
+                "type": "-",
+                "size": 5070,
+                "lmtime": 1683719912000,
+                "modified": false
+              },
+              "src": {
+                "HTML5": {
+                  "Elements.php": {
+                    "type": "-",
+                    "size": 19781,
+                    "lmtime": 1683719912000,
+                    "modified": false
+                  },
+                  "Entities.php": {
+                    "type": "-",
+                    "size": 60947,
+                    "lmtime": 1683719912000,
+                    "modified": false
+                  },
+                  "Exception.php": {
+                    "type": "-",
+                    "size": 129,
+                    "lmtime": 1683719912000,
+                    "modified": false
+                  },
+                  "InstructionProcessor.php": {
+                    "type": "-",
+                    "size": 1780,
+                    "lmtime": 1683719912000,
+                    "modified": false
+                  },
+                  "Parser": {
+                    "CharacterReference.php": {
+                      "type": "-",
+                      "size": 1531,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "DOMTreeBuilder.php": {
+                      "type": "-",
+                      "size": 22791,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "EventHandler.php": {
+                      "type": "-",
+                      "size": 3676,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "FileInputStream.php": {
+                      "type": "-",
+                      "size": 1161,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "InputStream.php": {
+                      "type": "-",
+                      "size": 2499,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "ParseError.php": {
+                      "type": "-",
+                      "size": 130,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "README.md": {
+                      "type": "-",
+                      "size": 1699,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "Scanner.php": {
+                      "type": "-",
+                      "size": 11460,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "StringInputStream.php": {
+                      "type": "-",
+                      "size": 9530,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "Tokenizer.php": {
+                      "type": "-",
+                      "size": 36539,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "TreeBuildingRules.php": {
+                      "type": "-",
+                      "size": 3273,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "UTF8Utils.php": {
+                      "type": "-",
+                      "size": 7276,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    }
+                  },
+                  "Serializer": {
+                    "HTML5Entities.php": {
+                      "type": "-",
+                      "size": 44292,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "OutputRules.php": {
+                      "type": "-",
+                      "size": 16618,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "README.md": {
+                      "type": "-",
+                      "size": 929,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "RulesInterface.php": {
+                      "type": "-",
+                      "size": 2615,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    },
+                    "Traverser.php": {
+                      "type": "-",
+                      "size": 4301,
+                      "lmtime": 1683719912000,
+                      "modified": false
+                    }
+                  }
+                },
+                "HTML5.php": {
+                  "type": "-",
+                  "size": 8546,
+                  "lmtime": 1683719912000,
+                  "modified": false
+                }
+              },
+              "UPGRADING.md": {
+                "type": "-",
+                "size": 496,
+                "lmtime": 1683719912000,
+                "modified": false
+              }
+            }
+          },
+          "phenx": {
+            "php-font-lib": {
+              ".github": {
+                "workflows": {
+                  "phpunit.yml": {
+                    "type": "-",
+                    "size": 909,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  }
+                }
+              },
+              ".htaccess": {
+                "type": "-",
+                "size": 14,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "bower.json": {
+                "type": "-",
+                "size": 525,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "composer.json": {
+                "type": "-",
+                "size": 760,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "index.php": {
+                "type": "-",
+                "size": 34,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "LICENSE": {
+                "type": "-",
+                "size": 24362,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "maps": {
+                "adobe-standard-encoding.map": {
+                  "type": "-",
+                  "size": 7861,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1250.map": {
+                  "type": "-",
+                  "size": 4797,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1251.map": {
+                  "type": "-",
+                  "size": 5031,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1252.map": {
+                  "type": "-",
+                  "size": 4792,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1253.map": {
+                  "type": "-",
+                  "size": 4494,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1254.map": {
+                  "type": "-",
+                  "size": 4772,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1255.map": {
+                  "type": "-",
+                  "size": 4531,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1257.map": {
+                  "type": "-",
+                  "size": 4678,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp1258.map": {
+                  "type": "-",
+                  "size": 4740,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "cp874.map": {
+                  "type": "-",
+                  "size": 4488,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-1.map": {
+                  "type": "-",
+                  "size": 4861,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-11.map": {
+                  "type": "-",
+                  "size": 4937,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-15.map": {
+                  "type": "-",
+                  "size": 4835,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-16.map": {
+                  "type": "-",
+                  "size": 4881,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-2.map": {
+                  "type": "-",
+                  "size": 4825,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-4.map": {
+                  "type": "-",
+                  "size": 4844,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-5.map": {
+                  "type": "-",
+                  "size": 4975,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-7.map": {
+                  "type": "-",
+                  "size": 4680,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "iso-8859-9.map": {
+                  "type": "-",
+                  "size": 4879,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "koi8-r.map": {
+                  "type": "-",
+                  "size": 4995,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                },
+                "koi8-u.map": {
+                  "type": "-",
+                  "size": 4995,
+                  "lmtime": 1639770294000,
+                  "modified": false
+                }
+              },
+              "README.md": {
+                "type": "-",
+                "size": 1099,
+                "lmtime": 1639770294000,
+                "modified": false
+              },
+              "src": {
+                "FontLib": {
+                  "AdobeFontMetrics.php": {
+                    "type": "-",
+                    "size": 5890,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "Autoloader.php": {
+                    "type": "-",
+                    "size": 986,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "BinaryStream.php": {
+                    "type": "-",
+                    "size": 10062,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "EncodingMap.php": {
+                    "type": "-",
+                    "size": 835,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "EOT": {
+                    "File.php": {
+                      "type": "-",
+                      "size": 3384,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "Header.php": {
+                      "type": "-",
+                      "size": 3287,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  },
+                  "Exception": {
+                    "FontNotFoundException.php": {
+                      "type": "-",
+                      "size": 202,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  },
+                  "Font.php": {
+                    "type": "-",
+                    "size": 1739,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "Glyph": {
+                    "Outline.php": {
+                      "type": "-",
+                      "size": 2272,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "OutlineComponent.php": {
+                      "type": "-",
+                      "size": 705,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "OutlineComposite.php": {
+                      "type": "-",
+                      "size": 6773,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "OutlineSimple.php": {
+                      "type": "-",
+                      "size": 8401,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  },
+                  "Header.php": {
+                    "type": "-",
+                    "size": 724,
+                    "lmtime": 1639770294000,
+                    "modified": false
+                  },
+                  "OpenType": {
+                    "File.php": {
+                      "type": "-",
+                      "size": 394,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "TableDirectoryEntry.php": {
+                      "type": "-",
+                      "size": 437,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  },
+                  "Table": {
+                    "DirectoryEntry.php": {
+                      "type": "-",
+                      "size": 2533,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "Table.php": {
+                      "type": "-",
+                      "size": 1812,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "Type": {
+                      "cmap.php": {
+                        "type": "-",
+                        "size": 8311,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "glyf.php": {
+                        "type": "-",
+                        "size": 4198,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "head.php": {
+                        "type": "-",
+                        "size": 1352,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "hhea.php": {
+                        "type": "-",
+                        "size": 1206,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "hmtx.php": {
+                        "type": "-",
+                        "size": 1517,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "kern.php": {
+                        "type": "-",
+                        "size": 1854,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "loca.php": {
+                        "type": "-",
+                        "size": 1814,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "maxp.php": {
+                        "type": "-",
+                        "size": 1244,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "name.php": {
+                        "type": "-",
+                        "size": 4842,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "nameRecord.php": {
+                        "type": "-",
+                        "size": 1156,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "os2.php": {
+                        "type": "-",
+                        "size": 1574,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      },
+                      "post.php": {
+                        "type": "-",
+                        "size": 3128,
+                        "lmtime": 1639770294000,
+                        "modified": false
+                      }
+                    }
+                  },
+                  "TrueType": {
+                    "Collection.php": {
+                      "type": "-",
+                      "size": 1927,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "File.php": {
+                      "type": "-",
+                      "size": 11538,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "Header.php": {
+                      "type": "-",
+                      "size": 760,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "TableDirectoryEntry.php": {
+                      "type": "-",
+                      "size": 735,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  },
+                  "WOFF": {
+                    "File.php": {
+                      "type": "-",
+                      "size": 1995,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "Header.php": {
+                      "type": "-",
+                      "size": 872,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    },
+                    "TableDirectoryEntry.php": {
+                      "type": "-",
+                      "size": 782,
+                      "lmtime": 1639770294000,
+                      "modified": false
+                    }
+                  }
+                }
+              }
+            },
+            "php-svg-lib": {
+              "composer.json": {
+                "type": "-",
+                "size": 644,
+                "lmtime": 1662466616000,
+                "modified": false
+              },
+              "LICENSE": {
+                "type": "-",
+                "size": 7652,
+                "lmtime": 1662466616000,
+                "modified": false
+              },
+              "README.md": {
+                "type": "-",
+                "size": 949,
+                "lmtime": 1662466616000,
+                "modified": false
+              },
+              "src": {
+                "Svg": {
+                  "CssLength.php": {
+                    "type": "-",
+                    "size": 3070,
+                    "lmtime": 1662466616000,
+                    "modified": false
+                  },
+                  "DefaultStyle.php": {
+                    "type": "-",
+                    "size": 720,
+                    "lmtime": 1662466616000,
+                    "modified": false
+                  },
+                  "Document.php": {
+                    "type": "-",
+                    "size": 9807,
+                    "lmtime": 1662466616000,
+                    "modified": false
+                  },
+                  "Gradient": {
+                    "Stop.php": {
+                      "type": "-",
+                      "size": 312,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    }
+                  },
+                  "Style.php": {
+                    "type": "-",
+                    "size": 18342,
+                    "lmtime": 1662466616000,
+                    "modified": false
+                  },
+                  "Surface": {
+                    "CPdf.php": {
+                      "type": "-",
+                      "size": 217753,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "SurfaceCpdf.php": {
+                      "type": "-",
+                      "size": 13757,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "SurfaceInterface.php": {
+                      "type": "-",
+                      "size": 2168,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "SurfacePDFLib.php": {
+                      "type": "-",
+                      "size": 11770,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    }
+                  },
+                  "Tag": {
+                    "AbstractTag.php": {
+                      "type": "-",
+                      "size": 6220,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Anchor.php": {
+                      "type": "-",
+                      "size": 259,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Circle.php": {
+                      "type": "-",
+                      "size": 992,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "ClipPath.php": {
+                      "type": "-",
+                      "size": 672,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Ellipse.php": {
+                      "type": "-",
+                      "size": 1148,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Group.php": {
+                      "type": "-",
+                      "size": 669,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Image.php": {
+                      "type": "-",
+                      "size": 1801,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Line.php": {
+                      "type": "-",
+                      "size": 1145,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "LinearGradient.php": {
+                      "type": "-",
+                      "size": 2310,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Path.php": {
+                      "type": "-",
+                      "size": 19806,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Polygon.php": {
+                      "type": "-",
+                      "size": 1003,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Polyline.php": {
+                      "type": "-",
+                      "size": 972,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "RadialGradient.php": {
+                      "type": "-",
+                      "size": 324,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Rect.php": {
+                      "type": "-",
+                      "size": 1368,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Shape.php": {
+                      "type": "-",
+                      "size": 1571,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Stop.php": {
+                      "type": "-",
+                      "size": 314,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "StyleTag.php": {
+                      "type": "-",
+                      "size": 541,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "Text.php": {
+                      "type": "-",
+                      "size": 1744,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    },
+                    "UseTag.php": {
+                      "type": "-",
+                      "size": 2511,
+                      "lmtime": 1662466616000,
+                      "modified": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "sabberworm": {
+            "php-css-parser": {
+              "CHANGELOG.md": {
+                "type": "-",
+                "size": 8672,
+                "lmtime": 1639230054000,
+                "modified": false
+              },
+              "composer.json": {
+                "type": "-",
+                "size": 2528,
+                "lmtime": 1639230054000,
+                "modified": false
+              },
+              "LICENSE": {
+                "type": "-",
+                "size": 1104,
+                "lmtime": 1639230054000,
+                "modified": false
+              },
+              "README.md": {
+                "type": "-",
+                "size": 20657,
+                "lmtime": 1639230054000,
+                "modified": false
+              },
+              "src": {
+                "Comment": {
+                  "Comment.php": {
+                    "type": "-",
+                    "size": 1165,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Commentable.php": {
+                    "type": "-",
+                    "size": 452,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "CSSList": {
+                  "AtRuleBlockList.php": {
+                    "type": "-",
+                    "size": 1658,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CSSBlockList.php": {
+                    "type": "-",
+                    "size": 5236,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CSSList.php": {
+                    "type": "-",
+                    "size": 15630,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Document.php": {
+                    "type": "-",
+                    "size": 4745,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "KeyFrame.php": {
+                    "type": "-",
+                    "size": 1934,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "OutputFormat.php": {
+                  "type": "-",
+                  "size": 7835,
+                  "lmtime": 1639230054000,
+                  "modified": false
+                },
+                "OutputFormatter.php": {
+                  "type": "-",
+                  "size": 5342,
+                  "lmtime": 1639230054000,
+                  "modified": false
+                },
+                "Parser.php": {
+                  "type": "-",
+                  "size": 1327,
+                  "lmtime": 1639230054000,
+                  "modified": false
+                },
+                "Parsing": {
+                  "OutputException.php": {
+                    "type": "-",
+                    "size": 358,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "ParserState.php": {
+                    "type": "-",
+                    "size": 13450,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "SourceException.php": {
+                    "type": "-",
+                    "size": 562,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "UnexpectedEOFException.php": {
+                    "type": "-",
+                    "size": 273,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "UnexpectedTokenException.php": {
+                    "type": "-",
+                    "size": 1476,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "Property": {
+                  "AtRule.php": {
+                    "type": "-",
+                    "size": 801,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Charset.php": {
+                    "type": "-",
+                    "size": 2336,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CSSNamespace.php": {
+                    "type": "-",
+                    "size": 2727,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Import.php": {
+                    "type": "-",
+                    "size": 2544,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "KeyframeSelector.php": {
+                    "type": "-",
+                    "size": 697,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Selector.php": {
+                    "type": "-",
+                    "size": 3435,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "Renderable.php": {
+                  "type": "-",
+                  "size": 296,
+                  "lmtime": 1639230054000,
+                  "modified": false
+                },
+                "Rule": {
+                  "Rule.php": {
+                    "type": "-",
+                    "size": 10160,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "RuleSet": {
+                  "AtRuleSet.php": {
+                    "type": "-",
+                    "size": 1424,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "DeclarationBlock.php": {
+                    "type": "-",
+                    "size": 29574,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "RuleSet.php": {
+                    "type": "-",
+                    "size": 10964,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                },
+                "Settings.php": {
+                  "type": "-",
+                  "size": 1959,
+                  "lmtime": 1639230054000,
+                  "modified": false
+                },
+                "Value": {
+                  "CalcFunction.php": {
+                    "type": "-",
+                    "size": 3408,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CalcRuleValueList.php": {
+                    "type": "-",
+                    "size": 441,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Color.php": {
+                    "type": "-",
+                    "size": 5784,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CSSFunction.php": {
+                    "type": "-",
+                    "size": 1590,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "CSSString.php": {
+                    "type": "-",
+                    "size": 2727,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "LineName.php": {
+                    "type": "-",
+                    "size": 1801,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "PrimitiveValue.php": {
+                    "type": "-",
+                    "size": 228,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "RuleValueList.php": {
+                    "type": "-",
+                    "size": 291,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Size.php": {
+                    "type": "-",
+                    "size": 5376,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "URL.php": {
+                    "type": "-",
+                    "size": 1805,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "Value.php": {
+                    "type": "-",
+                    "size": 7201,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  },
+                  "ValueList.php": {
+                    "type": "-",
+                    "size": 2398,
+                    "lmtime": 1639230054000,
+                    "modified": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "views": {
+          "actualizar_stock.php": {
+            "type": "-",
+            "size": 3071,
+            "lmtime": 1695987219997.156,
+            "modified": false
+          },
+          "agregarAlCarrito.php": {
+            "type": "-",
+            "size": 641,
+            "lmtime": 1685575078000,
+            "modified": false
+          },
+          "armar_presupuesto.php": {
+            "type": "-",
+            "size": 11087,
+            "lmtime": 1696592871157.8647,
+            "modified": false
+          },
+          "buscar_cliente.php": {
+            "type": "-",
+            "size": 475,
+            "lmtime": 1685497146000,
+            "modified": false
+          },
+          "cambiar_estado.php": {
+            "type": "-",
+            "size": 3850,
+            "lmtime": 1692296972000,
+            "modified": false
+          },
+          "categorias.php": {
+            "type": "-",
+            "size": 4412,
+            "lmtime": 1693847876000,
+            "modified": false
+          },
+          "clientes.php": {
+            "type": "-",
+            "size": 5388,
+            "lmtime": 1696460059927.505,
+            "modified": false
+          },
+          "codbarra.php": {
+            "type": "-",
+            "size": 5442,
+            "lmtime": 1690568368000,
+            "modified": false
+          },
+          "data.php": {
+            "type": "-",
+            "size": 478,
+            "lmtime": 1688253996000,
+            "modified": false
+          },
+          "detalles_presupuesto.php": {
+            "type": "-",
+            "size": 3318,
+            "lmtime": 1696414769428.0645,
+            "modified": false
+          },
+          "editar_cat.php": {
+            "type": "-",
+            "size": 2465,
+            "lmtime": 1690483958000,
+            "modified": false
+          },
+          "editar_clientes.php": {
+            "type": "-",
+            "size": 4616,
+            "lmtime": 1695922933650.256,
+            "modified": false
+          },
+          "editar_detalle_obras.php": {
+            "type": "-",
+            "size": 2769,
+            "lmtime": 1690483922000,
+            "modified": false
+          },
+          "editar_equivalencias.php": {
+            "type": "-",
+            "size": 5904,
+            "lmtime": 1696509960224.99,
+            "modified": false
+          },
+          "editar_inv.php": {
+            "type": "-",
+            "size": 6238,
+            "lmtime": 1696509534191.4443,
+            "modified": false
+          },
+          "editar_materiasprimas.php": {
+            "type": "-",
+            "size": 5844,
+            "lmtime": 1696891595267.9226,
+            "modified": false
+          },
+          "editar_obras.php": {
+            "type": "-",
+            "size": 3184,
+            "lmtime": 1696586581712.7375,
+            "modified": false
+          },
+          "editar_presupuesto.php": {
+            "type": "-",
+            "size": 7400,
+            "lmtime": 1692211606000,
+            "modified": false
+          },
+          "editar_prov.php": {
+            "type": "-",
+            "size": 4765,
+            "lmtime": 1690550306000,
+            "modified": false
+          },
+          "editar_user.php": {
+            "type": "-",
+            "size": 5372,
+            "lmtime": 1690483842000,
+            "modified": false
+          },
+          "equivalencias.php": {
+            "type": "-",
+            "size": 5654,
+            "lmtime": 1696510238719.6172,
+            "modified": false
+          },
+          "form_cat.php": {
+            "type": "-",
+            "size": 3009,
+            "lmtime": 1690483838000,
+            "modified": false
+          },
+          "form_cliente.php": {
+            "type": "-",
+            "size": 5072,
+            "lmtime": 1690483834000,
+            "modified": false
+          },
+          "form_cod.php": {
+            "type": "-",
+            "size": 4736,
+            "lmtime": 1690483822000,
+            "modified": false
+          },
+          "form_comprar_inv.php": {
+            "type": "-",
+            "size": 3991,
+            "lmtime": 1696265126195.0732,
+            "modified": false
+          },
+          "form_comprar_mp.php": {
+            "type": "-",
+            "size": 4509,
+            "lmtime": 1696891595422.2976,
+            "modified": false
+          },
+          "form_equivalencias.php": {
+            "type": "-",
+            "size": 6744,
+            "lmtime": 1691597534000,
+            "modified": false
+          },
+          "form_inv.php": {
+            "type": "-",
+            "size": 6708,
+            "lmtime": 1696245389572.8596,
+            "modified": false
+          },
+          "form_materiasprimas.php": {
+            "type": "-",
+            "size": 6710,
+            "lmtime": 1695913712916.9248,
+            "modified": false
+          },
+          "form_obras.php": {
+            "type": "-",
+            "size": 5429,
+            "lmtime": 1691597162000,
+            "modified": false
+          },
+          "form_presupuesto.php": {
+            "type": "-",
+            "size": 5473,
+            "lmtime": 1696506553263.3857,
+            "modified": false
+          },
+          "form_prov.php": {
+            "type": "-",
+            "size": 5110,
+            "lmtime": 1690483720000,
+            "modified": false
+          },
+          "form_seccion.php": {
+            "type": "-",
+            "size": 3081,
+            "lmtime": 1691591542000,
+            "modified": false
+          },
+          "index.php": {
+            "type": "-",
+            "size": 7039,
+            "lmtime": 1696001834840.6978,
+            "modified": false
+          },
+          "inventario.php": {
+            "type": "-",
+            "size": 7008,
+            "lmtime": 1696851384366.9036,
+            "modified": false
+          },
+          "materias_primas.php": {
+            "type": "-",
+            "size": 7528,
+            "lmtime": 1696891595631.7473,
+            "modified": false
+          },
+          "NOTAS": {
+            "type": "-",
+            "size": 4835,
+            "lmtime": 1691776832000,
+            "modified": false
+          },
+          "obras.php": {
+            "type": "-",
+            "size": 5339,
+            "lmtime": 1696254802180.1587,
+            "modified": false
+          },
+          "obtener_cliente.php": {
+            "type": "-",
+            "size": 608,
+            "lmtime": 1685548384000,
+            "modified": false
+          },
+          "presupuesto.php": {
+            "type": "-",
+            "size": 8028,
+            "lmtime": 1693847656000,
+            "modified": false
+          },
+          "profile.php": {
+            "type": "-",
+            "size": 7256,
+            "lmtime": 1690474674000,
+            "modified": false
+          },
+          "proveedores.php": {
+            "type": "-",
+            "size": 4868,
+            "lmtime": 1691421324000,
+            "modified": false
+          },
+          "remitos_clientes.php": {
+            "type": "-",
+            "size": 10037,
+            "lmtime": 1696503998133.1758,
+            "modified": false
+          },
+          "remitos_obras.php": {
+            "type": "-",
+            "size": 11431,
+            "lmtime": 1696850522365.0818,
+            "modified": false
+          },
+          "salir.php": {
+            "type": "-",
+            "size": 1177,
+            "lmtime": 1685486044000,
+            "modified": false
+          },
+          "usuarios.php": {
+            "type": "-",
+            "size": 5161,
+            "lmtime": 1690568434000,
+            "modified": false
+          }
+        }
+      },
+      "license.txt": {
+        "type": "-",
+        "size": 19935,
+        "lmtime": 0,
+        "modified": false
+      },
+      "readme.html": {
+        "type": "-",
+        "size": 7425,
+        "lmtime": 0,
+        "modified": false
+      },
+      "sistema": {},
+      "sistema.zip": {
+        "type": "-",
+        "size": 8044481,
+        "lmtime": 0,
+        "modified": false
+      },
+      "soft": {},
+      "Vega-Reparacion.jpg": {
+        "type": "-",
+        "size": 123676,
+        "lmtime": 0,
+        "modified": false
+      },
+      "web.config": {
+        "type": "-",
+        "size": 627,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wordfence-waf.php": {
+        "type": "-",
+        "size": 478,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-activate.php": {
+        "type": "-",
+        "size": 6919,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-admin": {},
+      "wp-blog-header.php": {
+        "type": "-",
+        "size": 369,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-comments-post.php": {
+        "type": "-",
+        "size": 2340,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-config-sample.php": {
+        "type": "-",
+        "size": 2898,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-config.php": {
+        "type": "-",
+        "size": 3434,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-content": {},
+      "wp-cron.php": {
+        "type": "-",
+        "size": 3847,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-includes": {},
+      "wp-links-opml.php": {
+        "type": "-",
+        "size": 2502,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-load.php": {
+        "type": "-",
+        "size": 3306,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-login.php": {
+        "type": "-",
+        "size": 38883,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-mail.php": {
+        "type": "-",
+        "size": 8353,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-settings.php": {
+        "type": "-",
+        "size": 17947,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-signup.php": {
+        "type": "-",
+        "size": 31085,
+        "lmtime": 0,
+        "modified": false
+      },
+      "wp-snapshots": {},
+      "wp-trackback.php": {
+        "type": "-",
+        "size": 4833,
+        "lmtime": 0,
+        "modified": false
+      },
+      "xmlrpc.php": {
+        "type": "-",
+        "size": 3068,
+        "lmtime": 0,
+        "modified": false
+      }
+    },
+    "sitio_anterior": {},
+    "webstatistics": {},
+    "invent": {}
+  },
+  "$version": 1
+}
