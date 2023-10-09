@@ -46,7 +46,7 @@ session_start();
                             FROM materias_primas as m INNER JOIN categorias as c ON c.id = m.id_categoria
                             GROUP BY m.id ORDER BY m.producto ASC");
                             while ($fila = mysqli_fetch_assoc($result)){
-                                $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid'];
+                                $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid']."||".$fila['unidad']."||".$fila['pesounitario'];
                                 $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
                             ?>
                                 <tr>
