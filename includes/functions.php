@@ -304,8 +304,8 @@ function insertar_cmp()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO compras_mp (mp_id,mp_nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
-    VALUES ('$iid','$icomprobante','$iexistencia','$pesounitario','1')";
+    $consulta = "INSERT INTO compras_mp (mp_id,cmp_cantidad,cmp_kg,cmp_estado,cmp_proveedor) 
+    VALUES ('$id_producto','$existencia','$pesounitario','$cmp_estado','$cmp_proveedor')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

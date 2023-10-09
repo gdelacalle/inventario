@@ -1,0 +1,17 @@
+{
+    "host": "estructurasvega.com",
+    "username": "v0070449@estructurasvega.com",
+    "password": "5115T3m4",
+    "remotePath": "public_html/inventario/",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ],
+    "ignoreWrongFileEncoding": true
+}
