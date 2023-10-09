@@ -75,7 +75,7 @@ $id = $_GET['id'];
                     <th>ID</th>
                     <th>Producto</th>
                     <th>Sección</th>
-                    <th>Presupuestadas</th>
+                    <th>Cant</th>
                     <th>Retira</th>
                     <th>Seleccionar</th>
                     <th>Proceso</th>
@@ -103,11 +103,7 @@ $id = $_GET['id'];
                     <td width="1%"><?php echo $fila['id']; ?></td>
                     <td width="15%"><?php echo $fila['producto']; ?></td>
                     <td width="15%"><?php echo $fila['seccion']; ?></td>
-                    <td><form action="cambiar_cantidad.php" method="post">
-							<input name="cantidad" type="hidden" value="<?php echo $fila['cantidad']; ?>">
-							<input class="cantidad" min="1" name="cantidad" class="form-control" required type="number" value="<?php echo $fila['cantidad']; ?>">
-                        </form>
-                    </td>
+                    <td width="15%"><center><?php echo $fila['cantidad']; ?></center></td>
                     <td><form action="cambiar_cantidad.php" method="post">
 						    <input name="retira" type="hidden">
 						    <input class="retira" min="1" name="retira" class="form-control" required type="number">
@@ -117,7 +113,8 @@ $id = $_GET['id'];
                     <td width="5%"><center><?php echo $fila['cant_proceso']; ?></center></td>
                     <td width="5%"><center><?php echo $fila['cant_terminadas']; ?></center></td>
                     <td width="5%"><center><?php echo $fila['cant_obra']; ?></center></td>
-                    <td width="5%"><center><?php echo $fila['nro_remito']; ?></center></td>
+                    <td width="5%"><center><a target="_blank" class="nav-link" href="../reportes/imprimirremitocliente.php?numero=<?php echo $fila['nro_remito']; ?>">
+                    <?php echo $fila['nro_remito']; ?></center></td>
                     <td width="5%"><right><?php echo $fila['metros']; ?></td>
                     <td width="5%"><?php echo $fila['unidad']; ?></td>
                     <td width="10%"><?php echo $fila['peso']; ?></td>

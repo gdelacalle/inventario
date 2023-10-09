@@ -38,9 +38,11 @@ session_start();
 
                         <tbody>
                             <?php
+                            $granTotal=0;
                             require_once("../includes/db.php");
-                            $result = mysqli_query($conexion, "SELECT SUM(i.existencia * i.pesounitario) peso, i.id,i.codigo,i.producto,i.existencia,i.precio,i.pesounitario,i.unidad,i.minimo,c.categoria,c.id as cid
-                            FROM inventario as i INNER JOIN categorias as c ON c.id = i.id_categoria
+                            $result = mysqli_query($conexion, "SELECT SUM(i.existencia * i.pesounitario) peso,
+                            i.id,i.codigo,i.producto,i.existencia,i.precio,i.pesounitario,i.unidad,i.minimo,c.categoria,
+                            c.id as cid FROM inventario as i INNER JOIN categorias as c ON c.id = i.id_categoria
                             GROUP BY i.id ORDER BY i.codigo ASC");
                             while ($fila = mysqli_fetch_assoc($result)){
                                 $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid'];
@@ -62,9 +64,12 @@ session_start();
                                     Eliminar <i class="fa fa-trash "></i></a>      
                                 </td>   
                                 </tr>
+                                <?php $granTotal += $fila['peso'];?>
                             <?php } ?> 
                         </tbody>
                     </table>
+                    <center><h2>Total: <?php echo $granTotal; ?> KGs</h2> 
+
                     <?php include "../includes/footer.php"; ?>                  
 <script>
     $('.btn-del').on('click', function(e) {
