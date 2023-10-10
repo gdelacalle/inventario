@@ -5,41 +5,49 @@
                 <h3 class="modal-title" id="exampleModalLabel">Compra de Producto</h3>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
-            </div>
+            </div> 
             <div class="modal-body">
-                <form id="FormCompraInv<?php echo $fila['id']; ?>" method="POST">
+                <form id="FormCompraInv">
                     <div class="row">
                         <div class="col-sm-2">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Codigo</label>
-                                <input type="text" id="codigo" name="codigo" class="form-control"  readonly>
+                                <input type="hidden" id="iid" name="iid" class="form-control" readonly>
+                                <input type="text" id="icodigo" name="icodigo" class="form-control"  readonly>
                             </div>
                         </div>
                         <div class="col-sm-10">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Producto</label>
-                                <input type="text" id="producto" name="producto" class="form-control"  readonly>
+                                <input type="text" id="iproducto" name="iproducto" class="form-control"  readonly>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-4">
+                            <div class="mb-3">
+                                <label for="icomprobante" class="form-label">Nro Comprobante</label>
+                                <input type="text" id="icomprobante" name="icomprobante" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="mb-3">
-                                <label for="cantidad">Cantidad</label><br>
-                                <input type="number" name="cantidad" id="cantidad" class="form-control"  required>
+                                <label for="iexistencia">Cantidad</label><br>
+                                <input type="number" name="iexistencia" id="iexistencia" class="form-control"  required>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="mb-3">
-                                <label for="pesounitario" class="form-label">Peso x Unidad</label>
-                                <input type="text" id="pesounitario" name="pesounitario" class="form-control" value="<?php echo $fila['pesounitario']; ?>" required>
+                                <label for="ipesounitario" class="form-label">Peso x Unidad</label>
+                                <input type="text" id="ipesounitario" name="ipesounitario" class="form-control">
                             </div>
                         </div>
                     </div>
 
-                    <input type="hidden" name="accion" value="insertar_cmp">
-                    <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                    <input type="hidden" name="accion" value="insertar_compra_inv">
                     <br>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="CompraInv(<?php echo $fila['id']; ?>)">Guardar</button>
+                        <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>         
                     <input type="hidden" id="cmp_estado" name="cmp_estado" class="form-control" value="0">

@@ -15,13 +15,13 @@ function modificar_productos(datos){
 function comprar_productos(datos){
     
     dato=datos.split('||');
+    id=dato[0];
 	codigo=dato[1];
 	producto=dato[2];
-	existencia=dato[3];
-	
-    $('#codigo').val(codigo);
-    $('#producto').val(producto);
-    $('#cantidad').val(existencia);
+    
+    $('#iid').val(id);
+    $('#icodigo').val(codigo);
+    $('#iproducto').val(producto);
 }
 
 function modificar_mp(datos){

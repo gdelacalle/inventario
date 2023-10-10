@@ -11,18 +11,12 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="mb-3">
-                                <label for="icomprobante" class="form-label">Nro Comprobante</label>
-                                <input type="text" id="icomprobante" name="icomprobante" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="mb-3">
                                 <label for="nombre" class="form-label">Codigo</label>
                                 <input type="hidden" id="iid" name="iid" class="form-control" readonly>
                                 <input type="text" id="icodigo" name="codigo" class="form-control" readonly>
                             </div>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Producto</label>
                                 <input type="text" id="iproducto" name="iproducto" class="form-control" readonly>
@@ -30,9 +24,15 @@
                         </div>
                     </div>
                     <div class="row">
+                    <div class="col-sm-4">
+                            <div class="mb-3">
+                                <label for="icomprobante" class="form-label">Nro Comprobante</label>
+                                <input type="text" id="icomprobante" name="icomprobante" class="form-control">
+                            </div>
+                        </div>
                         <div class="col-sm-1">
                             <div class="mb-1">
-                                <label for="password">Cantidad</label><br>
+                                <label for="iexistencia">Cantidad</label><br>
                                 <input type="number" name="iexistencia" id="iexistencia" class="form-control" required>
                             </div>
                         </div>

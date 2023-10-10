@@ -38,7 +38,6 @@ session_start();
 
                         <tbody>
                             <?php
-                            $granTotal=0;
                             require_once("../includes/db.php");
                             $result = mysqli_query($conexion, "SELECT SUM(i.existencia * i.pesounitario) peso,
                             i.id,i.codigo,i.producto,i.existencia,i.precio,i.pesounitario,i.unidad,i.minimo,c.categoria,
@@ -64,12 +63,9 @@ session_start();
                                     Eliminar <i class="fa fa-trash "></i></a>      
                                 </td>   
                                 </tr>
-                                <?php $granTotal += $fila['peso'];?>
                             <?php } ?> 
                         </tbody>
                     </table>
-                    <center><h2>Total: <?php echo $granTotal; ?> KGs</h2> 
-
                     <?php include "../includes/footer.php"; ?>                  
 <script>
     $('.btn-del').on('click', function(e) {

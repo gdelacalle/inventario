@@ -15,8 +15,7 @@ session_start();
             <div class="card-header py-3">
                 <h4 class="m-0 font-weight-bold text-primary">LISTADO DE MATERIAS PRIMAS
                 <button type="button" class="btn btn-outline-success float-right" data-toggle="modal" data-target="#materiasprimas" style="FONT-SIZE: 14pt">
-                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i></button>
-                    
+                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i></button>    
                 <!-- Agrega un botón para iniciar la exportación -->
                 <button id="export-btn" class="btn btn-outline-warning float-right" type="button" style="FONT-SIZE: 14pt">Exportar a Excel</button>
 
@@ -74,9 +73,7 @@ session_start();
                         </tbody>
                     </table>
                     <?php include "../includes/footer.php"; ?>
-                    <?php include "actualizar_stock.php"; ?>
-                    <?php include "form_comprar_mp.php"; ?>
-                    <?php include "editar_materiasprimas.php"; ?>
+                    
     <script>
     $('.btn-del').on('click', function(e) {
         e.preventDefault();
@@ -104,6 +101,9 @@ session_start();
         })
     })
 </script>
+<?php include "actualizar_stock.php"; ?>
+<?php include "form_comprar_mp.php"; ?>
+<?php include "editar_materiasprimas.php"; ?>
 <script>
     // Función para exportar la tabla a un archivo Excel
     function exportTableToExcel() {

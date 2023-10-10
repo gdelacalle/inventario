@@ -1,8 +1,8 @@
-<div class="modal fade bd-example-modal-lg" id="materiasprimas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="materiasprimas  " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h3 class="modal-title" id="exampleModalLabel">Agregar nuevo articulo</h3>
+                <h3 class="modal-title" id="exampleModalLabel">Agregar Nueva Materia Primas</h3>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
 
-                    <input type="hidden" name="accion" value="insertar_materiasprimas">
+                    <input type="hidden" name="accion" value="insertar_materias_primas">
                     <br>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>

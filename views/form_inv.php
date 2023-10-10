@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h3 class="modal-title" id="exampleModalLabel">Agregar nuevo articulo</h3>
+                <h3 class="modal-title" id="exampleModalLabel">Agregar Nuevo Producto</h3>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
@@ -86,7 +86,7 @@
         </div>
     </div>
 </div>
-
+ 
 <script>
     $(document).ready(function() {
         $('#inventarioForm').submit(function(e) {

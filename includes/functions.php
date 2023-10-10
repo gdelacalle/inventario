@@ -31,6 +31,10 @@ if (isset($_POST['accion'])) {
             insertar_compra_mp();
             break;
             
+        case 'insertar_compra_inv':
+            insertar_compra_inv();
+            break;
+            
 
         case 'insertar_materiasprimas':
             insertar_materiasprimas();
@@ -298,6 +302,28 @@ function insertar_inventario()
     echo json_encode($response);
 }
 
+function insertar_materiasprimas() 
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO materias_primas (codigo, producto, existencia, unidad,id_categoria,pesounitario) 
+    VALUES ('$codigo', '$producto','$existencia','$unidad','$id_categoria','$pesounitario')";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+    echo json_encode($response);
+}
 
 function insertar_compra_mp()
 {
@@ -322,14 +348,13 @@ function insertar_compra_mp()
     echo json_encode($response);
 }
 
-
-function insertar_materiasprimas()
+function insertar_compra_inv()
 {
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO materias_primas (codigo, producto, existencia, unidad,id_categoria,pesounitario) 
-    VALUES ('$codigo', '$producto','$existencia','$unidad','$id_categoria','$pesounitario')";
+    $consulta = "INSERT INTO compras_mp (mp_id,nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
+    VALUES ('$iid','$icomprobante','$iexistencia','$ipesounitario','1')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

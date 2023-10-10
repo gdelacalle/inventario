@@ -62,9 +62,7 @@ session_start();
                         </tbody>
                     </table>
                     <?php include "editar_equivalencias.php"; ?>
-
-                    <?php include "../includes/footer.php"; ?>
-                    
+                    <?php include "../includes/footer.php"; ?>                    
                     <script>
                         $('.btn-del').on('click', function(e) {
                             e.preventDefault();
