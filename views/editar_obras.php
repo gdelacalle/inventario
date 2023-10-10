@@ -1,4 +1,4 @@
-<div class="modal fade" id="editar<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_editar_obra<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
@@ -11,22 +11,18 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="mb-1">
-                                <label for="descripcion" class="form-label">Descripcion</label>
-                                <input type="text" id="descripcion" name="descripcion" class="form-control" readonly value="<?php echo $fila['descripcion']; ?>" required>
+                                <label for="iedescripcion" class="form-label">Descripcion</label>
+                                <input type="text" id="iedescripcion" name="iedescripcion" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="mb-1">
                                 <label for="fechaentrega" class="form-label">Fecha de Entrega</label>
-                                <input type="date" id="fechaentrega" name="fecha_entrega" class="form-control" value="<?php echo $fila['fecha_entrega']; ?>" pattern="\d{4}-\d{2}-\d{2}">
+                                <input type="date" id="fechaentrega" name="fecha_entrega" class="form-control" pattern="\d{4}-\d{2}-\d{2}">
                             </div>
                         </div>        
                     <input type="hidden" name="accion" value="editar_obra">
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
-                    </div>
-            </div>
-                    <div class="container">
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="editarObra(<?php echo $fila['id']; ?>)">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

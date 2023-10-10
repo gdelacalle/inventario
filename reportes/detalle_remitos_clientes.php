@@ -48,7 +48,7 @@ $_SESSION['id'] = $id
                     require_once("../includes/db.php");
                     
                     $result = mysqli_query($conexion, "SELECT r.id_cliente,c.nombre,c.apellido,r.numero,r.fecha 
-                    FROM remitosclientes as r INNER JOIN clientes as c ON r.id_cliente = $id GROUP BY r.numero ORDER BY r.numero ASC");   
+                    FROM remitosclientes as r INNER JOIN clientes as c ON r.id_cliente = $id GROUP BY numero ORDER BY r.numero ASC");   
                 while ($fila = mysqli_fetch_assoc($result)) :                       
                 ?>
                 <tr>

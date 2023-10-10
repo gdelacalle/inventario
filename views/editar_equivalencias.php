@@ -1,4 +1,62 @@
 <div class="modal fade" id="modal_editar_equivalencia<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h3 class="modal-title" id="exampleModalLabel">Modificar Equivalencia</h3>
+            </div>
+            <div class="modal-body">
+                <form id="editEquivalencia<?php echo $fila['id']; ?>" method="POST">
+                <div class="col-sm-10">
+                            <div class="mb-3">
+                                <label for="seccion" class="form-label">Seccion</label>
+                                <input type="text" id="seccion" name="seccion" class="form-control" >
+                            </div>
+                        </div>
+                    <br>
+                    <input type="hidden" name="accion" value="editar_equivalencia">
+                    <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="editarEquival(<?php echo $fila['id']; ?>)">Modificar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                    <?php include "../includes/footer.php"; ?>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editarEquival(id) {
+        var datosFormulario = $("#editEquivalencia" + id).serialize();
+        $.ajax({
+            url: "../includes/functions.php",
+            type: "POST",
+            data: datosFormulario,
+            dataType: "json",
+            success: function(response) {
+                if (response === "correcto") {
+                    alert("El registro se ha actualizado correctamente");
+                    setTimeout(function() {
+                        location.assign('equivalencias.php');
+                    }, 500);
+                } else {
+                    alert("Ha ocurrido un error al actualizar el registro");
+                }
+            },
+            error: function() {
+                alert("Error de comunicacion con el servidor");
+            }
+        });
+    }
+</script>
+
+
+
+
+<!-- 
+
+<div class="modal fade" id="modal_editar_equivalencia<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header ">
@@ -105,4 +163,4 @@
             }
         });
     }
-</script>
+</script> -->

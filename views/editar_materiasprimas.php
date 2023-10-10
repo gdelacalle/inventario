@@ -14,7 +14,7 @@
                                 <label for="nombre" class="form-label">Codigo</label>
                                 <input type="text" id="iecodigo" name="iecodigo" class="form-control"  required>
                             </div>
-                        </div>
+                        </div> 
                         <div class="col-sm-10">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Producto</label>

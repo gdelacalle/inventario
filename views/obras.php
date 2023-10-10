@@ -45,7 +45,8 @@ if ($permiso == "3") {
                             $result = mysqli_query($conexion, "SELECT o.id,o.descripcion,o.fecha_alta,o.fecha_entrega,c.nombre,c.apellido 
                             FROM clientes as c INNER JOIN obras as o ON c.id = o.id_cliente AND o.estado='CONFIRMADA' GROUP BY o.id ORDER BY c.nombre ASC");
                             while ($fila = mysqli_fetch_assoc($result)) {
-                            
+                                $datos=$fila['id']."||".$fila['descripcion']."||".$fila['nombre']."||".$fila['apellido'];                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
+
                             ?>
                                 <tr>
                                     <td><?php echo $fila['id']; ?></td>
@@ -56,9 +57,9 @@ if ($permiso == "3") {
                                     <td><?php echo $fila['apellido']; ?></td>
 
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar" onclick="modificar_obra('<?php echo $datos; ?>')">
-                                        <i class="fa fa-edit"></i>
-                                        </button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_obra" onclick="modificar_obra('<?php echo $datos; ?>')">
+                                        Editar <i class="fa fa-edit "></i></button>
+
                                         <a href="../views/remitos_obras.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-editar">
                                         <i class="fa fa-reply-all"></i></a>
                                         
@@ -67,12 +68,12 @@ if ($permiso == "3") {
                                         <i class="fa fa-random"></i></a>
                                     </td>
                                 </tr>
-                                <?php include "editar_obras.php"; ?>
-        <?php include "cambiar_estado.php"; ?>
+                                
                             <?php } ?>
                         </tbody>
                     </table>
-                    
+                    <?php include "editar_obras.php"; ?>
+                    <?php include "cambiar_estado.php"; ?>
                     <?php include "../includes/footer.php"; ?>
 
                     <script>

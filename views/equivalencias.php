@@ -51,7 +51,7 @@ session_start();
                                     <td><?php echo $fila['categoria']; ?></td>
                                     <td><?php echo $fila['peso']; ?></td>
                                     <td>
-                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia" onclick="modificar_equivalencia('<?php echo $datos; ?>')">
+                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia<?php echo $fila['id']; ?>">
                                     Editar <i class="fa fa-edit "></i></button>
 
                                         <a href="../includes/eliminar_equivalencia.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
@@ -61,6 +61,7 @@ session_start();
                                 <?php } ?> 
                         </tbody>
                     </table>
+                    <?php include "editar_equivalencias.php"; ?>
 
                     <?php include "../includes/footer.php"; ?>
                     
@@ -103,7 +104,6 @@ session_start();
     <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
-    <?php include "editar_equivalencias.php"; ?>
 
 </body>
 <?php include "form_equivalencias.php"; ?>

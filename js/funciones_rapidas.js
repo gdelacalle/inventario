@@ -108,3 +108,18 @@ function modificar_equivalencia(datos){
 
 }
 
+function modificar_obra(datos){
+    
+    dato=datos.split('||');
+	id=dato[0];
+    descripcion=[2];
+	
+    alert();
+
+    $('#id').val(id);
+    $('#iedescripcion').val(descripcion);
+    
+
+}
+
+
