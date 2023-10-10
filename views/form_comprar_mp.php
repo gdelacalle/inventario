@@ -1,4 +1,4 @@
-<div class="modal fade bd-example-modal-lg" id="modal_comprar_mp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_comp_mp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
@@ -7,15 +7,15 @@
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
             <div class="modal-body">
-            <form id="MpForm" method="POST">
+                <form id="MpForm">
                     <div class="row">
-                    <div class="col-sm-10">
+                        <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="icomprobante" class="form-label">Nro Comprobante</label>
                                 <input type="text" id="icomprobante" name="icomprobante" class="form-control">
                             </div>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Codigo</label>
                                 <input type="hidden" id="iid" name="iid" class="form-control" readonly>
@@ -25,7 +25,7 @@
                         <div class="col-sm-10">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Producto</label>
-                                <input type="text" id="iproducto" name="producto" class="form-control" readonly>
+                                <input type="text" id="iproducto" name="iproducto" class="form-control" readonly>
                             </div>
                         </div>
                     </div>
@@ -44,10 +44,10 @@
                         </div>
                     </div>
 
-                    <input type="hidden" name="accion" value="insertar_cmp">
+                    <input type="hidden" name="accion" value="insertar_compra_mp">
                     <br>
                     <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="register" name="registrar" onclick="">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
             </div>

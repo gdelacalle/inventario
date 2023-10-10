@@ -27,8 +27,8 @@ if (isset($_POST['accion'])) {
             insertar_inventario();
             break;
            
-        case 'insertar_cmp':
-            insertar_cmp();
+        case 'insertar_compra_mp':
+            insertar_compra_mp();
             break;
             
 
@@ -299,13 +299,13 @@ function insertar_inventario()
 }
 
 
-function insertar_cmp()
+function insertar_compra_mp()
 {
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO compras_mp (mp_id,mp_nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
-    VALUES ('$iid','$icomprobante','$iexistencia','$pesounitario','1')";
+    $consulta = "INSERT INTO compras_mp (cmp_estado) 
+    VALUES ('1')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

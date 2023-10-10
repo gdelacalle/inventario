@@ -44,8 +44,8 @@ function modificar_mp(datos){
 
 
 function comprar_mp(datos){
-    id=dato[0];
     dato=datos.split('||');
+    id=dato[0];
 	codigo=dato[1];
 	producto=dato[2];
 	
