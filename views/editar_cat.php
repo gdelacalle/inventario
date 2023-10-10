@@ -15,7 +15,6 @@
                     <br>
                     <input type="hidden" name="accion" value="editar_cat">
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="editarCat(<?php echo $fila['id']; ?>)">Modificar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
@@ -40,7 +39,7 @@
                     alert("El registro se ha actualizado correctamente");
                     setTimeout(function() {
                         location.assign('categorias.php');
-                    }, 2000);
+                    }, 500);
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");
                 }

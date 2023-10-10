@@ -304,8 +304,8 @@ function insertar_compra_mp()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO compras_mp (cmp_estado) 
-    VALUES ('1')";
+    $consulta = "INSERT INTO compras_mp (mp_id,nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
+    VALUES ('$iid','$icomprobante','$iexistencia','$ipesounitario','1')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -570,12 +570,12 @@ function editar_inv()
     }
 }
 
-function Editar_MP()
+function editar_mp()
 {
     require_once("db.php");
     extract($_POST);
-    $consulta = "UPDATE materias_primas SET codigo = '$codigo', producto = '$producto', existencia = '$cantidad', 
-        precio = '$precio' , id_categoria = '$id_categoria' WHERE id = '$id' ";
+    $consulta = "UPDATE materias_primas SET codigo = '$iecodigo', producto = '$ieproducto', existencia = '$iecantidad', 
+        id_categoria = '$seid_categoria', pesounitario = '$iepesounitario' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
         echo json_encode("correcto");

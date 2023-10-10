@@ -48,11 +48,10 @@ function comprar_mp(datos){
     id=dato[0];
 	codigo=dato[1];
 	producto=dato[2];
-	
-	
+    
+    $('#iid').val(id);
     $('#icodigo').val(codigo);
     $('#iproducto').val(producto);
-    $('#iid').val(id);
 }
 
 function actualizar_mp(datos){

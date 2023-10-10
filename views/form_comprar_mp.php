@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal_comp_mp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_comp_mp" tabindex="2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
@@ -38,8 +38,8 @@
                         </div>
                     <div class="col-sm-3">
                             <div class="mb-3">
-                                <label for="pesounitario" class="form-label">Peso x Unidad</label>
-                                <input type="text" id="pesounitario" name="pesounitario" class="form-control" value="<?php echo $fila['pesounitario']; ?>" required>
+                                <label for="ipesounitario" class="form-label">Peso x Unidad</label>
+                                <input type="text" id="ipesounitario" name="ipesounitario" class="form-control">
                             </div>
                         </div>
                     </div>
