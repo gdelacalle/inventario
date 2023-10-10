@@ -353,7 +353,7 @@ function insertar_compra_inv()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO compras_inv (mp_id,nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
+    $consulta = "INSERT INTO compras_mp (mp_id,nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
     VALUES ('$iid','$icomprobante','$iexistencia','$ipesounitario','1')";
     $resultado = mysqli_query($conexion, $consulta);
 
