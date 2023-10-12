@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
-
+   
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" required>
+                        <input type="password" id="password" name="password" class="form-control" autocomplete="on" required>
                     </div>
 
                     <div class="text-center">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <script src="../../js/login.js"></script>
+    <script src="../../js/login.js"></script>   
 </body>
 
 </html>
