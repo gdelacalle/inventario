@@ -4,29 +4,28 @@
 error_reporting(0);
 session_start();
 $granTotal=0;
-$id = $_GET['id'];
-$obras=$_GET['id_obra'];
+$idobra = $_GET['id'];
+
 require_once("../includes/db.php");
-
-$result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, p.id, 
+$result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso )as decimal(10,2))as total, p.id,
 cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,o.id_cliente,
-e.id as sid
+i.id as id_producto,p.cant_proceso,p.cant_terminadas,p.cant_obra
 FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
-ON p.id_producto = i.id AND e.id = p.id_seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");
+ON p.id_producto = i.id AND e.id = p.id_seccion AND p.id_obra = $idobra GROUP BY p.id ORDER BY p.id ASC");
 
-$result2 = mysqli_query($conexion, "SELECT o.descripcion
-FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
-ON p.id_producto = i.id AND e.seccion = p.seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");
-$fila2 = mysqli_fetch_assoc($result2);
-$obras=$fila2['descripcion'];
+$result1 = mysqli_query($conexion, "SELECT descripcion FROM obras WHERE id = $idobra");
+$fila = mysqli_fetch_assoc($result1);
+$descripcion=$fila['descripcion'];
+
 ?>
-
-
 <h4>ESTRUCTURAS VEGA S.R.L.
-<h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666</h6> 
-<h5><center>PRESUPUESTO</center></h5>
-<h6>Generó el Presupuesto:<class style="text-transform: uppercase; color: black;"> <?php echo $_SESSION['usuario']?>
-<div><h6>Nombre de la Obra: <?php echo $obras?></h6></div>
+<h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666
+
+<center>DETALLE DEL PRESUPUESTO</center>
+<h5>OBRA / CLIENTE: <class style="text-transform: uppercase; color: black;">  <?php echo $descripcion; ?>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="5">
                 <tr>
                     <td>Producto</td>
@@ -50,6 +49,8 @@ $obras=$fila2['descripcion'];
                 <?php $granTotal += $fila['total'];?>
                 <?php endwhile?>
 </table>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 <center><h2>Total: <?php echo $granTotal; ?> KGs</h2></center>
 
 

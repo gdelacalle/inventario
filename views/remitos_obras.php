@@ -92,8 +92,9 @@ $id = $_GET['id'];
                 <?php
                     require_once("../includes/db.php");
                     
-                    $result = mysqli_query($conexion, "SELECT p.id,e.seccion,i.id,i.producto,p.cantidad,p.cant_proceso,
-                    p.cant_terminadas,p.cant_obra,p.metros,p.unidad,o.descripcion,o.id_cliente,p.peso,p.pesototal,p.nro_remito,
+                    $result = mysqli_query($conexion, "SELECT  cast(SUM(p.cantidad * p.metros * e.peso )as decimal(10,2))as pesototal,
+                    p.id,cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.id,i.producto,p.cantidad,p.cant_proceso,
+                    p.cant_terminadas,p.cant_obra,p.metros,p.unidad,o.descripcion,o.id_cliente,p.nro_remito,
                     e.id as sid
                     FROM presupuesto as p INNER JOIN inventario as i INNER JOIN equivalencias as e INNER JOIN obras as o 
                     ON p.id_producto = i.id AND e.id = p.id_seccion AND p.id_obra = o.id AND p.id_obra = $id GROUP BY p.id ORDER BY p.id ASC");   

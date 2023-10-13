@@ -39,24 +39,20 @@ $fecha= $fila['fecha'];
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">
 <thead class="thead-dark">
                 <tr>
-                    <td>ID</td>
                     <td>Producto</td>
                     <th>Sección</th>
                     <th>Cantidad</th>   
                     <th>Medida</th> 
-                    <th>Desarrollo</th> 
                     <th>Unidad</th> 
                     <th>Peso x Unidad</th>
                     <th>TOTAL</th>
                 </tr>
                 <?php while ($fila = mysqli_fetch_assoc($result)) :?>
                 <tr>
-                    <td><?php echo $fila['idp']; ?></td>
                     <td><?php echo $fila['producto']; ?></td>
                     <td><center><?php echo $fila['seccion']; ?></td>
                     <td><center><?php echo $fila['cantidad']; ?></td>
                     <td><center><?php echo $fila['metros']; ?></td>
-                    <td><center><?php echo $fila['desarrollo']; ?></td>
                     <td><center><?php echo $fila['unidad']; ?></td>
                     <td><center><?php echo $fila['peso']; ?></td>
                     <td><center><?php echo $fila['total']; ?></td>

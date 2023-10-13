@@ -26,7 +26,7 @@ $dompdf -> setOptions($options);
 
 $dompdf -> load_html($html);
 
-$dompdf -> setPaper('A4');
+$dompdf -> setPaper('A4','Landscape');
 
 $dompdf -> render();
 
