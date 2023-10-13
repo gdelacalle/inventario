@@ -22,7 +22,7 @@ $row_num = mysqli_num_rows($db_consult);
             session_start();
             $_SESSION['usuario']=$user_data['usuario'];
             $_SESSION['type'] =$user_data['type']; 
-
+                
                 if($_SESSION['type'] && $_SESSION['usuario']){
                     echo json_encode($success_response);
                 }
