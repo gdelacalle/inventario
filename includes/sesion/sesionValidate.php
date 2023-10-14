@@ -1,7 +1,9 @@
 <?php
 $error_response = "error";
 $success_response = "success";
-require_once('../db.php');
+// echo "<script>console.log('Console: " .$success_response. "' );</script>";
+//echo "<script>console.log('Console: " .$_POST['login']. "' );</script>";
+require_once("../db.php");
 if(isset ($_POST['login'])){
 $usuario = $_POST['usuario'];
 $password =  $_POST['password']; 
@@ -18,12 +20,14 @@ $row_num = mysqli_num_rows($db_consult);
             'type' => $fetch_result['id_rol']
         ];
         
-            if(password_verify($password, $user_data['password'])){
+            // if(password_verify($password, $user_data['password'])){
+            if($password==$user_data['password']){
             session_start();
             $_SESSION['usuario']=$user_data['usuario'];
             $_SESSION['type'] =$user_data['type']; 
                 
                 if($_SESSION['type'] && $_SESSION['usuario']){
+                    // echo "<script>console.log('Console: " .$success_response. "' );</script>";
                     echo json_encode($success_response);
                 }
                 else{
@@ -41,3 +45,7 @@ $row_num = mysqli_num_rows($db_consult);
     }
 
 }
+// //echo json_encode($success_response);
+// //echo "<script>console.log('Console: " .$_SESSION['usuario']. "' );</script>";
+
+?>

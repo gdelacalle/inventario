@@ -707,8 +707,8 @@
         "componentes": {
           "tabla_presupuesto.php": {
             "type": "-",
-            "size": 3183,
-            "lmtime": 1696845899779.5923,
+            "size": 3294,
+            "lmtime": 1697210433964.5034,
             "modified": false
           },
           "tabla_remito.php": {
@@ -739,8 +739,8 @@
         "consultas": {
           "insert_remito.php": {
             "type": "-",
-            "size": 596,
-            "lmtime": 1695680325448.015,
+            "size": 600,
+            "lmtime": 1697210433970.4883,
             "modified": false
           }
         },
@@ -1006,8 +1006,8 @@
             },
             "login.php": {
               "type": "-",
-              "size": 1790,
-              "lmtime": 1696499693430.2507,
+              "size": 1814,
+              "lmtime": 1697122857499.5015,
               "modified": false
             },
             "registros.php": {
@@ -1018,8 +1018,8 @@
             },
             "sesionValidate.php": {
               "type": "-",
-              "size": 1328,
-              "lmtime": 1694990688782.333,
+              "size": 1784,
+              "lmtime": 1697242723611.428,
               "modified": false
             },
             "validar.php": {
@@ -1033,7 +1033,7 @@
         "index.php": {
           "type": "-",
           "size": 48,
-          "lmtime": 1685416172349.2278,
+          "lmtime": 1697119885053.9663,
           "modified": false
         },
         "inventario.sql": {
@@ -1089,9 +1089,9 @@
           },
           "funciones_rapidas.js": {
             "type": "-",
-            "size": 2127,
+            "size": 2226,
             "lmtime": 1696891595116.5654,
-            "modified": false
+            "modified": true
           },
           "jquery-3.5.1.js": {
             "type": "-",
@@ -1119,8 +1119,8 @@
           },
           "login.js": {
             "type": "-",
-            "size": 926,
-            "lmtime": 1696499675049.9587,
+            "size": 948,
+            "lmtime": 1697242392991.7122,
             "modified": false
           },
           "sb-admin-2.js": {
@@ -1227,8 +1227,8 @@
         "reportes": {
           "detalle_presupuesto.php": {
             "type": "-",
-            "size": 3010,
-            "lmtime": 1696504206208.706,
+            "size": 3461,
+            "lmtime": 1697210433983.3833,
             "modified": false
           },
           "detalle_remitos_clientes.php": {
@@ -1239,8 +1239,8 @@
           },
           "imprimirdetallepresupuesto.php": {
             "type": "-",
-            "size": 771,
-            "lmtime": 1694180412000,
+            "size": 783,
+            "lmtime": 1697210433989.3699,
             "modified": false
           },
           "imprimirremitocliente.php": {
@@ -1263,14 +1263,14 @@
           },
           "remitos_clientes.php": {
             "type": "-",
-            "size": 3661,
-            "lmtime": 1696849417086.2014,
+            "size": 3455,
+            "lmtime": 1697210433998.3464,
             "modified": false
           },
           "remitos_obras.php": {
             "type": "-",
-            "size": 4106,
-            "lmtime": 1696459570574.4714,
+            "size": 3933,
+            "lmtime": 1697210434003.6848,
             "modified": false
           }
         },
@@ -3587,9 +3587,9 @@
           },
           "editar_cat.php": {
             "type": "-",
-            "size": 2465,
+            "size": 2462,
             "lmtime": 1690483958000,
-            "modified": false
+            "modified": true
           },
           "editar_clientes.php": {
             "type": "-",
@@ -3617,8 +3617,8 @@
           },
           "editar_materiasprimas.php": {
             "type": "-",
-            "size": 5844,
-            "lmtime": 1696891595267.9226,
+            "size": 5926,
+            "lmtime": 1697294760324.353,
             "modified": false
           },
           "editar_obras.php": {
@@ -3677,9 +3677,9 @@
           },
           "form_comprar_mp.php": {
             "type": "-",
-            "size": 4509,
+            "size": 4872,
             "lmtime": 1696891595422.2976,
-            "modified": false
+            "modified": true
           },
           "form_equivalencias.php": {
             "type": "-",
@@ -3737,9 +3737,9 @@
           },
           "materias_primas.php": {
             "type": "-",
-            "size": 7528,
+            "size": 7571,
             "lmtime": 1696891595631.7473,
-            "modified": false
+            "modified": true
           },
           "NOTAS": {
             "type": "-",
@@ -3785,8 +3785,8 @@
           },
           "remitos_obras.php": {
             "type": "-",
-            "size": 11431,
-            "lmtime": 1696850522365.0818,
+            "size": 11553,
+            "lmtime": 1697210434014.1235,
             "modified": false
           },
           "salir.php": {

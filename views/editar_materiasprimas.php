@@ -12,6 +12,7 @@
                         <div class="col-sm-2">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Codigo</label>
+                                
                                 <input type="text" id="iecodigo" name="iecodigo" class="form-control"  required>
                             </div>
                         </div> 
@@ -64,7 +65,7 @@
                     </div>
                     <br>
                     <input type="hidden" name="accion" value="editar_mp">
-                    <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                    <input type="text" name="id" value="<?php echo $fila['id']; ?>">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="EditarMP(<?php echo $fila['id']; ?>)">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
@@ -79,6 +80,7 @@
 <script>
     function EditarMP(id) {
         var datosFormulario = $("#FormEditarMP" + id).serialize();
+        alert(datosFormulario);
         $.ajax({
             url: "../includes/functions.php",
             type: "POST",

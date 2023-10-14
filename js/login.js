@@ -1,12 +1,13 @@
-const btnSub = document.getElementById("loginForm")
+const btnSub = document.getElementById("loginForm");
 btnSub.addEventListener('submit', (function (e) {
     e.preventDefault();
-    let userData = new FormData(document.forms.namedItem("loginData"))
-    userData.append("login", "login")
-    fetch('sesionValidate.php',{
-        method: 'POST',
+    let userData = new FormData(document.forms.namedItem("loginData"));
+    userData.append("login", "login");
+    fetch('../sesion/sesionValidate.php',{
+        method: "POST", // or 'PUT'
         body: userData
-    }).then((res) => res.json()).then((response) => {
+    }).then((res) => res.json())
+      .then((response) => {
         console.log();
         if (response === "success") {
             window.location.replace("../../views/index.php")
