@@ -65,7 +65,7 @@
                     </div>
                     <br>
                     <input type="hidden" name="idmp" id="idmp">
-                    <input type="hidden" name="accion" value="editar_mp">
+                    <input type="hidden" name="accion" id="accion" value="editar_mp">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="EditarMP()">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
@@ -86,10 +86,12 @@
         unidad=$('#seunidad').val();
         categoria=$('#seid_categoria').val();
         peso=$('#iepesounitario').val();
+        accion=$('#accion').val();
        // var datosFormulario = $("#FormEditarMP").serialize();
-       datosFormulario="id="+id+"&codigo="+codigo+"&producto="+cantidad+"&unidad="+unidad+"&categoria="+categoria+"&peso="+peso;
+       datosFormulario="id="+id+"&codigo="+codigo+"&producto="+producto+"&cantidad="+cantidad+"&unidad="+unidad+"&categoria="+categoria+"&peso="+peso+"&accion="+accion;
+       alert(datosFormulario);
        $.ajax({
-            url: "./includes/functions.php",
+            url: "../consultas/update_mp.php",
             type: "POST",
             data: datosFormulario,
             dataType: "json",

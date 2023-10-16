@@ -597,6 +597,7 @@ function editar_inv()
 
 function editar_mp()
 {
+    alert('entra');
     require_once("db.php");
     $id=$_POST['id'];
     $codigo=$_POST['codigo'];
