@@ -27,6 +27,7 @@ function comprar_productos(datos){
 function modificar_mp(datos){
     
     dato=datos.split('||');
+    id=dato[0];
 	codigo=dato[1];
 	producto=dato[2];
 	existencia=dato[3];
@@ -34,6 +35,8 @@ function modificar_mp(datos){
     unidad=dato[5];
     peso=dato[6];
 
+    
+    $('#idmp').val(id);
     $('#iecodigo').val(codigo);
     $('#ieproducto').val(producto);
     $('#iecantidad').val(existencia);

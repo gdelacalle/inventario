@@ -1,4 +1,5 @@
-<div class="modal fade" id="modal_editar_mp<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="modal_editar_mp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,7 +13,6 @@
                         <div class="col-sm-2">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Codigo</label>
-                                
                                 <input type="text" id="iecodigo" name="iecodigo" class="form-control"  required>
                             </div>
                         </div> 
@@ -64,10 +64,10 @@
                             </div>
                     </div>
                     <br>
+                    <input type="hidden" name="idmp" id="idmp">
                     <input type="hidden" name="accion" value="editar_mp">
-                    <input type="text" name="id" value="<?php echo $fila['id']; ?>">
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="EditarMP(<?php echo $fila['id']; ?>)">Guardar</button>
+                        <button type="button" class="btn btn-primary" onclick="EditarMP()">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
                     <?php include "../includes/footer.php"; ?>
@@ -78,11 +78,18 @@
 </div>
 
 <script>
-    function EditarMP(id) {
-        var datosFormulario = $("#FormEditarMP" + id).serialize();
-        alert(datosFormulario);
-        $.ajax({
-            url: "../includes/functions.php",
+    function EditarMP() {
+        id=$('#idmp').val();
+        codigo=$('#iecodigo').val();
+        producto=$('#ieproducto').val();
+        cantidad=$('#iecantidad').val();
+        unidad=$('#seunidad').val();
+        categoria=$('#seid_categoria').val();
+        peso=$('#iepesounitario').val();
+       // var datosFormulario = $("#FormEditarMP").serialize();
+       datosFormulario="id="+id+"&codigo="+codigo+"&producto="+cantidad+"&unidad="+unidad+"&categoria="+categoria+"&peso="+peso;
+       $.ajax({
+            url: "./includes/functions.php",
             type: "POST",
             data: datosFormulario,
             dataType: "json",

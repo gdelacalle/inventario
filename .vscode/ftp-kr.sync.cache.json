@@ -720,7 +720,7 @@
           "tabla_sel_items.php": {
             "type": "-",
             "size": 1346,
-            "lmtime": 1690464868000,
+            "lmtime": 1697384093591.1396,
             "modified": false
           }
         },
@@ -873,9 +873,9 @@
         "includes": {
           "db.php": {
             "type": "-",
-            "size": 280,
+            "size": 297,
             "lmtime": 1689101104000,
-            "modified": false
+            "modified": true
           },
           "eliminar_cat.php": {
             "type": "-",
@@ -963,8 +963,8 @@
           },
           "functions.php": {
             "type": "-",
-            "size": 21733,
-            "lmtime": 1696891594977.2195,
+            "size": 22709,
+            "lmtime": 1697385886700.9614,
             "modified": false
           },
           "functionss.php": {
@@ -1089,9 +1089,9 @@
           },
           "funciones_rapidas.js": {
             "type": "-",
-            "size": 2226,
-            "lmtime": 1696891595116.5654,
-            "modified": true
+            "size": 2465,
+            "lmtime": 1697385091762.974,
+            "modified": false
           },
           "jquery-3.5.1.js": {
             "type": "-",
@@ -3617,8 +3617,8 @@
           },
           "editar_materiasprimas.php": {
             "type": "-",
-            "size": 5926,
-            "lmtime": 1697294760324.353,
+            "size": 6190,
+            "lmtime": 1697390769386.3782,
             "modified": false
           },
           "editar_obras.php": {
