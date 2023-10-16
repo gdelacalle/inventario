@@ -44,8 +44,11 @@ session_start();
                             $result = mysqli_query($conexion, "SELECT SUM(m.existencia * m.pesounitario) peso, m.id,m.codigo,m.producto,m.existencia,m.precio,m.pesounitario,m.unidad,m.minimo,c.categoria,c.id as cid
                             FROM materias_primas as m INNER JOIN categorias as c ON c.id = m.id_categoria
                             GROUP BY m.id ORDER BY m.producto ASC");
+                            $subtotal=0;
                             while ($fila = mysqli_fetch_assoc($result)){
-                                $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid']."||".$fila['unidad']."||".$fila['pesounitario'];                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
+                                $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid']."||".$fila['unidad']."||".$fila['pesounitario'];                                
+                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
+                                $subtotal=$subtotal+$fila['peso'];
                             ?>
                                 <tr>
                                     <td><?php echo $fila['id']; ?></td>
@@ -70,6 +73,7 @@ session_start();
                                 </td>
                                 </tr>    
                             <?php } ?>
+                            <tr><?php echo "SUBTOTAL: ".$subtotal ?></tr>
                         </tbody>
                     </table>
                     <?php include "../includes/footer.php"; ?>

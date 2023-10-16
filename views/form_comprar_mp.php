@@ -58,8 +58,7 @@
 </div>
 
 <script>
-    $(document).ready(function() {
-        $('#MpForm').submit(function(e) {
+    $('#MpForm').submit(function(e) {
             e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
             var formData = $(this).serialize(); // Serializa los datos del formulario
             $.ajax({
@@ -93,5 +92,4 @@
                 }
             });
         });
-    });
 </script>
