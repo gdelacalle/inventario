@@ -61,11 +61,11 @@ if ($permiso == "3") {
                                         Editar <i class="fa fa-edit "></i></button>
 
                                         <a href="../views/remitos_obras.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-editar">
-                                        <i class="fa fa-reply-all"></i></a>
+                                        Remitar <i class="fa fa-reply-all"></i></a>
                                         
                                         
                                         <a type="button" class="btn btn-success" data-toggle="modal" data-target="#estadopresu<?php echo $fila['id']?>">
-                                        <i class="fa fa-random"></i></a>
+                                        Estado <i class="fa fa-random"></i></a>
                                     </td>
                                 </tr>
                                 

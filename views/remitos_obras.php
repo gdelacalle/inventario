@@ -59,12 +59,7 @@ $id = $_GET['id'];
                                 </select>
                             </div>
                         </div>
-                        
-            <div class="col-sm-2">
-                <br>
-                <br>
-
-                <a href="../reportes/imprimirremitoobra.php?id=<?php echo $id ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
+<a href="../reportes/imprimirremitoobra.php?id=<?php echo $id ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
             </div>
             <div class="card-body">
         </form>

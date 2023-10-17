@@ -57,13 +57,13 @@ if ($permiso == "3") {
                                     <td><?php echo $fila['fecha_alta']; ?></td>
                                     <td>
                                         <a href="../views/armar_presupuesto.php?id=<?php echo $fila['id']?>" class="btn btn-warning btn-agregar">
-                                            <i class="fa fa-plus"></i></a>
+                                        Agregar <i class="fa fa-plus"></i></a>
                                         <a href="../views/detalles_presupuesto.php?id=<?php echo $fila['id']?>" class="btn btn-primary btn-editar">
-                                            <i class="fa fa-eye"></i></a>
+                                        Ver <i class="fa fa-eye"></i></a>
                                         <a href="../includes/eliminar_presupuesto.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+                                        Eliminar <i class="fa fa-trash "></i></a>
                                         <a type="button" class="btn btn-success" data-toggle="modal" data-target="#estadopresu<?php echo $fila['id']?>">
-                                            <i class="fa fa-random"></i></a>
+                                        Estado <i class="fa fa-random"></i></a>
 
                                             
                                     </td>

@@ -40,10 +40,10 @@ session_start();
                                     <td><?php echo $fila['fecha']; ?></td>
                                     <td>
                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarcat<?php echo $fila['id']; ?>">
-                                            <i class="fa fa-edit "></i>
+                                        Editar <i class="fa fa-edit "></i>
                                         </button> 
                                         <a href="../includes/eliminar_cat.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+                                        Eliminar <i class="fa fa-trash "></i></a>
                                     </td>
                                 </tr>
                                 <?php include "editar_cat.php"; ?>

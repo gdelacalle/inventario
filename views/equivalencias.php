@@ -51,11 +51,11 @@ session_start();
                                     <td><?php echo $fila['categoria']; ?></td>
                                     <td><?php echo $fila['peso']; ?></td>
                                     <td>
-                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia<?php echo $fila['id']; ?>">
-                                    Editar <i class="fa fa-edit "></i></button>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia<?php echo $fila['id']; ?>">
+                                        Editar <i class="fa fa-edit "></i></button>
 
                                         <a href="../includes/eliminar_equivalencia.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+                                        Eliminar <i class="fa fa-trash "></i></a>
                                     </td>
                                 </tr>
                                 <?php } ?> 
