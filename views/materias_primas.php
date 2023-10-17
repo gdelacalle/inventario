@@ -73,9 +73,10 @@ session_start();
                                 </td>
                                 </tr>    
                             <?php } ?>
-                            <tr><?php echo "SUBTOTAL: ".$subtotal ?></tr>
+                            
                         </tbody>
                     </table>
+                    <tr><?php echo "SUBTOTAL: ".$subtotal ?></tr>
                     <?php include "../includes/footer.php"; ?>
                     
     <script>
