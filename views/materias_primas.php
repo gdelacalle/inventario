@@ -9,7 +9,7 @@ session_start();
 <body id="page-top">
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid"> 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -76,7 +76,6 @@ session_start();
                             
                         </tbody>
                     </table>
-                    <tr><?php echo "SUBTOTAL: ".$subtotal ?></tr>
                     <?php include "../includes/footer.php"; ?>
                     
     <script>
@@ -154,7 +153,9 @@ session_start();
     const exportButton = document.getElementById('export-btn');
     exportButton.addEventListener('click', exportTableToExcel);
 </script>
+<<script>
 
+</script>
 <?php include "form_materiasprimas.php"; ?>
 
 </html>
