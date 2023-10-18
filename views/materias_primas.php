@@ -41,7 +41,7 @@ session_start();
                         <tbody>
                             <?php
                             require_once("../includes/db.php");
-                            $result = mysqli_query($conexion, "SELECT SUM(m.existencia * m.pesounitario) peso, m.id,m.codigo,m.producto,m.existencia,m.precio,m.pesounitario,m.unidad,m.minimo,c.categoria,c.id as cid
+                            $result = mysqli_query($conexion, "SELECT m.peso, m.id,m.codigo,m.producto,m.existencia,m.precio,m.pesounitario,m.unidad,m.minimo,c.categoria,c.id as cid
                             FROM materias_primas as m INNER JOIN categorias as c ON c.id = m.id_categoria
                             GROUP BY m.id ORDER BY m.producto ASC");
                             $subtotal=0;
@@ -60,7 +60,7 @@ session_start();
                                     <td><?php echo $fila['categoria']; ?></td>
                                 <td>
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_act_mp" onclick="actualizar_mp('<?php echo $datos; ?>')">
-                                    Actualiar <i class="fa fa-retweet"></i></button>
+                                    Salida <i class="fa fa-retweet"></i></button>
 
                                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_mp" onclick="modificar_mp('<?php echo $datos; ?>')">
                                     Editar <i class="fa fa-edit "></i></button>
