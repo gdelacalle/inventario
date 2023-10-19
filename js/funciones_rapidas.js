@@ -91,6 +91,7 @@ function modificar_eq(datos){
     dato=datos.split('||');
     id=dato[0];
     seccion=dato[1];
+    alert();
 
     $('#ideq').val(id);
     $('#eseccion').val(seccion);

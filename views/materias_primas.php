@@ -72,11 +72,9 @@ session_start();
                                 </td>
                                 </tr>    
                             <?php } ?>
-                            
                         </tbody>
                     </table>
                     <?php include "../includes/footer.php"; ?>
-                    
     <script>
     $('.btn-del').on('click', function(e) {
         e.preventDefault();
