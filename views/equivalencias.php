@@ -38,8 +38,7 @@ session_start();
                             $result = mysqli_query($conexion, "SELECT e.id,e.seccion, e.e1, e.e2, e.h1, e.h2, e.b,e.peso, c.categoria
                             FROM equivalencias as e INNER JOIN categorias as c 
                             WHERE e.id_categoria = c.id ");
-                            while ($fila = mysqli_fetch_assoc($result)) {
-                                $datos=$fila['id']."||".$fila['seccion'];
+                            while ($fila = mysqli_fetch_assoc($result)) :
                             ?>
                                 <tr>
                                     <td><?php echo $fila['seccion']; ?></td>
@@ -58,7 +57,7 @@ session_start();
                                         Eliminar <i class="fa fa-trash "></i></a>
                                     </td>
                                 </tr>
-                                <?php } ?> 
+                                <?php endwhile; ?>
                         </tbody>
                     </table>
                     <?php include "editar_equivalencias.php"; ?>
@@ -94,18 +93,7 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- /.container-fluid -->
-
-    </div>
-    <!-- End of Main Content -->
-    </div>
-    <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
-
 </body>
 <?php include "form_equivalencias.php"; ?>
-
 <?php include "../includes/footer.php"; ?>
-
 </html>

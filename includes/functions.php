@@ -597,7 +597,7 @@ function editar_inv()
 
 function editar_mp()
 {
-    alert('entra');
+    // alert('entra');
     require_once("db.php");
     $id=$_POST['id'];
     $codigo=$_POST['codigo'];
@@ -619,8 +619,9 @@ function editar_mp()
 
 function Actualiza_stock()
 {
+    alert('entra');
     require_once("db.php");
-    extract($_POST);
+    $cantidad=$_POST['cantidad'];
     $consulta = "UPDATE materias_primas SET existencia = existencia - '$cantidad' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {

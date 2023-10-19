@@ -1,7 +1,7 @@
-<div class="modal fade" id="modal_act_mp"tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_act_mp<?php echo $fila['id']; ?>"tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLabel">Modificar Datos del Producto</h3>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
@@ -24,9 +24,9 @@
                             </div>
                         </div>
                     </div>
+                    <br>
                     <input type="hidden" name="accion" value="Actualiza_stock">
                     <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
-                    <br>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="actualizastock(<?php echo $fila['id']; ?>)">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
