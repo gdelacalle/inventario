@@ -36,9 +36,10 @@ session_start();
                             <?php
                             require_once("../includes/db.php");
                             $result = mysqli_query($conexion, "SELECT e.id,e.seccion, e.e1, e.e2, e.h1, e.h2, e.b,e.peso, c.categoria
-                            FROM equivalencias as e INNER JOIN categorias as c 
-                            WHERE e.id_categoria = c.id ");
-                            while ($fila = mysqli_fetch_assoc($result)) :
+                            FROM equivalencias as e INNER JOIN categorias as c WHERE e.id_categoria = c.id ");
+                            while ($fila = mysqli_fetch_assoc($result)) {
+                                $datos=$fila['id']."||".$fila['seccion'];                                
+
                             ?>
                                 <tr>
                                     <td><?php echo $fila['seccion']; ?></td>
@@ -49,15 +50,15 @@ session_start();
                                     <td><?php echo $fila['b']; ?></td>
                                     <td><?php echo $fila['categoria']; ?></td>
                                     <td><?php echo $fila['peso']; ?></td>
-                                    <td>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia<?php echo $fila['id']; ?>">
+                                    <td>                                       
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_equivalencia" onclick="modificar_eq('<?php echo $datos; ?>')">
                                         Editar <i class="fa fa-edit "></i></button>
 
                                         <a href="../includes/eliminar_equivalencia.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
                                         Eliminar <i class="fa fa-trash "></i></a>
                                     </td>
                                 </tr>
-                                <?php endwhile; ?>
+                                <?php } ?>
                         </tbody>
                     </table>
                     <?php include "editar_equivalencias.php"; ?>

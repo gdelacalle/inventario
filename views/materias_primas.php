@@ -47,7 +47,6 @@ session_start();
                             $subtotal=0;
                             while ($fila = mysqli_fetch_assoc($result)){
                                 $datos=$fila['id']."||".$fila['codigo']."||".$fila['producto']."||".$fila['existencia']."||".$fila['cid']."||".$fila['unidad']."||".$fila['pesounitario'];                                
-                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
                                 $subtotal=$subtotal+$fila['peso'];
                             ?>
                                 <tr>
