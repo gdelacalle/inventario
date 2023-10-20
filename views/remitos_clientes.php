@@ -51,7 +51,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                 <div class="col-sm-1">
                     <div>
                         <label for="cantidad">Cantidad</label>
-                        <input id="cantidad" class="form-control" type="text" name="cantidad" placeholder="Cantidad" >
+                        <input id="cantidad" class="form-control" type="text" name="cantidad" placeholder="Cantidad" required >
                     </div>
                 </div>
             <div class="col-sm-3">
@@ -91,13 +91,13 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
             <div class="col-sm-1">
                 <div class="mb-3">
                     <label for="metros">Medida</label>
-                    <input  id="metros" min="0" max="30000" class="form-control" step="0.01" type="number" name="metros" placeholder="Mts o Kgs">
+                    <input  id="metros" min="0" max="30000" class="form-control" step="0.01" type="number" name="metros" placeholder="Mts o Kgs" required>
                 </div>
             </div>
             <div class="col-sm-2">
             <div class="mb-3">
                     <label for="unidad">Tipo de Unidad</label>
-                        <select name="unidad" id="unidad" class="form-control" >
+                        <select name="unidad" id="unidad" class="form-control" required>
                             <option value="">Seleccione una opcion</option>
                             <option value="UNIDAD">UNIDAD</option>
                             <option value="MTS">METROS</option>
