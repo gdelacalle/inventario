@@ -1,4 +1,7 @@
 <?php
+$fecha = date('10-m-Y');//Obtengo la fecha del dia actual
+$fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
+
 require "../includes/db.php";
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
@@ -23,14 +26,12 @@ $total['descripcion'] = mysqli_num_rows($obras);
 $obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
 $total['estado'] = mysqli_num_rows($obrasp);
 
-$fecha='17-10-2023';
-
-$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha' GROUP BY fecha";
+$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha_menos1dia' GROUP BY fecha";
 $salidasperfileria= $conexion -> query($consulta3);
 $fila=$salidasperfileria->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasperfileria=$fila['salidasperfileria'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha' GROUP BY fecha";
+$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha_menos1dia' GROUP BY fecha";
 $salidasestructura= $conexion -> query($consulta4);
 $fila=$salidasestructura->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de calcular en la consulta
@@ -126,7 +127,7 @@ session_start();
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-industry fa-2x"></i>
+                    <i class="fas fa-industry fa-2x"> </i> <?php echo $fecha_menos1dia?>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Salida Perfileria   
@@ -146,7 +147,7 @@ session_start();
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-industry fa-2x"></i>
+                    <i class="fas fa-industry fa-2x"></i> <?php echo $fecha_menos1dia ?>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Salida Estructuras
