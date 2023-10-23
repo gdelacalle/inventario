@@ -60,8 +60,10 @@ function comprar_mp(datos){
 function actualizar_mp(datos){
     
     dato=datos.split('||');
+    id=dato[0];
+	codigo=dato[1];
 	producto=dato[2];
-	
+	$('#smpid').val(id);
     $('#producto').val(producto);
 }
 

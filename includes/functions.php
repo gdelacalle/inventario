@@ -333,7 +333,8 @@ function insertar_compra_mp()
     $consulta = "INSERT INTO compras_mp (mp_id,nro_comp,cmp_cantidad,cmp_kg,cmp_estado) 
     VALUES ('$iid','$icomprobante','$iexistencia','$ipesounitario','1')";
     $resultado = mysqli_query($conexion, $consulta);
-
+    $consulta1 = "UPDATE materias_primas SET existencia = existencia + '$iexistencia', peso=peso+$ipesounitario WHERE id = '$iid' ";
+    $resultado1 = mysqli_query($conexion, $consulta1);
     if ($resultado) {
         $response = array(
             'status' => 'success',
@@ -619,11 +620,17 @@ function editar_mp()
 
 function Actualiza_stock()
 {
-    alert('entra');
+   
     require_once("db.php");
+    $id=$_POST['smpid'];
+    $producto=$_POST['producto'];
+    $destino=$_POST['sidproducto'];
     $cantidad=$_POST['cantidad'];
-    $consulta = "UPDATE materias_primas SET existencia = existencia - '$cantidad' WHERE id = '$id' ";
+    $peso=$_POST['smppeso'];
+    $consulta = "UPDATE materias_primas SET existencia = existencia - '$cantidad', peso=peso-$peso WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
+    $consulta1 = "INSERT INTO salida_mp(smp_id, smp_producto, smp_cantidad, smp_peso, smp_destino) VALUES ($id,'$producto',$cantidad,$peso,'$destino')";
+    $resultado1 = mysqli_query($conexion, $consulta1);
     if ($resultado) {
         echo json_encode("correcto");
     } else {

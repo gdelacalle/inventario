@@ -47,7 +47,7 @@
                     <input type="hidden" name="accion" value="insertar_compra_mp">
                     <br>
                     <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="register" name="registrar" onclick="insertarcompra()">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
             </div>
@@ -58,7 +58,8 @@
 </div>
 
 <script>
-    $('#MpForm').submit(function(e) {
+    function insertarcompra(){
+    //$('#MpForm').submit(function(e) {
             e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
             var formData = $(this).serialize(); // Serializa los datos del formulario
             $.ajax({
@@ -91,5 +92,5 @@
                     });
                 }
             });
-        });
+        };
 </script>
