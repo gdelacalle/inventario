@@ -1,5 +1,5 @@
 <?php
-$fecha = date('10-m-Y');//Obtengo la fecha del dia actual
+$fecha = date('22-m-Y');//Obtengo la fecha del dia actual
 $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 
 require "../includes/db.php";
@@ -46,27 +46,10 @@ session_start();
 <div class="container-fluid">
     <!-- Content Row -->
     <div class="row">
-
-        <div class="col-lg-3 col-md-4 col-sm-4">
-        <div class="card card-stats">
-            <div class="card-header card-header-success card-header-icon">
-                <div class="card-icon">
-                    <i class="fas fa-users fa-2x"></i>
-                </div>
-                <a class="card-category text-success font-weight-bold">
-                    Obras en Ejecucion
-                </a>
-                <h3 class="card-title"><?php echo $total['descripcion']; ?></h3>
-            </div>
-            <div class="card-footer bg-warning text-white">
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-shopping-bag fa-2x"></i>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Kgs en Flejes
@@ -83,11 +66,10 @@ session_start();
         </div>
     </div>
     
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-shopping-bag fa-2x"></i>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Kgs en Bobinas
@@ -103,11 +85,10 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-shopping-bag fa-2x"></i>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Kgs en Chapas
@@ -127,7 +108,7 @@ session_start();
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-industry fa-2x"> </i> <?php echo $fecha_menos1dia?>
+                    <?php echo $fecha_menos1dia?>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Salida Perfileria   
@@ -139,7 +120,7 @@ session_start();
                 </meter>
                 <h3 class="card-title"><?php echo $salidasperfileria;echo ' Kgs'?></h3>
             </div>
-            <div class="card-footer bg-danger text-white">
+            <div class="card-footer bg-success text-white">
             </div>
         </div>
     </div>
@@ -147,7 +128,7 @@ session_start();
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
-                    <i class="fas fa-industry fa-2x"></i> <?php echo $fecha_menos1dia ?>
+                    <?php echo $fecha_menos1dia ?>
                 </div>
                 <a class="card-category text-danger font-weight-bold">
                     Salida Estructuras
@@ -159,7 +140,7 @@ session_start();
                 </meter>
                 <h3 class="card-title"><?php echo $salidasestructura;echo ' Kgs'?></h3>
             </div>
-            <div class="card-footer bg-danger text-white">
+            <div class="card-footer bg-success text-white">
             </div>
         </div>
     </div>
