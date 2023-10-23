@@ -23,6 +23,18 @@ $total['descripcion'] = mysqli_num_rows($obras);
 $obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
 $total['estado'] = mysqli_num_rows($obrasp);
 
+$fecha='17-10-2023';
+
+$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha' GROUP BY fecha";
+$salidasperfileria= $conexion -> query($consulta3);
+$fila=$salidasperfileria->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
+$salidasperfileria=$fila['salidasperfileria'];//Este es el valor que acabas de calcular en la consulta
+
+$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha' GROUP BY fecha";
+$salidasestructura= $conexion -> query($consulta4);
+$fila=$salidasestructura->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
+$salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de calcular en la consulta
+
 error_reporting(0);
 session_start();
 
@@ -105,6 +117,46 @@ session_start();
                         value=<?php echo $SumaTotal;?>>
                 </meter>
                 <h3 class="card-title"><?php echo $SumaTotal;echo ' Kgs'?></h3>
+            </div>
+            <div class="card-footer bg-danger text-white">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4">
+        <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+                <div class="card-icon">
+                    <i class="fas fa-industry fa-2x"></i>
+                </div>
+                <a class="card-category text-danger font-weight-bold">
+                    Salida Perfileria   
+                </a>
+                <meter id="fuel"
+                        min="0" max="8000"
+                        low="1200" high="5000" optimum="3500"
+                        value=<?php echo $salidasperfileria;?>>
+                </meter>
+                <h3 class="card-title"><?php echo $salidasperfileria;echo ' Kgs'?></h3>
+            </div>
+            <div class="card-footer bg-danger text-white">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-4">
+        <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+                <div class="card-icon">
+                    <i class="fas fa-industry fa-2x"></i>
+                </div>
+                <a class="card-category text-danger font-weight-bold">
+                    Salida Estructuras
+                </a>
+                <meter id="fuel"
+                        min="0" max="3500"
+                        low="10" high="3000" optimum="5000"
+                        value=<?php echo $salidasestructura;?>>
+                </meter>
+                <h3 class="card-title"><?php echo $salidasestructura;echo ' Kgs'?></h3>
             </div>
             <div class="card-footer bg-danger text-white">
             </div>
