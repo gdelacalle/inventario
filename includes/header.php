@@ -152,6 +152,26 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
             <?php if($permiso=="1"): ?>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContable" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Contable</span>
+                </a>
+                <div id="collapseContable" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Modulos</h6>
+                        <a class="collapse-item" href="../views/index.php">Ingresos a Caja</a>
+                        <a class="collapse-item" href="../views/index.php">Egresos a Caja</a>
+                        <a class="collapse-item" href="../views/index.php">Transferencias entre Cajas</a>
+
+
+            </li>
+
+            <?php endif; ?>
+
+            <hr class="sidebar-divider">
+
+            <?php if($permiso=="1"): ?>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Configuracion</span>
