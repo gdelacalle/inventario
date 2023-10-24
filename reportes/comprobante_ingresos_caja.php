@@ -8,20 +8,20 @@ $consulta = mysqli_query($conexion, "UPDATE ingresos_caja SET estado = '2'");
 error_reporting(0);
 session_start();
 $granTotal=0;
-$numero = $_GET['num'];
+$numero = $_GET['numero'];
 
 require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja,ic.nro_comp, ic.id_gasto, ic.comentarios, ic.fecha, ic.importe,c.descripcion,tg.descripcion as tgdescripcion 
 FROM ingresos_caja as ic, cajas as c, tipo_gastos as tg
-WHERE ic.id_caja = c.id AND ic.id_gasto = tg.id AND ic.estado='2' AND ic.nro_comp = 5");
+WHERE ic.id_caja = c.id AND ic.id_gasto = tg.id AND ic.estado='2' AND ic.nro_comp = $numero");
 $fecha= $fila['fecha'];
-$numero = $fila['nro_comp'];
+$numeros= $fila['numero'];
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
 <div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
-<h2><center>Comprobante de Ingreso a Caja</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numero; ?>
+<h2><center>Comprobante de Ingreso a Caja</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numeros; ?>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class ="container">
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">

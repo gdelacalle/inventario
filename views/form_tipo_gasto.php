@@ -9,13 +9,15 @@
             <div class="modal-body">
                 <form id="gastoForm">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <div class="mb-3">
                                 <label for="descripcion" class="form-label">Descripcion</label>
                                 <input type="text" id="descripcion" name="descripcion" class="form-control" required>
                             </div>
                         </div>
-                        
+                    </div>
+                    </div>
+
                     <input type="hidden" name="accion" value="insertar_nuevo_tipo_gasto">
                     
                     <div class="modal-footer">

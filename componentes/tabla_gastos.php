@@ -19,6 +19,7 @@
             </thead>
             <tbody>
                 <?php
+                $granTotal=0;
                     require_once("../includes/db.php");
                     $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja, ic.id_gasto, ic.comentarios, ic.fecha, ic.importe,c.descripcion,tg.descripcion as tgdescripcion 
                     FROM ingresos_caja as ic, cajas as c, tipo_gastos as tg
@@ -32,8 +33,10 @@
                     <td> <a href="../includes/eliminar_gasto.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
                     Quitar <i class="fa fa-trash "></i></a></td>
                 </tr>
+                <?php $granTotal += $fila['importe'];?>
                 <?php endwhile;?>      
             </tbody>
         </table>
+        <div style="text-align: right;"><h2>Total: $ <?php echo $granTotal; ?></h2>
     </body>
 </html>
