@@ -7,7 +7,7 @@ session_start();
 <script type='text/javascript' src="../js/funciones_rapidas.js"></script>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <body id="page-top">
-
+ 
     <!-- Begin Page Content -->
     <div class="container-fluid">
         <!-- DataTales Example -->

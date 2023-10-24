@@ -7,7 +7,7 @@ session_start();
 <script type='text/javascript' src="../js/funciones_rapidas.js"></script>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <body id="page-top">
-
+ 
     <!-- Begin Page Content -->
     <div class="container-fluid"> 
         <!-- DataTales Example -->
@@ -105,6 +105,8 @@ session_start();
 <?php include "actualizar_stock.php"; ?>
 <?php include "form_comprar_mp.php"; ?>
 <?php include "editar_materiasprimas.php"; ?>
+
+</body>
 <script>
     // Función para exportar la tabla a un archivo Excel
     function exportTableToExcel() {
@@ -150,9 +152,7 @@ session_start();
     const exportButton = document.getElementById('export-btn');
     exportButton.addEventListener('click', exportTableToExcel);
 </script>
-<<script>
 
-</script>
 <?php include "form_materiasprimas.php"; ?>
 
 </html>

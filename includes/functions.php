@@ -40,7 +40,15 @@ if (isset($_POST['accion'])) {
             insertar_materiasprimas();
             break;
 
-        case 'insertar_codebarra':
+        case 'insertar_gasto':
+            insertar_gasto();
+            break;
+           
+        case 'insertar_nuevo_tipo_gasto':
+            insertar_nuevo_tipo_gasto();
+            break;
+
+            case 'insertar_codebarra':
             insertar_codebarra();
             break;
 
@@ -307,8 +315,8 @@ function insertar_materiasprimas()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO materias_primas (codigo, producto, existencia, unidad,id_categoria,pesounitario) 
-    VALUES ('$codigo', '$producto','$existencia','$unidad','$id_categoria','$pesounitario')";
+    $consulta = "INSERT INTO materias_primas (codigo, producto, existencia, minimo, unidad,id_categoria,pesounitario) 
+    VALUES ('$codigo', '$producto','$existencia','$minimo','$unidad','$id_categoria','$pesounitario')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -324,6 +332,55 @@ function insertar_materiasprimas()
     }
     echo json_encode($response);
 }
+
+function insertar_gasto() 
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO ingresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp) 
+    VALUES ('$id_caja','$id_gasto', '$comentarios','$fecha','$importe','1',$numerito)";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+    echo json_encode($response);
+}
+
+
+function insertar_nuevo_tipo_gasto() 
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO tipo_gastos (descripcion, estado) 
+    VALUES ('$descripcion','1')";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+    echo json_encode($response);
+}
+
+
 
 function insertar_compra_mp()
 {
