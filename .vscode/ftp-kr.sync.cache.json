@@ -969,8 +969,8 @@
           },
           "functions.php": {
             "type": "-",
-            "size": 22734,
-            "lmtime": 1697499228806.9849,
+            "size": 23298,
+            "lmtime": 1698093324843.0505,
             "modified": false
           },
           "functionss.php": {
@@ -987,9 +987,9 @@
           },
           "header.php": {
             "type": "-",
-            "size": 12327,
+            "size": 13348,
             "lmtime": 1697579349331.9954,
-            "modified": false
+            "modified": true
           },
           "reporte_productos.php": {
             "type": "-",
@@ -1095,8 +1095,8 @@
           },
           "funciones_rapidas.js": {
             "type": "-",
-            "size": 2465,
-            "lmtime": 1697385091762.974,
+            "size": 2224,
+            "lmtime": 1698090246792.0532,
             "modified": false
           },
           "jquery-3.5.1.js": {
@@ -3533,8 +3533,8 @@
         "views": {
           "actualizar_stock.php": {
             "type": "-",
-            "size": 3071,
-            "lmtime": 1695987219997.156,
+            "size": 4760,
+            "lmtime": 1698092837489.0298,
             "modified": false
           },
           "agregarAlCarrito.php": {
@@ -3683,8 +3683,8 @@
           },
           "form_comprar_mp.php": {
             "type": "-",
-            "size": 4821,
-            "lmtime": 1697499621223.8455,
+            "size": 4881,
+            "lmtime": 1698093545416.3342,
             "modified": false
           },
           "form_equivalencias.php": {
@@ -3731,9 +3731,9 @@
           },
           "index.php": {
             "type": "-",
-            "size": 7039,
+            "size": 8929,
             "lmtime": 1696001834840.6978,
-            "modified": false
+            "modified": true
           },
           "inventario.php": {
             "type": "-",
@@ -3743,8 +3743,8 @@
           },
           "materias_primas.php": {
             "type": "-",
-            "size": 7676,
-            "lmtime": 1697586514393.1653,
+            "size": 7526,
+            "lmtime": 1698090748082.5525,
             "modified": false
           },
           "NOTAS": {
