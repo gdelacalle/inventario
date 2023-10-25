@@ -67,7 +67,6 @@ function actualizar_mp(datos){
     $('#producto').val(producto);
 }
 
-
 function modificar_clientes(datos){
     
     dato=datos.split('||');

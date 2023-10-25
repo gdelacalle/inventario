@@ -1,22 +1,22 @@
 <?php
-$fecha = date('22-m-Y');//Obtengo la fecha del dia actual
+$fecha = date('10-m-Y');//Obtengo la fecha del dia actual
 $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 
 require "../includes/db.php";
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
 
-$consulta = "SELECT SUM(existencia*pesounitario) as SumaTotal FROM materias_primas WHERE id_categoria=54 GROUP BY id_categoria";
+$consulta = "SELECT SUM(peso) as SumaTotal FROM materias_primas WHERE id_categoria=54 GROUP BY id_categoria";
 $SumaTotal= $conexion -> query($consulta);
 $fila=$SumaTotal->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $SumaTotal=$fila['SumaTotal'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta1 = "SELECT SUM(existencia*pesounitario) as SumaBobinas FROM materias_primas WHERE id_categoria=3 GROUP BY id_categoria";
+$consulta1 = "SELECT SUM(peso) as SumaBobinas FROM materias_primas WHERE id_categoria=3 GROUP BY id_categoria";
 $SumaBobinas= $conexion -> query($consulta1);
 $fila1=$SumaBobinas->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $SumaBobinas=$fila1['SumaBobinas'];
 
-$consulta2 = "SELECT SUM(existencia*pesounitario) as SumaFlejes FROM materias_primas WHERE id_categoria=55 GROUP BY id_categoria";
+$consulta2 = "SELECT SUM(peso) as SumaFlejes FROM materias_primas WHERE id_categoria=55 GROUP BY id_categoria";
 $SumaFlejes= $conexion -> query($consulta2);
 $fila3=$SumaFlejes->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $SumaFlejes=$fila3['SumaFlejes'];

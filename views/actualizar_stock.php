@@ -69,9 +69,7 @@
 
 <script>
     function actualizastock() {
-       
         var datosFormulario = $("#actualizarstock").serialize();
-       
         $.ajax({
             url: "../includes/functions.php",
             type: "POST",

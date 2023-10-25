@@ -44,6 +44,10 @@ if (isset($_POST['accion'])) {
             insertar_gasto();
             break;
            
+        case 'insertar_transferencia':
+            insertar_transferencia();
+            break; 
+
         case 'insertar_nuevo_tipo_gasto':
             insertar_nuevo_tipo_gasto();
             break;
@@ -340,6 +344,29 @@ function insertar_gasto()
     include "db.php";
     $consulta = "INSERT INTO ingresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp) 
     VALUES ('$id_caja','$id_gasto', '$comentarios','$fecha','$importe','1',$numerito)";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+    echo json_encode($response);
+}
+
+function insertar_transferencia() 
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe, estado,nro_comp) 
+    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','1',$numerito)";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -674,10 +701,8 @@ function editar_mp()
     }
 }
 
-
 function Actualiza_stock()
 {
-   
     require_once("db.php");
     $id=$_POST['smpid'];
     $producto=$_POST['producto'];

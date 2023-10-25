@@ -161,7 +161,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         <h6 class="collapse-header">Modulos</h6>
                         <a class="collapse-item" href="../views/ingreso_caja.php">Ingresos a Caja</a>
                         <a class="collapse-item" href="../views/contable/egreso_caja.php">Egresos a Caja</a>
-                        <a class="collapse-item" href="../views/contable/transferencias_cajas.php">Transferencias entre Cajas</a>
+                        <a class="collapse-item" href="../views/transferencia_cajas.php">Transferencias entre Cajas</a>
 
 
             </li>

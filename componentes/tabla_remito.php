@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
 
@@ -28,7 +27,7 @@
                 $pesounidad=0;
                 $total=0;
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT cast(SUM(r.cantidad * r.metros * e.peso)as decimal(10,2)) as totalpeso, r.id,cast((e.peso*r.metros)as decimal(10,2)) as pesoxunidad,c.nombre,i.producto,r.seccion,r.cantidad,r.metros,r.unidad
+                    $result = mysqli_query($conexion, "SELECT cast(SUM(r.cantidad * r.metros * e.peso)as decimal(10,2)) as totalpeso, r.id,cast((e.peso*r.metros)as decimal(10,2)) as pesoxunidad,c.nombre,i.producto,r.seccion,r.cantidad,r.metros,r.unidad,c.id as id_cliente
                     FROM remitosclientestmp as r INNER JOIN inventario as i INNER JOIN clientes as c INNER JOIN equivalencias as e 
                     ON r.producto = i.id AND r.id_cliente = c.id AND e.seccion = r.seccion AND r.id_cliente = $id GROUP BY r.id ORDER BY r.id ASC");
                 while ($fila = mysqli_fetch_assoc($result)) :                        
@@ -45,6 +44,7 @@
                     <td><a href="../includes/eliminar_remitosclientestmp.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del"><i class="fa fa-trash "></i></a></td>
                 </tr>
                 <?php $granTotal += $fila['totalpeso'];?>
+                <?php $cliente = $fila['id_cliente'];?>
                 <?php $pesounidad = $fila['pesoxunidad'];?>
                 <?php $total = $fila['totalpeso'];?>
                 <?php endwhile;?> 

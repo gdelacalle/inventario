@@ -76,6 +76,7 @@
 
                     <input type="hidden" name="accion" value="insertar_inventario">
                     <br>
+                    
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

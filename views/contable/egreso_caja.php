@@ -1,5 +1,6 @@
 <html>
 
-PRUEBA DE EGRESOS DE CAJAS
+                                                                    
+                                                            PRUEBA DE EGRESOS DE CAJAS
 
 </html>

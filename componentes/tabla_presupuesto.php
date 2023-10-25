@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -22,7 +21,6 @@
             </thead>
             <tbody>
                 <?php
-
                 $id_obra=$_GET['id'];
                 $granTotal=0;
                 $pesounidad=0;
@@ -58,7 +56,6 @@
             </tbody>
         </table>
         <center><h2>Total: <?php echo $granTotal; ?> KGs</h2>
- 
 </body>
 </html>
 
