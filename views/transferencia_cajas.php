@@ -75,7 +75,7 @@ session_start();
                 <div class="col-sm-3">
                     <div class="mb-3">
                         <label for="importe">Importe</label>
-                        <input  id="importe" min="0" max="1000000" class="form-control" step="0.1" type="number" name="importe" required>
+                        <input  id="importe" min="0" max="100000000" class="form-control" step="0.1" type="number" name="importe" required>
                     </div>
                 </div>
                 <div class="col-sm-12">
@@ -85,13 +85,12 @@ session_start();
                             </div>
                         </div>  
                 <div class="col-sm-1">
-                    <button type="submit" class="btn btn-warning" id="id" name="id">Agregar</button>
-                    <input type="hidden" name="accion" value="insertar_transferencia">
-                </div>
-                    <div class="col-sm-1">
-                        <a target="_blank" href="../reportes/comprobante_transfercajas.php?numero=<?php echo $numcomprobante['num'] ?>" 
+                        <button type="submit" class="btn btn-warning" id="id" name="id">Agregar</button>
+                        <input type="hidden" name="accion" value="insertar_transferencia">
+
+                    <a target="_blank" href="../reportes/comprobante_transfercajas.php?numero=<?php echo $numcomprobante['num'] ?>" 
                         target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
-                    </div>
+                </div>
             </div>
             <div id="tablatransferencias" class="table-responsive">
             </form>              

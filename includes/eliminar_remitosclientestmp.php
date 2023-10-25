@@ -2,10 +2,11 @@
 session_start();
 error_reporting(0);
 
-$id = $_GET['id'];
-$cliente = $_SESSION['cliente'];
 include "db.php";
+$id = $_GET['id'];
+$clientes = $_SESSION['clientes'];
+
 $query = mysqli_query($conexion, "DELETE FROM remitosclientestmp WHERE id = '$id'");
 
-header("Location: ../views/remitos_clientes.php?id=$cliente");
+header("Location: ../views/remitos_clientes.php?id=$clientes");
 ?>

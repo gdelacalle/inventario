@@ -1,9 +1,23 @@
 <?php
 error_reporting(0);
 session_start();
+
+$permiso = $_SESSION['type'];
+if ($permiso == "3") {
+
+    echo "<script language='JavaScript'>
+    alert('Error: No tiene permiso para ingresar a esa página ');
+    location.assign('../views/index.php');
+    </script>";
+
+    die();
+}
+
 include "../includes/header.php";
 include "../includes/db.php";
 $id = $_GET['id'];
+$id_cliente=$_GET['id_cliente'];
+
 echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
 
 ?>
@@ -165,7 +179,6 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
         });
     });
 </script>
-
 <script>
     $('.btn-del').on('click', function(e) {
         e.preventDefault();

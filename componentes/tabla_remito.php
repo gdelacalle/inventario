@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="thead-dark">
                 <tr>
@@ -43,12 +42,17 @@
                     <td width="10%"><?php echo $fila['totalpeso']; ?></td>
                     <td><a href="../includes/eliminar_remitosclientestmp.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del"><i class="fa fa-trash "></i></a></td>
                 </tr>
-                <?php $granTotal += $fila['totalpeso'];?>
-                <?php $cliente = $fila['id_cliente'];?>
-                <?php $pesounidad = $fila['pesoxunidad'];?>
-                <?php $total = $fila['totalpeso'];?>
+                <?php 
+                    $granTotal += $fila['totalpeso'];
+                    $cliente=$fila['id_cliente'];
+                    $pesounidad = $fila['pesoxunidad'];
+                    $total = $fila['totalpeso'];
+
+                 ?>
                 <?php endwhile;?> 
+
                 <?php
+                echo '<input  id="clientes"  class="form-control" type="hidden" name="clientes" value="'.$cliente.'">';
                 echo '<input  id="pesounidad"  class="form-control" type="hidden" name="pesounidad" value="'.$pesounidad.'">';
                 echo '<input  id="pesototal"  class="form-control" type="hidden" name="pesototal" value="'.$total.'">';
                 ?>       

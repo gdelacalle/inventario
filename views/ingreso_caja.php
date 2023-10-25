@@ -82,7 +82,7 @@ session_start();
                 <div class="col-sm-1">
                     <div class="mb-3">
                         <label for="importe">Importe</label>
-                        <input  id="importe" min="0" max="1000000" class="form-control" step="0.1" type="number" name="importe" required>
+                        <input  id="importe" min="0" max="100000000" class="form-control" step="0.1" type="number" name="importe" required>
                     </div>
                 </div>
                 <div class="col-sm-12">
