@@ -407,8 +407,6 @@ function insertar_nuevo_tipo_gasto()
     echo json_encode($response);
 }
 
-
-
 function insertar_compra_mp()
 {
     global $conexion;

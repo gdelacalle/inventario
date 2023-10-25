@@ -39,6 +39,7 @@ $salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de c
 error_reporting(0);
 session_start();
 
+
 ?>
 <?php include "../includes/header.php";?>
 

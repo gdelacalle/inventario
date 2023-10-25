@@ -1,6 +1,11 @@
 <?php
 error_reporting(0);
 session_start();
+
+require "../includes/db.php";
+$consulta = mysqli_query($conexion, "UPDATE materias_primas set peso = existencia * pesounitario");
+
+
 ?>
 <?php include "../includes/header.php"; ?>
 <script type='text/javascript' src="../js/jquery-3.5.1.js"></script>
