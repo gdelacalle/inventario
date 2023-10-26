@@ -1,11 +1,14 @@
 <?php
-$fecha = date('27-m-Y');//Obtengo la fecha del dia actual
-$fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
+$fecha = date('d-m-Y');//Obtengo la fecha del dia actual
+// $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 
 require "../includes/db.php";
 
 require "../includes/db.php";
 $consulta = mysqli_query($conexion, "UPDATE remitosclientes as r, inventario as i set r.id_categoria=i.id_categoria where r.producto=i.id");
+$consulta5 = mysqli_query($conexion, "UPDATE remitosclientes SET peso=metros*cantidad WHERE id_seccion='65'");
+$consulta6 = mysqli_query($conexion, "UPDATE remitosclientes as r, equivalencias as e SET r.peso= r.metros*e.peso WHERE r.id_seccion=e.id");
+$consulta7 = mysqli_query($conexion, "UPDATE remitosclientes SET pesototal = cantidad*peso WHERE 1");
 
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
@@ -30,15 +33,20 @@ $total['descripcion'] = mysqli_num_rows($obras);
 $obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
 $total['estado'] = mysqli_num_rows($obrasp);
 
-$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha_menos1dia' GROUP BY fecha";
+$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha' GROUP BY fecha";
 $salidasperfileria= $conexion -> query($consulta3);
 $fila=$salidasperfileria->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasperfileria=$fila['salidasperfileria'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha_menos1dia' GROUP BY fecha";
+$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha' GROUP BY fecha";
 $salidasestructura= $conexion -> query($consulta4);
 $fila=$salidasestructura->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de calcular en la consulta
+
+$obras = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='CONFIRMADA'");//Muestra las Obras en Ejecucion
+$total['descripcion'] = mysqli_num_rows($obras);
+$obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
+$total['estado'] = mysqli_num_rows($obrasp);
 
 error_reporting(0);
 session_start();
@@ -51,6 +59,20 @@ session_start();
 <div class="container-fluid">
     <!-- Content Row -->
     <div class="row">
+    <div class="col-lg-2 col-md-4 col-sm-4">
+        <div class="card card-stats">
+            <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                </div>
+                <a class="card-category text-success font-weight-bold">
+                    Obras en Ejecucion
+                </a>
+                <h3 class="card-title"><?php echo $total['descripcion']; ?></h3>
+            </div>
+            <div class="card-footer bg-warning text-white">
+            </div>
+        </div>
+    </div>
     <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
@@ -109,7 +131,7 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
@@ -129,7 +151,7 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-2 col-md-4 col-sm-4">
         <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
