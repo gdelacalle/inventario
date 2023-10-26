@@ -365,8 +365,8 @@ function insertar_transferencia()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe, estado,nro_comp) 
-    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','1',$numerito)";
+    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe, estado) 
+    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','1')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -459,7 +459,7 @@ function remito_cliente()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO remitosclientestmp (numero,id_cliente,cantidad,producto,seccion,metros,unidad,fecha) 
+    $consulta = "INSERT INTO remitosclientestmp (numero,id_cliente,cantidad,producto,id_seccion,metros,unidad,fecha) 
     VALUES ('$numerito','$id_cliente','$cantidad','$id_producto','$seccion','$metros','$unidad','$fecha')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {

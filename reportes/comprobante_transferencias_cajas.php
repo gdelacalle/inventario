@@ -2,19 +2,30 @@
 <title>ESTRUCTURAS VEGA - Sistema de Inventario</title>
 <?php
 include "db.php";
-
-$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
-
 error_reporting(0);
 session_start();
+
 $granTotal=0;
 $numero = $_GET['numero'];
 
 require_once("../includes/db.php");
-$result = mysqli_query($conexion, "SELECT tc.id,tc.id_caja_origen, tc.id_caja_destino, tc.importe, c.descripcion
+$result = mysqli_query($conexion, "SELECT tc.id,tc.id_caja_origen, tc.id_caja_destino, tc.importe, c.descripcion,tc.fecha,tc.nro_comp
 FROM transfer_cajas as tc, cajas as c WHERE tc.id_caja_origen = c.id AND tc.estado='2' AND tc.nro_comp = $numero");
-$fecha= $fila['fecha'];
-$numeros= $fila['numero'];
+
+$result1 = mysqli_query($conexion, "SELECT id,id_caja_origen,id_caja_destino,importe,fecha,nro_comp
+FROM transfer_cajas WHERE nro_comp = $numero");
+$fila = mysqli_fetch_assoc($result1);
+$fecha = $fila['fecha'];
+$numeros = $fila['nro_comp'];
+$cajadestino = $fila['id_caja_destino'];
+$cajaorigen = $fila['id_caja_origen'];
+$importee =$fila['importe'];
+
+$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
+$consulta1 = mysqli_query($conexion,"UPDATE cajas SET importe = importe + '$importee' Where id = '$cajadestino'");
+$consulta2 = mysqli_query($conexion,"UPDATE cajas SET importe = importe - '$importee' Where id = '$cajaorigen'");
+
+
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
@@ -30,17 +41,18 @@ $numeros= $fila['numero'];
                     <th>Caja Destino</th>
                     <th>Importe</th>
                 </tr>
-                <?php while ($fila = mysqli_fetch_assoc($result)) :?>
+                <?php while ($fila = mysqli_fetch_assoc($result)):?>
                 <tr>
-                <td width="20%"><?php echo $fila['id_caja_origen']; ?></td>
-                    <td width="30%"><?php echo $fila['id_caja_destino']; ?></td>
-                    <td width="30%"><?php echo $fila['importe']; ?></td>
+                    <td><?php echo $fila['id_caja_origen']; ?></td>
+                    <td><?php echo $fila['id_caja_destino']; ?></td>
+                    <td><?php echo $fila['importe']; ?></td>
                 </tr>
+                
                 <?php $granTotal += $fila['importe'];?>
                 <?php endwhile?>
 </table>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<div style="text-align: right;"><h2>Total: $ <?php echo $granTotal; ?></h2>
+<div style="text-align: right;"><h2>Total: $ <?php echo $granTotal;?></h2>
 
 <div style="text-align: left;"><h4>FIRMA:_______________________________</h4>
 <div>

@@ -15,9 +15,11 @@ $granTotal=0;
 $numero = $_GET['numero'];
 
 require_once("../includes/db.php");
-$result = mysqli_query($conexion, "SELECT cast(SUM(r.cantidad * r.metros * e.peso)as decimal(10,2)) as total, cast((e.peso*r.metros)as decimal(10,2))as peso, r.id,r.numero,c.apellido,i.producto,i.id as idp,r.seccion,r.cantidad,r.metros,r.desarrollo,r.unidad
+$result = mysqli_query($conexion, "SELECT cast(SUM(r.cantidad * r.metros * e.peso)as decimal(10,2)) as total, cast((e.peso*r.metros)
+as decimal(10,2))as peso, r.id,r.numero,c.apellido,i.producto,i.id as idp,e.seccion as idseccion,r.cantidad,r.metros,r.desarrollo,
+r.unidad
 FROM remitosclientes as r INNER JOIN inventario as i INNER JOIN clientes as c INNER JOIN equivalencias as e 
-ON r.producto = i.id AND r.id_cliente = c.id AND e.seccion = r.seccion AND r.numero = $numero GROUP BY r.id ORDER BY r.id ASC");
+ON r.producto = i.id AND r.id_cliente = c.id AND r.id_seccion = e.id AND r.numero = $numero GROUP BY r.id ORDER BY r.id ASC");
 
 $result1 = mysqli_query($conexion, "SELECT r.id,c.nombre,c.apellido,r.numero,r.fecha
 FROM remitosclientes as r INNER JOIN clientes as c 
@@ -50,7 +52,7 @@ $fecha= $fila['fecha'];
                 <?php while ($fila = mysqli_fetch_assoc($result)) :?>
                 <tr>
                     <td><?php echo $fila['producto']; ?></td>
-                    <td><center><?php echo $fila['seccion']; ?></td>
+                    <td><center><?php echo $fila['idseccion']; ?></td>
                     <td><center><?php echo $fila['cantidad']; ?></td>
                     <td><center><?php echo $fila['metros']; ?></td>
                     <td><center><?php echo $fila['unidad']; ?></td>

@@ -96,7 +96,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                             $sql = "SELECT * FROM equivalencias WHERE id_categoria IN (4, 2, 56, 57) ORDER BY seccion ASC";
                             $resultado = mysqli_query($conexion, $sql);
                             while ($consulta = mysqli_fetch_array($resultado)) {
-                                echo '<option value="' . $consulta['seccion'] . '">' . $consulta['seccion'] . '</option>';
+                                echo '<option value="' . $consulta['id'] . '">' . $consulta['seccion'] . '</option>';
                             }
                         ?>     
                     </select>

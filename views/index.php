@@ -1,8 +1,12 @@
 <?php
-$fecha = date('10-m-Y');//Obtengo la fecha del dia actual
+$fecha = date('27-m-Y');//Obtengo la fecha del dia actual
 $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 
 require "../includes/db.php";
+
+require "../includes/db.php";
+$consulta = mysqli_query($conexion, "UPDATE remitosclientes as r, inventario as i set r.id_categoria=i.id_categoria where r.producto=i.id");
+
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
 
