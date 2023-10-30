@@ -62,6 +62,9 @@ $consulta = mysqli_query($conexion, "UPDATE materias_primas set peso = existenci
                                     <td><?php echo $fila['peso']; ?></td>
                                     <td><?php echo $fila['categoria']; ?></td>
                                 <td>
+                                    <a href="../views/remitos_materias_primas.php?id=<?php echo $fila['id']?>" class="btn btn-success">
+                                    Remito <i class="fa fa-reply-all"></i></a>
+
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_act_mp" onclick="actualizar_mp('<?php echo $datos; ?>')">
                                     Salida <i class="fa fa-retweet"></i></button>
 
@@ -71,7 +74,7 @@ $consulta = mysqli_query($conexion, "UPDATE materias_primas set peso = existenci
                                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_comp_mp" onclick="comprar_mp('<?php echo $datos; ?>')">
                                     Compra <i class="fa fa-plus"></i></button>
                                     
-                                    <a href="../includes/eliminar_materiasprimas.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
+                                    <a href="../includes/eliminar_materiasprimas.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-del">
                                     Eliminar <i class="fa fa-trash "></i></a>
                                     </td>   
                                 </tr>

@@ -1,7 +1,6 @@
 <?php
 $fecha = date('d-m-Y');//Obtengo la fecha del dia actual
 // $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
-
 require "../includes/db.php";
 
 require "../includes/db.php";
@@ -9,7 +8,7 @@ $consulta = mysqli_query($conexion, "UPDATE remitosclientes as r, inventario as 
 $consulta5 = mysqli_query($conexion, "UPDATE remitosclientes SET peso=metros*cantidad WHERE id_seccion='65'");
 $consulta6 = mysqli_query($conexion, "UPDATE remitosclientes as r, equivalencias as e SET r.peso= r.metros*e.peso WHERE r.id_seccion=e.id");
 $consulta7 = mysqli_query($conexion, "UPDATE remitosclientes SET pesototal = cantidad*peso WHERE 1");
-
+$consulta8 = mysqli_query($conexion, "UPDATE obras o SET avance = (SELECT (SUM(p.cant_obra)*100) / SUM(p.cantidad) FROM presupuesto p WHERE p.id_obra = o.id) WHERE 1");
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
 

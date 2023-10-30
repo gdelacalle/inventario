@@ -25,7 +25,6 @@
         </div>
     </div>
 </div> 
-
 <script>
     function editarCat(id) {
         var datosFormulario = $("#editCat" + id).serialize();
@@ -39,7 +38,7 @@
                     alert("El registro se ha actualizado correctamente");
                     setTimeout(function() {
                         location.assign('categorias.php');
-                    }, 500);
+                    }, 200);
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");
                 }

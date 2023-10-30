@@ -476,6 +476,29 @@ function remito_cliente()
     echo json_encode($response);
 }
 
+function remito_mp()
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO remitosclientestmp (numero,id_cliente,cantidad,producto,metros,fecha) 
+    VALUES ('$numerito','$id_cliente','$cantidad','$id_producto','$metros','$fecha')";
+    $resultado = mysqli_query($conexion, $consulta);
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+    echo json_encode($response);
+}
+
+
 function insertar_presupuestotemporal()
 {
     global $conexion;

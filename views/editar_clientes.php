@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal_editar_clientes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_editar_clientes<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
@@ -77,13 +77,13 @@
                     alert("El registro se ha actualizado correctamente");
                     setTimeout(function() {
                         location.assign('clientes.php');
-                    }, 1);
+                    }, 200);
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");
                 }
             },
             error: function() {
-                alert("Error de comunicacion con el servidor no se encuentra");
+                alert("Error de comunicacion con el servidor");
             }
         });
     }

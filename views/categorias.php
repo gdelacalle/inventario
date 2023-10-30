@@ -15,7 +15,7 @@ session_start();
                 <h4 class="m-0 font-weight-bold text-primary">LISTADO DE CATEGORIAS
                 <button type="button" class="btn btn-outline-success float-right" data-toggle="modal" data-target="#cat" style="FONT-SIZE: 14pt">
                     <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button></h4>
-            </div>
+            </div> 
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

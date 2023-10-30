@@ -33,10 +33,9 @@ session_start();
                             <?php
                             require_once("../includes/db.php");
                             $result = mysqli_query($conexion, "SELECT id,nombre, apellido, cuit,telefono,correo,direccion FROM clientes ");
-                            while ($fila = mysqli_fetch_assoc($result)) {
+                            while ($fila = mysqli_fetch_assoc($result)) :
                                 $datos=$fila['id']."||".$fila['nombre']."||".$fila['apellido']."||".$fila['cuit']."||".$fila['telefono']
                                 ."||".$fila['correo']."||".$fila['direccion'];
-
                             ?>
                                 <tr>
                                     <td><?php echo $fila['id']; ?></td>
@@ -45,7 +44,7 @@ session_start();
                                     <td><?php echo $fila['telefono']; ?></td>
                                     <td><?php echo $fila['direccion']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_clientes" onclick="modificar_clientes('<?php echo $datos; ?>')">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarcat<?php echo $fila['id']; ?>">
                                     Editar <i class="fa fa-edit "></i></button>
 
                                     <a href="../views/remitos_clientes.php?id=<?php echo $fila['id']?>" class="btn btn-success">
@@ -57,8 +56,8 @@ session_start();
                                     <a href="../includes/eliminar_clientes.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
                                     Eliminar <i class="fa fa-trash "></i></a>
                                 </td>
-                            </tr>
-                            <?php } ?>
+                            </tr> 
+                            <?php endwhile; ?>
                         </tbody>
                     </table>
                     <?php include "../includes/footer.php"; ?>

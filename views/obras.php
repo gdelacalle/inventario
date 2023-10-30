@@ -32,6 +32,7 @@ if ($permiso == "3") {
                                 <th>Descripcion</th>
                                 <th>Fecha Alta</th>
                                 <th>Fecha Entrega</th>
+                                <th>Avance</th>
                                 <th>Cliente</th>
                                 <th>Apellido</th>
                                 <th>Acciones</th>
@@ -42,8 +43,8 @@ if ($permiso == "3") {
                             <?php
                             require_once("../includes/db.php");
 
-                            $result = mysqli_query($conexion, "SELECT o.id,o.descripcion,o.fecha_alta,o.fecha_entrega,c.nombre,c.apellido 
-                            FROM clientes as c INNER JOIN obras as o ON c.id = o.id_cliente AND o.estado='CONFIRMADA' GROUP BY o.id ORDER BY c.nombre ASC");
+                            $result = mysqli_query($conexion, "SELECT o.id,o.descripcion,o.fecha_alta,o.fecha_entrega,o.avance,c.nombre,c.apellido 
+                            FROM clientes as c INNER JOIN obras as o ON c.id = o.id_cliente AND o.estado='CONFIRMADA' GROUP BY o.id ORDER BY c.nombre ASC");                            
                             while ($fila = mysqli_fetch_assoc($result)) {
                                 $datos=$fila['id']."||".$fila['descripcion']."||".$fila['nombre']."||".$fila['apellido'];                                $datos2=$fila['id']."||".$fila['codigo']."||".$fila['producto'];
 
@@ -53,6 +54,7 @@ if ($permiso == "3") {
                                     <td><?php echo $fila['descripcion']; ?></td>
                                     <td><?php echo $fila['fecha_alta']; ?></td>
                                     <td><?php echo $fila['fecha_entrega']; ?></td>
+                                    <td><?php echo $fila['avance']; ?></td>
                                     <td><?php echo $fila['nombre']; ?></td>
                                     <td><?php echo $fila['apellido']; ?></td>
 
