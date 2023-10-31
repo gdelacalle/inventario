@@ -459,8 +459,8 @@ function remito_cliente()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO remitosclientestmp (numero,id_cliente,cantidad,producto,id_seccion,metros,unidad,fecha) 
-    VALUES ('$numerito','$id_cliente','$cantidad','$id_producto','$seccion','$metros','$unidad','$fecha')";
+    $consulta = "INSERT INTO remitosclientestmp (numero,id_cliente,id_tipo_cuenta,cantidad,producto,id_seccion,metros,unidad,fecha) 
+    VALUES ('$numerito','$id_cliente','$tipo_cuenta','$cantidad','$id_producto','$seccion','$metros','$unidad','$fecha')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
         $response = array(

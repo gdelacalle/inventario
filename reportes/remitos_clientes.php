@@ -16,26 +16,29 @@ $numero = $_GET['numero'];
 
 require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT cast(SUM(r.cantidad * r.metros * e.peso)as decimal(10,2)) as total, cast((e.peso*r.metros)
-as decimal(10,2))as peso, r.id,r.numero,c.apellido,i.producto,i.id as idp,e.seccion as idseccion,r.cantidad,r.metros,r.desarrollo,
-r.unidad
+as decimal(10,2))as peso, r.id,r.numero,c.apellido,i.producto,i.id as idp,e.seccion as idseccion,r.cantidad,r.metros,
+r.unidad,r.id_tipo_cuenta
 FROM remitosclientes as r INNER JOIN inventario as i INNER JOIN clientes as c INNER JOIN equivalencias as e 
 ON r.producto = i.id AND r.id_cliente = c.id AND r.id_seccion = e.id AND r.numero = $numero GROUP BY r.id ORDER BY r.id ASC");
 
-$result1 = mysqli_query($conexion, "SELECT r.id,c.nombre,c.apellido,r.numero,r.fecha
-FROM remitosclientes as r INNER JOIN clientes as c 
-ON r.id_cliente = c.id AND r.numero = $numero");
+$result1 = mysqli_query($conexion, "SELECT r.id,c.nombre,c.apellido,r.numero,r.fecha,id_tipo_cuenta,t.descripcion
+FROM remitosclientes as r INNER JOIN clientes as c INNER JOIN tipo_cuenta as t
+ON r.id_cliente = c.id AND r.numero = $numero AND r.id_tipo_cuenta = t.id");
 $fila = mysqli_fetch_assoc($result1);
 $nombre=$fila['nombre'];
 $apellido=$fila['apellido'];
 $numeros= $fila['numero'];
 $fecha= $fila['fecha'];
+$tipo_cuenta = $fila['descripcion'];
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
 <div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
 <h2><center>REMITO DE MATERIALES</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numeros; ?>
+<h5><div style="text-align: left;">CONDICION DE VENTA:<class style="text-transform: uppercase; color: black;"> <?php echo $tipo_cuenta; ?></h5>
 <h5><div style="text-align: left;">OBRA / CLIENTE:<class style="text-transform: uppercase; color: black;"> <?php echo $apellido.' '.$nombre; ?></div>
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class ="container">
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">

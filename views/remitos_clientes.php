@@ -3,7 +3,7 @@ error_reporting(0);
 session_start();
 
 $permiso = $_SESSION['type'];
-if ($permiso == "3") {
+if ($permiso == "2") {
 
     echo "<script language='JavaScript'>
     alert('Error: No tiene permiso para ingresar a esa página ');
@@ -60,6 +60,24 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                         <label for="numerito">Remito N°:</label>
                         <input id="numerito" class="form-control" type="text" name="numerito" value="<?php echo $numerito?>">
                         </div>
+                <div class="col-sm-3">
+                <div class="mb-3">
+                    <label for="tipo_cuenta">Tipo Cuenta</label><br>
+                    <select name="tipo_cuenta" id="tipo_cuenta" class="form-control" required >
+                        <option value="">Seleccione Cuenta</option>
+                        <?php
+                            include("../includes/db.php");
+                            //Codigo para mostrar categorias desde otra tabla
+                            $sqlp = "SELECT * FROM tipo_cuenta ORDER BY descripcion ASC";
+                            $resultadop = mysqli_query($conexion, $sqlp);
+                            while ($consulta = mysqli_fetch_array($resultadop)) {
+                                echo '<option value="' . $consulta['id'] . '">' . $consulta['descripcion'] . '</option>';
+                            }
+                        ?>     
+                    </select>
+                </div>
+            </div>
+
             <div class="card-body">
             <div class="row">
                 <div class="col-sm-1">
