@@ -1042,16 +1042,10 @@
           "lmtime": 1697119885053.9663,
           "modified": false
         },
-        "inventario.sql": {
+        "inventario al 31-10-2023.sql": {
           "type": "-",
-          "size": 177955,
-          "lmtime": 1696846271767.975,
-          "modified": false
-        },
-        "inventario2.sql": {
-          "type": "-",
-          "size": 165261,
-          "lmtime": 1696846271775.9868,
+          "size": 232883,
+          "lmtime": 0,
           "modified": false
         },
         "js": {
