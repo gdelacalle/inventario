@@ -62,7 +62,7 @@ if ($permiso == "3") {
                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar_obra" onclick="modificar_obra('<?php echo $datos; ?>')">
                                         Editar <i class="fa fa-edit "></i></button>
 
-                                        <a href="../views/remitos_obras.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-editar">
+                                        <a href="../views/detalles_obras.php?id=<?php echo $fila['id']?>" class="btn btn-danger btn-editar">
                                         Detalle <i class="fa fa-reply-all"></i></a>
                                         
                                         

@@ -235,7 +235,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
                             if (result.value) {
                             if (result.isConfirmed) {
                             Swal.fire(
-                                    'Generando Remito',
+                                    'Generando...',
                                     )
                             }
                                 document.location.href = href;

@@ -1,5 +1,5 @@
 <?php
-$fecha = date('28-m-Y');//Obtengo la fecha del dia actual
+$fecha = date('d-m-Y');//Obtengo la fecha del dia actual
 // $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 require "../includes/db.php";
 
@@ -17,17 +17,18 @@ $salidasestructura= $conexion -> query($consulta4);
 $fila=$salidasestructura->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta = "SELECT SUM(peso) as SumaTotal FROM materias_primas WHERE id_categoria=54 GROUP BY id_categoria";
-$SumaTotal= $conexion -> query($consulta);
-$fila=$SumaTotal->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
-$SumaTotal=$fila['SumaTotal']-$salidasestructura;//Este es el valor que acabas de calcular en la consulta
-
 $consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha' GROUP BY fecha";
 $salidasperfileria= $conexion -> query($consulta3);
 $fila=$salidasperfileria->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasperfileria=$fila['salidasperfileria'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta1 = "SELECT SUM(peso) as SumaBobinas FROM materias_primas WHERE id_categoria=3 GROUP BY id_categoria";
+$consulta = "SELECT SUM(peso) as SumaTotal FROM materias_primas WHERE id_categoria=54 GROUP BY id_categoria"; //chapas de Estructura
+$SumaTotal= $conexion -> query($consulta);
+$fila=$SumaTotal->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
+$SumaTotal=$fila['SumaTotal']-$salidasestructura;//Este es el valor que acabas de calcular en la consulta
+
+
+$consulta1 = "SELECT SUM(peso) as SumaBobinas FROM materias_primas WHERE id_categoria=3 GROUP BY id_categoria";//
 $SumaBobinas= $conexion -> query($consulta1);
 $fila1=$SumaBobinas->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $SumaBobinas=$fila1['SumaBobinas']-$salidasperfileria;

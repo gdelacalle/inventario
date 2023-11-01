@@ -59,7 +59,7 @@ $id = $_GET['id'];
                                 </select>
                             </div>
                         </div>
-<a href="../reportes/imprimirremitoobra.php?id=<?php echo $id ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Remito</a>
+<a href="../reportes/imprimirdetalleobra.php?id=<?php echo $id ?>"class="btn btn-danger float-right btn-generar" type="button">Imprimir Detalle</a>
             </div>
             <div class="card-body">
         </form>
@@ -67,20 +67,18 @@ $id = $_GET['id'];
             <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="thead-dark">
                 <tr>  
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Sección</th>
-                    <th>Cant</th>
-                    <th>Retira</th>
-                    <th>Seleccionar</th>
-                    <th>Proceso</th>
-                    <th>Terminado</th>
-                    <th>Entregado</th>
-                    <th>N° Remito</th>
-                    <th>Medida</th>
-                    <th>Unidad</th>
-                    <th>Peso Unitario</th>
-                    <th>Peso Total</th>
+                    <th><center>ID</th>
+                    <th><center>Producto</th>
+                    <th><center>Sección</th>
+                    <th><center>Cant</th>
+                    <th><center>En Proceso</th>
+                    <th><center>Terminado</th>
+                    <th><center>Entregado</th>
+                    <th><center>N° Remito</th>
+                    <th><center>Medida</th>
+                    <th><center>Unidad</th>
+                    <th><center>Peso Unitario</th>
+                    <th><center>Peso Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -96,32 +94,26 @@ $id = $_GET['id'];
                 while ($fila = mysqli_fetch_assoc($result)) :                       
                 ?>
                 <tr>
-                    <td width="1%"><?php echo $fila['id']; ?></td>
-                    <td width="15%"><?php echo $fila['producto']; ?></td>
-                    <td width="15%"><?php echo $fila['seccion']; ?></td>
-                    <td width="15%"><center><?php echo $fila['cantidad']; ?></center></td>
-                    <td><form action="cambiar_cantidad.php" method="post">
-						    <input name="retira" type="hidden">
-						    <input class="retira" min="1" name="retira" class="form-control" required type="number">
-                        </form>
-                    </td>
-                    <td width="1%"><center><input class="form-check-input seleccionarRegistro" name="seleccion" type="checkbox"></center></td>
+                    <td width="1%"><center><?php echo $fila['id']; ?></td>
+                    <td width="15%"><center><?php echo $fila['producto']; ?></td>
+                    <td width="15%"><center><?php echo $fila['seccion']; ?></td>
+                    <td width="5%"><center><?php echo $fila['cantidad']; ?></center></td>
                     <td width="5%"><center><?php echo $fila['cant_proceso']; ?></center></td>
                     <td width="5%"><center><?php echo $fila['cant_terminadas']; ?></center></td>
                     <td width="5%"><center><?php echo $fila['cant_obra']; ?></center></td>
                     <td width="5%"><center><a target="_blank" class="nav-link" href="../reportes/imprimirremitocliente.php?numero=<?php echo $fila['nro_remito']; ?>">
                     <?php echo $fila['nro_remito']; ?></center></td>
-                    <td width="5%"><right><?php echo $fila['metros']; ?></td>
-                    <td width="5%"><?php echo $fila['unidad']; ?></td>
-                    <td width="10%"><?php echo $fila['peso']; ?></td>
-                    <td width="10%"><?php echo $fila['pesototal']; ?></td>
+                    <td width="5%"><center><right><?php echo $fila['metros']; ?></td>
+                    <td width="5%"><center><?php echo $fila['unidad']; ?></td>
+                    <td width="5%"><center><?php echo $fila['peso'];?> kg</td>
+                    <td width="10%"><center><?php echo $fila['pesototal']; ?> kg</td>
                 </tr>
                 <?php $cliente += $fila['id_cliente'];?>
                 <?php $granTotal += $fila['pesototal'];?>
                 <?php endwhile;?>  
             </tbody>
         </table>
-        <center><h2>Total Entregado: <?php echo $granTotal; ?> KGs</h2>
+        <center><h2>Total: <?php echo $granTotal; ?> KGs</h2>
         <?php include "../includes/footer.php"; ?>
         </div>
     </div>
@@ -171,7 +163,7 @@ $id = $_GET['id'];
         e.preventDefault();
         const href = $(this).attr('href')
         Swal.fire({
-                    title: '¿Desea Imprimir el Remito?',
+                    title: '¿Desea Imprimir el Detalle de Obra?',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
@@ -181,7 +173,7 @@ $id = $_GET['id'];
                         if (result.value) {
                             if (result.isConfirmed) {
                                 Swal.fire(
-                                    'success'
+                                    'Generando....'
                                 );
                                 }else{
                                     Swal.fire(

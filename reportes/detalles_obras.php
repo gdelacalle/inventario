@@ -8,7 +8,7 @@ $permiso = $_SESSION['type'];
 if ($permiso == "3") {
 
     echo "<script language='JavaScript'>
-    alert('Error: No tiene permiso para ingresar a esa página ');
+    alert('Error: No tiene permiso para ingresar a esta página ');
     location.assign('../views/index.php');
     </script>";
 
@@ -33,7 +33,7 @@ $descripcion=$fila['descripcion'];
 <h4>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666
 
-<center>DETALLE DE ITEMS DE ESTRUCTURA DE LA OBRA</center>
+<center>DETALLES DE OBRA</center>
 <h5>OBRA:<class style="text-transform: uppercase; color: black;"> <?php echo $descripcion; ?>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
