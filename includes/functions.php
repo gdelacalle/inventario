@@ -730,7 +730,8 @@ function Actualiza_stock()
     $destino=$_POST['sidproducto'];
     $cantidad=$_POST['cantidad'];
     $peso=$_POST['smppeso'];
-    $consulta = "UPDATE materias_primas SET existencia = existencia - '$cantidad', peso=peso-$peso WHERE id = '$id' ";
+    $consulta = "UPDATE materias_primas SET existencia = ( existencia -$cantidad ) ,
+    peso = ( peso -$peso ) WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
     $consulta1 = "INSERT INTO salida_mp(smp_id, smp_producto, smp_cantidad, smp_peso, smp_destino) VALUES ($id,'$producto',$cantidad,$peso,'$destino')";
     $resultado1 = mysqli_query($conexion, $consulta1);

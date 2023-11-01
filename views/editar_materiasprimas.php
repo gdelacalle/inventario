@@ -88,7 +88,7 @@
         accion=$('#accion').val();
        // var datosFormulario = $("#FormEditarMP").serialize();
        datosFormulario="id="+id+"&codigo="+codigo+"&producto="+producto+"&cantidad="+cantidad+"&unidad="+unidad+"&categoria="+categoria+"&peso="+peso+"&accion="+accion;
-       alert(datosFormulario);
+       //alert(datosFormulario);
        $.ajax({
             url: "../consultas/update_mp.php",
             type: "POST",

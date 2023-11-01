@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "root";
-$password = "";
-$database = "inventario";
+$user = "v0070449_invent";
+$password = "5115T3m4";
+$database = "v0070449_invent";
 
 
 $conexion = mysqli_connect($host, $user, $password, $database);

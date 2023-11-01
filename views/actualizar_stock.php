@@ -21,7 +21,7 @@
                         <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="password">Cantidad</label><br>
-                                <input type="number" name="cantidad" id="cantidad" class="form-control"  required>
+                                <input type="number" name="cantidad" id="cantidad" class="form-control" value=0  required>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="password">Peso</label><br>
-                                <input type="number" name="smppeso" id="smppeso" class="form-control"  required>
+                                <input type="number" name="smppeso" id="smppeso" class="form-control" value=0  required>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
             dataType: "json",
             success: function(response) {
                 if (response === "correcto") {
-                    alert("El registro se ha actualizado correctamente");
+                    alert("El registro se ha actualizado correctamente1 ");
                     setTimeout(function() {
                         location.assign('materias_primas.php');
                     }, 10);
