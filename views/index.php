@@ -32,15 +32,15 @@ $SumaBobinas= $conexion -> query($consulta1);
 $fila1=$SumaBobinas->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $SumaBobinas=$fila1['SumaBobinas']-$salidasperfileria;
 
-$consulta9 = "SELECT SUM(pesototal) as salidasflejes FROM remitosclientes WHERE id_categoria IN (55) AND fecha='$fecha' GROUP BY fecha";
-$salidasflejes= $conexion -> query($consulta9);
-$fila=$salidasflejes->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
-$salidasflejes=$fila['salidasflejes'];//Este es el valor que acabas de calcular en la consulta
+// $consulta9 = "SELECT SUM(pesototal) as salidasflejes FROM remitosclientes WHERE id_categoria IN (55) AND fecha='$fecha' GROUP BY fecha";
+// $salidasflejes= $conexion -> query($consulta9);
+// $fila=$salidasflejes->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
+// $salidasflejes=$fila['salidasflejes'];//Este es el valor que acabas de calcular en la consulta
 
 $consulta2 = "SELECT SUM(peso) as SumaFlejes FROM materias_primas WHERE id_categoria=55 GROUP BY id_categoria";
 $SumaFlejes= $conexion -> query($consulta2);
 $fila3=$SumaFlejes->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
-$SumaFlejes=$fila3['SumaFlejes']-$salidasflejes;
+$SumaFlejes=$fila3['SumaFlejes'];
 
 $obras = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='CONFIRMADA'");//Muestra las Obras en Ejecucion
 $total['descripcion'] = mysqli_num_rows($obras);

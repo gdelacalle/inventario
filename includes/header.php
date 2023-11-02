@@ -61,7 +61,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <?php if($permiso=="1" || $permiso=="2" || $permiso=="3" || $permiso=="4"): ?>
+            <?php if($permiso=="1" || $permiso=="2" || $permiso=="3" ): ?>
 
              <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -116,6 +116,10 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                     </div>
                 </div>
             </li>
+            <?php endif; ?>
+
+            <?php if($permiso=="1" || $permiso=="4"): ?>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseObras" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cogs"></i>
@@ -132,7 +136,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
             <?php endif; ?>
 
-            <?php if($permiso=="1" || $permiso=="2" || $permiso=="3" || $permiso=="4"): ?>
+            <?php if($permiso=="1" || $permiso=="2" || $permiso=="3" ): ?>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseParametros" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-cut"></i>
@@ -148,9 +152,9 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             </li>
             <?php endif; ?>
 
+            <?php if($permiso=="1" || $permiso=="4"): ?>
             <hr class="sidebar-divider">
 
-            <?php if($permiso=="1"): ?>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContable" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-users"></i>
@@ -162,15 +166,13 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         <a class="collapse-item" href="../views/ingreso_caja.php">Ingresos a Caja</a>
                         <a class="collapse-item" href="../views/contable/egreso_caja.php">Egresos a Caja</a>
                         <a class="collapse-item" href="../views/transferencia_cajas.php">Transferencias entre Cajas</a>
-
-
+                        <a class="collapse-item" href="../views/transferencia_cajas.php">Detalle de Movimientos</a>
             </li>
-
             <?php endif; ?>
 
-            <hr class="sidebar-divider">
-
             <?php if($permiso=="1"): ?>
+                <hr class="sidebar-divider">
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-users"></i>
@@ -181,26 +183,20 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         <h6 class="collapse-header">Modulos</h6>
                         <a class="collapse-item" href="../views/usuarios.php">Usuarios</a>
             </li>
-
             <?php endif; ?>
             
           <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
         </ul>
         <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -220,30 +216,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         </div>
                     </form>
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-          
+         
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

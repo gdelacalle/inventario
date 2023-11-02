@@ -16,10 +16,10 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Selecciona "Logout" para cerrar sesion.</div>
+                <div class="modal-body">Selecciona "Cerrar" para cerrar sesion.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../includes/sesion/cerrarSesion.php">Logout</a>
+                    <a class="btn btn-primary" href="../includes/sesion/cerrarSesion.php">Cerrar</a>
                 </div>
             </div>
         </div>

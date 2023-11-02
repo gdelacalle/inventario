@@ -10,7 +10,7 @@ if ($actualsesion == null || $actualsesion == '') {
 ?>
 <?php
 $id = $_GET['id'];
-$sql = "SELECT  u.id, u.usuario, u.correo, u.password, u.fecha, r.descripcion FROM users u
+$sql = "SELECT  u.id, u.usuario, u.nombre_completo, u.correo, u.password, u.fecha, r.descripcion FROM users u
 LEFT JOIN rol r ON u.id_rol= r.id  WHERE usuario ='$actualsesion'";
 $usuarios = mysqli_query($conexion, $sql);
 if ($usuarios->num_rows > 0) {
@@ -78,7 +78,7 @@ if ($usuarios->num_rows > 0) {
 
                                         <div class="row">
                                             <div class="col-lg-3 col-md-4 label ">Nombre</div>
-                                            <div class="col-lg-9 col-md-8"><?php echo $fila['usuario']; ?></div>
+                                            <div class="col-lg-9 col-md-8"><?php echo $fila['nombre_completo']; ?></div>
                                         </div>
 
                                         <div class="row">
@@ -100,7 +100,7 @@ if ($usuarios->num_rows > 0) {
                                         <!-- Profile Edit Form -->
                                         <form id="form">
                                             <div class="row mb-3">
-                                                <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nombre</label>
+                                                <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nombre de Usuario</label>
                                                 <div class="col-md-8 col-lg-9">
                                                     <input name="usuario" type="text" data-id="<?php echo $fila['id']; ?>" class="form-control" id="usuario" value="<?php echo $fila['usuario']; ?>">
                                                 </div>

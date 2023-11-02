@@ -47,9 +47,8 @@ $_SESSION['id'] = $id
                 </tr>
             </thead>
             <tbody>
-                <?php
+                <?php 
                     require_once("../includes/db.php");
-                    
                     $result = mysqli_query($conexion, "SELECT cast(SUM(p.cantidad * p.metros * e.peso)as decimal(10,2)) as total, 
                     p.id, cast((e.peso*p.metros)as decimal(10,2))as peso,e.seccion,i.producto,p.cantidad,p.metros,p.unidad,o.descripcion,
                     o.id_cliente,e.id as sid
