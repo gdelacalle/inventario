@@ -3,7 +3,6 @@ $fecha = date('d-m-Y');//Obtengo la fecha del dia actual
 // $fecha_menos1dia = date("d-m-Y", strtotime($fecha. "-1 day"));// guardo en variable la fecha actual menos 1 dia
 require "../includes/db.php";
 
-require "../includes/db.php";
 $consulta = mysqli_query($conexion, "UPDATE remitosclientes as r, inventario as i set r.id_categoria=i.id_categoria where r.producto=i.id");
 $consulta5 = mysqli_query($conexion, "UPDATE remitosclientes SET peso=metros*cantidad WHERE id_seccion='65'");
 $consulta6 = mysqli_query($conexion, "UPDATE remitosclientes as r, equivalencias as e SET r.peso= r.metros*e.peso WHERE r.id_seccion=e.id");
@@ -48,10 +47,6 @@ $total['descripcion'] = mysqli_num_rows($obras);
 $obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
 $total['estado'] = mysqli_num_rows($obrasp);
 
-
-
-
-
 $obras = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='CONFIRMADA'");//Muestra las Obras en Ejecucion
 $total['descripcion'] = mysqli_num_rows($obras);
 $obrasp = mysqli_query($conexion, "SELECT * FROM obras WHERE estado ='PENDIENTE'");//Muestra los Presupuestos Pendientes
@@ -59,7 +54,6 @@ $total['estado'] = mysqli_num_rows($obrasp);
 
 error_reporting(0);
 session_start();
-
 
 ?>
 <?php include "../includes/header.php";?>
