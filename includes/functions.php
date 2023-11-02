@@ -730,10 +730,13 @@ function Actualiza_stock()
     $destino=$_POST['sidproducto'];
     $cantidad=$_POST['cantidad'];
     $peso=$_POST['smppeso'];
-    $consulta = "UPDATE materias_primas SET existencia = existencia - '$cantidad', peso=peso-$peso WHERE id = '$id' ";
+    $consulta = "UPDATE materias_primas SET existencia = ( existencia -$cantidad ) ,
+    peso = ( peso -$peso ) WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
     $consulta1 = "INSERT INTO salida_mp(smp_id, smp_producto, smp_cantidad, smp_peso, smp_destino) VALUES ($id,'$producto',$cantidad,$peso,'$destino')";
     $resultado1 = mysqli_query($conexion, $consulta1);
+    // $consulta2 = "UPDATE `inventario` SET `id`=[value-1],`codigo`=[value-2],`producto`=[value-3],`existencia`=[value-4],`precio`=[value-5],`minimo`=[value-6],`venta`=[value-7],`compra`=[value-8],`unidad`=[value-9],`id_categoria`=[value-10],`fecha`=[value-11],`pesounitario`=[value-12],`id_deposito`=[value-13] WHERE 1 ";
+    // $resultado2 = mysqli_query($conexion, $consulta2);
     if ($resultado) {
         echo json_encode("correcto");
     } else {
