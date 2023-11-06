@@ -21,7 +21,7 @@ r.unidad,r.id_tipo_cuenta
 FROM remitosclientes as r INNER JOIN inventario as i INNER JOIN clientes as c INNER JOIN equivalencias as e 
 ON r.producto = i.id AND r.id_cliente = c.id AND r.id_seccion = e.id AND r.numero = $numero GROUP BY r.id ORDER BY r.id ASC");
 
-$result1 = mysqli_query($conexion, "SELECT r.id,c.nombre,c.apellido,r.numero,r.fecha,id_tipo_cuenta,t.descripcion
+$result1 = mysqli_query($conexion, "SELECT r.id,c.nombre,c.apellido,r.numero,r.fecha,id_tipo_cuenta,t.descripcion,c.direccion
 FROM remitosclientes as r INNER JOIN clientes as c INNER JOIN tipo_cuenta as t
 ON r.id_cliente = c.id AND r.numero = $numero AND r.id_tipo_cuenta = t.id");
 $fila = mysqli_fetch_assoc($result1);
@@ -30,16 +30,18 @@ $apellido=$fila['apellido'];
 $numeros= $fila['numero'];
 $fecha= $fila['fecha'];
 $tipo_cuenta = $fila['descripcion'];
+$direccion = $fila['direccion'];
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
 <div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
 <h2><center>REMITO DE MATERIALES</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numeros; ?>
-<h5><div style="text-align: left;">CONDICION DE VENTA:<class style="text-transform: uppercase; color: black;"> <?php echo $tipo_cuenta; ?></h5>
-<h5><div style="text-align: left;">OBRA / CLIENTE:<class style="text-transform: uppercase; color: black;"> <?php echo $apellido.' '.$nombre; ?></div>
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h6><div style="text-align: left;">CONDICION DE VENTA:<class style="text-transform: uppercase; color: black;"> <?php echo $tipo_cuenta; ?></h6>
+<h6><div style="text-align: left;">OBRA / CLIENTE:<class style="text-transform: uppercase; color: black;"> <?php echo $apellido.' '.$nombre; ?>
+<div style="text-align: left;">DIRECCION:<class style="text-transform: uppercase; color: black;"> <?php echo $direccion ?></div>
+<h3>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class ="container">
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">
 <thead class="thead-dark">
@@ -65,7 +67,7 @@ $tipo_cuenta = $fila['descripcion'];
                 <?php $granTotal += $fila['total'];?>
                 <?php endwhile?>
 </table>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div style="text-align: right;"><h2>Total: <?php echo $granTotal; ?> KGs</h2>
 
 <div style="text-align: left;"><h4>FIRMA:_______________________________</h4>

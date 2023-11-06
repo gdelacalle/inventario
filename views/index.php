@@ -14,12 +14,12 @@ $consulta8 = mysqli_query($conexion, "UPDATE obras o SET avance = (SELECT (SUM(p
 $nombre = mysqli_query($conexion, "SELECT * FROM clientes");//Muestra la Cantidad de Clientes
 $total['nombre'] = mysqli_num_rows($nombre);
 
-$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha='$fecha' GROUP BY fecha";
+$consulta3 = "SELECT SUM(pesototal) as salidasperfileria FROM remitosclientes WHERE id_categoria IN (4) AND fecha = '$fecha' ORDER BY fecha";
 $salidasperfileria= $conexion -> query($consulta3);
 $fila=$salidasperfileria->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasperfileria=$fila['salidasperfileria'];//Este es el valor que acabas de calcular en la consulta
 
-$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha='$fecha' GROUP BY fecha";
+$consulta4 = "SELECT SUM(pesototal) as salidasestructura FROM remitosclientes WHERE id_categoria IN (2) AND fecha = '$fecha' ORDER BY fecha";
 $salidasestructura= $conexion -> query($consulta4);
 $fila=$salidasestructura->fetch_assoc();//te devuelve un array asociativo con el nombre del campo
 $salidasestructura=$fila['salidasestructura'];//Este es el valor que acabas de calcular en la consulta
