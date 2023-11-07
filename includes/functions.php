@@ -365,8 +365,8 @@ function insertar_transferencia()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe, estado) 
-    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','1')";
+    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe,nro_comp, estado) 
+    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','$numerito','1')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

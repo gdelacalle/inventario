@@ -11,26 +11,29 @@
                 <tr>
                     <th>Caja</th>
                     <th>Tipo Gasto</th>
+                    <th>Comprobante</th>
+                    <th>Detalle Movimiento</th>
+                    <th>Fecha</th>
                     <th>Importe</th>
-                    <th>Acciones</th>
-
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $granTotal=0;
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja, ic.id_gasto, ic.comentarios, ic.fecha, ic.importe,c.descripcion,tg.descripcion as tgdescripcion 
+                    $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja, ic.id_gasto,ic.nro_comp, ic.comentarios, ic.fecha, ic.importe,ic.fecha,c.descripcion,tg.descripcion as tgdescripcion 
                     FROM ingresos_caja as ic, cajas as c, tipo_gastos as tg
                     WHERE ic.id_caja = c.id AND ic.id_gasto = tg.id AND ic.estado='2'");
                 while ($fila = mysqli_fetch_assoc($result)) :                        
                 ?>
                 <tr>
-                    <td width="20%"><?php echo $fila['descripcion']; ?></td>
-                    <td width="30%"><?php echo $fila['tgdescripcion']; ?></td>
-                    <td width="30%"><?php echo $fila['importe']; ?></td>
-                    <td> <a href="../reportes/comprobante_ingcaja.php?numero=<?php echo $numcomprobante['num'] ?>" class="btn btn-danger btn-del">
-                    Comprobante <i class="fa fa-trash "></i></a></td>
+                    <td width="10%"><?php echo $fila['descripcion']; ?></td>
+                    <td width="20%"><?php echo $fila['tgdescripcion']; ?></td>
+                    <td width="5%"><center><a target="_blank" class="nav-link" href="../reportes/comprobante_ingcaja.php?numero=<?php echo $fila['nro_comp']; ?>">
+                    <?php echo $fila['nro_comp']; ?></td>
+                    <td width="30%"><?php echo $fila['comentarios']; ?></td>
+                    <td width="12%"><?php echo $fila['fecha']; ?></td>
+                    <td width="15%"><center>$ <?php echo $fila['importe']; ?></td>
                 </tr>
                 <?php $granTotal += $fila['importe'];?>
                 <?php endwhile;?>      

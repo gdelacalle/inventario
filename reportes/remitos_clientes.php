@@ -37,11 +37,11 @@ $direccion = $fila['direccion'];
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
 <div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
 <h2><center>REMITO DE MATERIALES</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numeros; ?>
-<h6><div style="text-align: left;">CONDICION DE VENTA:<class style="text-transform: uppercase; color: black;"> <?php echo $tipo_cuenta; ?></h6>
-<h6><div style="text-align: left;">OBRA / CLIENTE:<class style="text-transform: uppercase; color: black;"> <?php echo $apellido.' '.$nombre; ?>
+<h5><div style="text-align: left;">CONDICION DE VENTA:<class style="text-transform: uppercase; color: black;"> <?php echo $tipo_cuenta; ?></h5>
+<h5><div style="text-align: left;">OBRA / CLIENTE:<class style="text-transform: uppercase; color: black;"> <?php echo $apellido.' '.$nombre; ?>
 <div style="text-align: left;">DIRECCION:<class style="text-transform: uppercase; color: black;"> <?php echo $direccion ?></div>
-<h3>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h5>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class ="container">
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">
 <thead class="thead-dark">
@@ -67,7 +67,7 @@ $direccion = $fila['direccion'];
                 <?php $granTotal += $fila['total'];?>
                 <?php endwhile?>
 </table>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div style="text-align: right;"><h2>Total: <?php echo $granTotal; ?> KGs</h2>
 
 <div style="text-align: left;"><h4>FIRMA:_______________________________</h4>

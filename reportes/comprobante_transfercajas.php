@@ -7,7 +7,6 @@ ob_start();
 require_once("../includes/db.php");
 extract($_POST);
 
-
 require ('../reportes/comprobante_transferencias_cajas.php');
 $html = ob_get_clean();
 

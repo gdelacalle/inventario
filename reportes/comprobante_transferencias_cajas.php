@@ -7,6 +7,8 @@ session_start();
 
 $granTotal=0;
 $numero = $_GET['numero'];
+$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
+
 
 require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT tc.id,tc.id_caja_origen, tc.id_caja_destino, tc.importe, c.descripcion,tc.fecha,tc.nro_comp
@@ -21,7 +23,6 @@ $cajadestino = $fila['id_caja_destino'];
 $cajaorigen = $fila['id_caja_origen'];
 $importee =$fila['importe'];
 
-$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
 $consulta1 = mysqli_query($conexion,"UPDATE cajas SET importe = importe + '$importee' Where id = '$cajadestino'");
 $consulta2 = mysqli_query($conexion,"UPDATE cajas SET importe = importe - '$importee' Where id = '$cajaorigen'");
 
@@ -31,7 +32,7 @@ $consulta2 = mysqli_query($conexion,"UPDATE cajas SET importe = importe - '$impo
 <div><h5>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
 <div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
-<h2><center>Comprobante de Transferencia entre Cajas</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numeros; ?>
+<h2><center>Comprobante de Transferencia entre Cajas</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numero; ?>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class ="container">
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="5">

@@ -58,7 +58,7 @@ echo '<input id="num" type="hidden" name="numremito" value="'.$id.'">';
 
                         <div class="col-sm-2">
                         <label for="numerito">Remito N°:</label>
-                        <input id="numerito" class="form-control" type="text" name="numerito" value="<?php echo $numerito?>">
+                        <input id="numerito" class="form-control" type="text" name="numerito" value="<?php echo $numerito?>" readonly>
                         </div>
                 <div class="col-sm-3">
                 <div class="mb-3">
