@@ -8,7 +8,7 @@ require_once("../includes/db.php");
 extract($_POST);
 
 
-require ('../reportes/comprobante_ingresos_caja.php');
+require ('../reportes/comprobante_egresos_caja.php');
 $html = ob_get_clean();
 
 require '../vendor/autoload.php';

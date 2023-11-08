@@ -374,7 +374,7 @@ function insertar_gasto()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO ingresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp) 
+    $consulta = "INSERT INTO egresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp) 
     VALUES ('$id_caja','$id_gasto', '$comentarios','$fecha','$importe','1',$numerito)";
     $resultado = mysqli_query($conexion, $consulta);
 

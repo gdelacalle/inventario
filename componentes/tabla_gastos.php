@@ -20,9 +20,9 @@
                 <?php
                 $granTotal=0;
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja, ic.id_gasto, ic.comentarios, ic.fecha, ic.importe,c.descripcion,tg.descripcion as tgdescripcion 
-                    FROM ingresos_caja as ic, cajas as c, tipo_gastos as tg
-                    WHERE ic.id_caja = c.id AND ic.id_gasto = tg.id AND ic.estado='1'");
+                    $result = mysqli_query($conexion, "SELECT ec.id,ec.id_caja, ec.id_gasto, ec.comentarios, ec.fecha, ec.importe,c.descripcion,tg.descripcion as tgdescripcion 
+                    FROM egresos_caja as ec, cajas as c, tipo_gastos as tg
+                    WHERE ec.id_caja = c.id AND ec.id_gasto = tg.id AND ec.estado='1'");
                 while ($fila = mysqli_fetch_assoc($result)) :                        
                 ?>
                 <tr>

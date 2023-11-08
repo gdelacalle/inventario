@@ -21,15 +21,15 @@
                 <?php
                 $granTotal=0;
                     require_once("../includes/db.php");
-                    $result = mysqli_query($conexion, "SELECT ic.id,ic.id_caja, ic.id_gasto,ic.nro_comp, ic.comentarios, ic.fecha, ic.importe,ic.fecha,c.descripcion,tg.descripcion as tgdescripcion 
-                    FROM ingresos_caja as ic, cajas as c, tipo_gastos as tg
-                    WHERE ic.id_caja = c.id AND ic.id_gasto = tg.id AND ic.estado='2'");
+                    $result = mysqli_query($conexion, "SELECT ec.id,ec.id_caja, ec.id_gasto,ec.nro_comp, ec.comentarios, ec.fecha, ec.importe,ec.fecha,c.descripcion,tg.descripcion as tgdescripcion 
+                    FROM egresos_caja as ec, cajas as c, tipo_gastos as tg
+                    WHERE ec.id_caja = c.id AND ec.id_gasto = tg.id AND ec.estado='2'");
                 while ($fila = mysqli_fetch_assoc($result)) :                        
                 ?>
                 <tr>
                     <td width="10%"><?php echo $fila['descripcion']; ?></td>
                     <td width="20%"><?php echo $fila['tgdescripcion']; ?></td>
-                    <td width="5%"><center><a target="_blank" class="nav-link" href="../reportes/comprobante_ingcaja.php?numero=<?php echo $fila['nro_comp']; ?>">
+                    <td width="5%"><center><a target="_blank" class="nav-link" href="../reportes/comprobante_egcaja.php?numero=<?php echo $fila['nro_comp']; ?>">
                     <?php echo $fila['nro_comp']; ?></td>
                     <td width="30%"><?php echo $fila['comentarios']; ?></td>
                     <td width="12%"><?php echo $fila['fecha']; ?></td>
