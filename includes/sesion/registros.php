@@ -11,10 +11,17 @@
                 <form action="" method="POST">
 
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Usuario</label>
                                 <input type="text" id="usuario" name="usuario" class="form-control" required>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="nombre_completo" class="form-label">Nombre Completo</label>
+                                <input type="text" id="nombre_completo" name="nombre_completo" class="form-control" required>
 
                             </div>
                         </div>
@@ -67,9 +74,7 @@
                         <button type="button" class="btn btn-primary" id="register" name="registrar">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
-
-            </div>
-
+                </div>
             </form>
         </div>
     </div>
@@ -86,6 +91,7 @@
         if (valid) {
             var datos = new FormData();
             datos.append('usuario', $('#usuario').val())
+            datos.append('nombre_completo', $('#nombre_completo').val())
             datos.append('correo', $('#correo').val())
             datos.append('telefono', $('#telefono').val())
             datos.append('password', $('#password').val())

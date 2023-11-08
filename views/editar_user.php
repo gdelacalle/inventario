@@ -84,7 +84,7 @@
                     alert("El registro se ha actualizado correctamente");
                     setTimeout(function() {
                         location.assign('usuarios.php');
-                    }, 2000);
+                    }, 100);
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");
                 }

@@ -17,8 +17,8 @@ if (isset($_POST)) {
     } else {
         $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 5]);
 
-        $consulta = "INSERT INTO users (usuario, correo, telefono, password, id_rol)
-	VALUES ('$usuario', '$correo ', '$telefono', '$password', '$id_rol')";
+        $consulta = "INSERT INTO users (usuario,nombre_completo, correo, telefono, password, id_rol)
+	VALUES ('$usuario','$nombre_completo', '$correo ', '$telefono', '$password', '$id_rol')";
         $resultado = mysqli_query($conexion, $consulta);
         if ($resultado) {
             echo json_encode('success');

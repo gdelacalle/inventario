@@ -13,8 +13,6 @@ session_start();
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h4 class="m-0 font-weight-bold text-primary">ENGRESO DE CAJA
-                <button type="button" class="btn btn-outline-success float-right" data-toggle="modal" data-target="#cliente" style="FONT-SIZE: 14pt">
-                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i></button></h4>
             </div>
             <div class="card">
             <div class="card-body">
@@ -88,21 +86,23 @@ session_start();
                         <label for="comentarios" class="form-label">Descripcion Breve</label>
                         <input type="text" id="comentarios" name="comentarios" class="form-control" required>
                     </div>
-                </div>  
+                </div>
+                <br> 
                 <div class="col-sm-1">
-                    <button type="submit" class="btn btn-warning" id="id" name="id">Agregar</button>
+                    <button type="submit" class="btn btn-warning" id="id" name="id">Agregar Gasto</button>
                     <input type="hidden" name="accion" value="insertar_gasto">
                 </div>
-                    <div class="col-sm-1">
-                        <a target="_blank" href="../reportes/comprobante_egcaja.php?numero=<?php echo $numcomprobante['num'] ?>" 
-                        target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
-                    </div>
+                <div class="col-sm-1">
+                    <a target="_blank" href="../reportes/comprobante_egcaja.php?numero=<?php echo $numcomprobante['num'] ?>" 
+                    target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
+                </div>
             </div>
+            <br> 
+
             <div id="tablagastos" class="table-responsive">
             </form>              
-
             <?php include "../includes/footer.php"; ?>
-            </div>  
+        </div>  
     </div>
 </div>
 

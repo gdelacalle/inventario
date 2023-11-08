@@ -26,6 +26,7 @@ session_start();
                         <thead class="thead-dark">    
                                 <tr>
                                     <th>Usuario</th>
+                                    <th>Nombre Completo</th>
                                     <th>Correo</th>
                                     <th>Telefono</th>
                                     <th>Rol</th>
@@ -42,6 +43,7 @@ session_start();
                                 ?>
                                     <tr>
                                         <td><?php echo $fila['usuario']; ?></td>
+                                        <td><?php echo $fila['nombre_completo']; ?></td>
                                         <td><?php echo $fila['correo']; ?></td>
                                         <td><?php echo $fila['telefono']; ?></td>
                                         <td><?php echo $fila['id_rol']; ?></td>
