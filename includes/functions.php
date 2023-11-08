@@ -6,6 +6,11 @@ if (isset($_POST['accion'])) {
         case 'insertar_categoria':
             insertar_categoria();
             break;
+
+        case 'insertar_vehiculo':
+            insertar_vehiculo();
+            break;
+            
             
         case 'insertar_seccion':
             insertar_seccion();
@@ -100,6 +105,10 @@ if (isset($_POST['accion'])) {
             editar_cat();
             break;
 
+        case 'editar_vehiculo':
+            editar_vehiculo();
+            break;
+
         case 'editar_user':
             editar_user();
             break;
@@ -160,6 +169,29 @@ function insertar_categoria()
     extract($_POST);
     include "db.php";
     $consulta = "INSERT INTO categorias (categoria) VALUES ('$categoria')";
+    $resultado = mysqli_query($conexion, $consulta);
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Los datos se guardaron correctamente'
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+    }
+
+    echo json_encode($response);
+}
+
+function insertar_vehiculo()
+{
+    global $conexion;
+    extract($_POST);
+    include "db.php";
+    $consulta = "INSERT INTO vehiculo (marca,modelo,patente,kmts,nro_chasis,nro_motor,ano) 
+    VALUES ('$marca','$modelo','$patente','$kmts','$nrochasis','$nromotor','$modano')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
         $response = array(
@@ -821,6 +853,21 @@ function editar_cat()
         echo json_encode("error");
     }
 }
+
+function editar_vehiculo()
+{
+    require_once("db.php");
+    extract($_POST);
+    $consulta = "UPDATE vehiculo SET marca = '$marca', modelo = '$modelo', patente = '$patente', kmts = '$kmts',
+    nro_chasis ='$nrochasis', nro_motor = '$nromotor', ano = '$modano' WHERE id = '$id' ";
+    $resultado = mysqli_query($conexion, $consulta);
+    if ($resultado) {
+        echo json_encode("correcto");
+    } else {
+        echo json_encode("error");
+    }
+}
+
 
 function editar_seccion()
 {

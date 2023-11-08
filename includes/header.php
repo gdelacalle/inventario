@@ -170,6 +170,21 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             </li>
             <?php endif; ?>
 
+            <?php if($permiso=="1" || $permiso=="4"): ?>
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVehiculos" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-car"></i>
+                    <span>Vehículos</span>
+                </a>
+                <div id="collapseVehiculos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Modulos</h6>
+                        <a class="collapse-item" href="../views/vehiculos.php">Flota Vehiculos</a>
+            </li>
+            <?php endif; ?>
+
             <?php if($permiso=="1"): ?>
                 <hr class="sidebar-divider">
 
