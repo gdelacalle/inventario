@@ -18,7 +18,7 @@ session_start();
             <div class="card-body">
             <form id="transfercajaForm">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="mb-3">
                         <label for="id_caja_origen">Caja Origen</label>
                         <select name="id_caja_origen" id="id_caja_origen" class="form-control" required>
@@ -35,7 +35,7 @@ session_start();
                         </select>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="mb-3">
                         <label for="id_caja_destino">Caja Destino</label>
                         <select name="id_caja_destino" id="id_caja_destino" class="form-control" required>
@@ -64,14 +64,12 @@ session_start();
                     <label for="numerito">Numero Comprobante</label>
                     <input id="numerito" class="form-control" type="text" name="numerito" value="<?php echo $numerito?>"readonly>
                 </div>
-
                 <div class="col-sm-2">
                     <div class="mb-3">
                         <label for="fecha">Fecha</label>
                         <input type="date" name="fecha" id="fecha" class="form-control" pattern="\d{4}-\d{2}-\d{2}" required> 
                     </div>
                 </div>  
-            </div>  
                 <div class="col-sm-3">
                     <div class="mb-3">
                         <label for="importe">Importe</label>
@@ -79,24 +77,23 @@ session_start();
                     </div>
                 </div>
                 <div class="col-sm-12">
-                            <div class="mb-3">
-                                <label for="descripcion" class="form-label">Descripcion Breve</label>
-                                <input type="text" id="descripcion" name="descripcion" class="form-control" required>
-                            </div>
-                        </div>  
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion Breve</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-control" required>
+                    </div>
+                </div>  
                 <div class="col-sm-1">
-                        <button type="submit" class="btn btn-warning" id="id" name="id">Agregar</button>
-                        <input type="hidden" name="accion" value="insertar_transferencia">
-
+                    <button type="submit" class="btn btn-warning" id="id" name="id">Agregar Transferencia</button>
+                    <input type="hidden" name="accion" value="insertar_transferencia">
+                </div>
                     <a target="_blank" href="../reportes/comprobante_transfercajas.php?numero=<?php echo $numcomprobante['num'] ?>" 
-                        target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
+                    target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
                 </div>
             </div>
-            <div id="tablatransferencias" class="table-responsive">
+                <div id="tablatransferencias" class="table-responsive">
             </form>              
-
             <?php include "../includes/footer.php"; ?>
-            </div>  
+        </div>  
     </div>
 </div>
 

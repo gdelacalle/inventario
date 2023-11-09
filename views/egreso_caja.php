@@ -43,12 +43,9 @@ session_start();
                     $numerito = $numcomprobante['num'];
                 ?>
                 <div class="col-sm-2">
-                    <div class="mb-3">
                         <label for="numerito">Numero Comprobante</label>
                         <input id="numerito" class="form-control" type="text" name="numerito" value="<?php echo $numerito?>"readonly>
                     </div>
-                </div>
-
                 <div class="col-sm-2">
                     <div class="mb-3">
                         <label for="fecha">Fecha</label>
@@ -73,8 +70,7 @@ session_start();
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_nuevo_gasto">
                         Nuevo <i class="fa fa-plus "></i></button>
                     </div>
-                </div> 
-
+                </div>
                 <div class="col-sm-2">
                     <div class="mb-3">
                         <label for="importe">Importe</label>
@@ -87,19 +83,15 @@ session_start();
                         <input type="text" id="comentarios" name="comentarios" class="form-control" required>
                     </div>
                 </div>
-                <br> 
                 <div class="col-sm-1">
                     <button type="submit" class="btn btn-warning" id="id" name="id">Agregar Gasto</button>
                     <input type="hidden" name="accion" value="insertar_gasto">
                 </div>
-                <div class="col-sm-1">
                     <a target="_blank" href="../reportes/comprobante_egcaja.php?numero=<?php echo $numcomprobante['num'] ?>" 
                     target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
                 </div>
             </div>
-            <br> 
-
-            <div id="tablagastos" class="table-responsive">
+                <div id="tablagastos" class="table-responsive">
             </form>              
             <?php include "../includes/footer.php"; ?>
         </div>  
