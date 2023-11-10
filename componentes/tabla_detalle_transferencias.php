@@ -6,7 +6,8 @@
 </head>
 <body>
 <h5><div style="text-align: left" class="font-weight-bold text-primary";>TRANSFERENCIAS ENTRE CAJAS REALIZADAS</h5>
-    <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+    
+<table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="thead-dark">
                 <tr>
                     <th>Caja Origen</th>

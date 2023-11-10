@@ -163,6 +163,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                 <div id="collapseContable" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Caja</h6>
+                        <a class="collapse-item" href="../views/cajas.php">Estados de Cajas</a>
                         <a class="collapse-item" href="../views/ingreso_caja.php">Ingresos a Caja</a>
                         <a class="collapse-item" href="../views/egreso_caja.php">Egresos de Caja</a>
                         <a class="collapse-item" href="../views/detalle_mov_cajas.php">Movimientos de Caja</a>

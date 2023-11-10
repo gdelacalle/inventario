@@ -86,7 +86,7 @@ session_start();
                 <?php 
                 $usuario=$_SESSION['usuario'];
                 ?>
-                    <input type="hidden" id="usuario" name="usuario" class="form-control" value="<?php echo $usuario ?>">
+                <input type="hidden" id="usuario" name="usuario" class="form-control" value="<?php echo $usuario ?>">
 
                 <div class="col-sm-1">
                     <button type="submit" class="btn btn-warning" id="id" name="id">Agregar Transferencia</button>
