@@ -91,7 +91,12 @@ session_start();
                     target="_blank" class="btn btn-danger float-right btn-generar" type="button">Generar Comprobante</a>
                 </div>
             </div>
-                <div id="tablagastos" class="table-responsive">
+            <?php 
+                $usuario=$_SESSION['usuario'];
+            ?>
+            <input type="hidden" id="usuario" name="usuario" class="form-control" value="<?php echo $usuario ?>">
+
+            <div id="tablagastos" class="table-responsive">
             </form>              
             <?php include "../includes/footer.php"; ?>
         </div>  

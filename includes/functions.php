@@ -374,8 +374,8 @@ function insertar_gasto()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO egresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp) 
-    VALUES ('$id_caja','$id_gasto', '$comentarios','$fecha','$importe','1',$numerito)";
+    $consulta = "INSERT INTO egresos_caja (id_caja,id_gasto, comentarios, fecha, importe, estado,nro_comp,usuario) 
+    VALUES ('$id_caja','$id_gasto', '$comentarios','$fecha','$importe','1',$numerito,'$usuario')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -397,8 +397,8 @@ function insertar_transferencia()
     global $conexion;
     extract($_POST);
     include "db.php";
-    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe,nro_comp, estado) 
-    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','$numerito','1')";
+    $consulta = "INSERT INTO transfer_cajas (id_caja_origen,id_caja_destino,descripcion, fecha, importe,nro_comp, estado,usuario) 
+    VALUES ('$id_caja_origen','$id_caja_destino','$descripcion','$fecha','$importe','$numerito','1','$usuario')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

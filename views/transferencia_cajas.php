@@ -81,7 +81,13 @@ session_start();
                         <label for="descripcion" class="form-label">Descripcion Breve</label>
                         <input type="text" id="descripcion" name="descripcion" class="form-control" required>
                     </div>
-                </div>  
+                </div> 
+                
+                <?php 
+                $usuario=$_SESSION['usuario'];
+                ?>
+                    <input type="hidden" id="usuario" name="usuario" class="form-control" value="<?php echo $usuario ?>">
+
                 <div class="col-sm-1">
                     <button type="submit" class="btn btn-warning" id="id" name="id">Agregar Transferencia</button>
                     <input type="hidden" name="accion" value="insertar_transferencia">

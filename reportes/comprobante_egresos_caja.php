@@ -14,12 +14,19 @@ require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT ec.id,ec.id_caja,ec.nro_comp, ec.id_gasto, ec.comentarios, ec.fecha, ec.importe,c.descripcion,tg.descripcion as tgdescripcion 
 FROM egresos_caja as ec, cajas as c, tipo_gastos as tg
 WHERE ec.id_caja = c.id AND ec.id_gasto = tg.id AND ec.estado='2' AND ec.nro_comp = $numero");
-$fecha= $fila['ec.fecha'];
+
+$result1 = mysqli_query($conexion, "SELECT id,importe,fecha,nro_comp,usuario
+FROM egresos_caja WHERE nro_comp = $numero");
+$fila = mysqli_fetch_assoc($result1);
+$fecha = $fila['fecha'];
+$usuario = $fila['usuario'];
+
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
 <h6>Juan B. Alberdi 2052 - (CP5972) - Pilar - Tel:(03572) 471-666 
-<div style="text-align: left;"><h4>Fecha: <?php echo $fecha?>
+<div style="text-align: left;"><h4>Realizada por: <?php echo $usuario?> 
+<div style="text-align: right;"><h4>Fecha: <?php echo $fecha?>
 <h2><center>COMPROBANTE DE EGRESOS DE CAJA</center><div style="text-align: right;">Número: 0001 - 0000<?php echo $numero; ?>
 <h5>
 

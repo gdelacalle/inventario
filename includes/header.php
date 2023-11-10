@@ -162,12 +162,15 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                 </a>
                 <div id="collapseContable" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Modulos</h6>
+                        <h6 class="collapse-header">Caja</h6>
                         <a class="collapse-item" href="../views/ingreso_caja.php">Ingresos a Caja</a>
                         <a class="collapse-item" href="../views/egreso_caja.php">Egresos de Caja</a>
-                        <a class="collapse-item" href="../views/transferencia_cajas.php">Transferencias entre Cajas</a>
-                        <a class="collapse-item" href="../views/detalle_mov_cajas.php">Detalle de Movimientos</a>
-            </li>
+                        <a class="collapse-item" href="../views/detalle_mov_cajas.php">Movimientos de Caja</a>
+                        <h6 class="collapse-header">Transferencias</h6>
+                        <a class="collapse-item" href="../views/transferencia_cajas.php">Transferencias</a>
+                        <a class="collapse-item" href="../views/detalle_transferencias.php">Detalle de Transferencias</a>
+
+                    </li>
             <?php endif; ?>
 
             <?php if($permiso=="1" || $permiso=="4"): ?>

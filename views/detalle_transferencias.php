@@ -16,23 +16,20 @@ session_start();
             </div>
             <div class="card">
             <div class="card-body">
-            <form id="MovcajaForm">
+            <form id="TransferForm">
             
-            <div id="tabladetallegastos" class="table-responsive">
+            <div id="tabladetalletransferencias" class="table-responsive">
             </form>              
 
             <?php include "../includes/footer.php"; ?>
             </div>  
     </div>
 </div>
-
-<?php include "../views/form_tipo_gasto.php";?>
-
 <script>
     $(document).ready(function() {
     id=$('#num').val();
-    $('#tabladetallegastos').load('../componentes/tabla_detalle_gastos.php?id='+id);
-        $('#MovcajaForm').submit(function(e) {
+    $('#tabladetalletransferencias').load('../componentes/tabla_detalle_transferencias.php?id='+id);
+        $('#TransferForm').submit(function(e) {
             e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
             var formData = $(this).serialize(); // Serializa los datos del formulario
             $.ajax({
@@ -46,7 +43,7 @@ session_start();
                             icon: 'success',
                             title: 'Éxito',
                         }).then(function() {
-                            $('#tabladetallegastos').load('../componentes/tabla_detalle_gastos.php?id='+id);
+                            $('#tabladetalletransferencias').load('../componentes/tabla_detalle_transferencias.php?id='+id);
                         });                       
 
                     } else {
