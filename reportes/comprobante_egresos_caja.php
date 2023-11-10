@@ -6,14 +6,13 @@ error_reporting(0);
 session_start();
 $granTotal=0;
 $numero = $_GET['numero'];
-
 $result1 = mysqli_query($conexion, "SELECT id,id_caja,importe,fecha,nro_comp,usuario
 FROM egresos_caja WHERE nro_comp = $numero");
 $fila = mysqli_fetch_assoc($result1);
 $fecha = $fila['fecha'];
 $cajadestino = $fila['id_caja'];
 $usuario = $fila['usuario'];
-$importee =$fila['importe'];
+$importee += $fila['importe'];
 
 $consulta1 = mysqli_query($conexion,"UPDATE cajas as c, egresos_caja as ec SET c.importe = c.importe -'$importee' Where c.id = '$cajadestino' AND ec.estado = '1'");
 

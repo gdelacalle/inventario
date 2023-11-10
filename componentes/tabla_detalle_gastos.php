@@ -39,7 +39,7 @@
                 <?php $granTotal += $fila['importe'];?>
                 <?php endwhile;?>      
             </tbody>
-        </table>
+        </table> 
         <div style="text-align: right;"><h2>Total: $ <?php echo $granTotal; ?></h2>
     </body>
 </html>
