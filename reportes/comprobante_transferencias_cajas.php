@@ -7,13 +7,7 @@ session_start();
 
 $granTotal=0;
 $numero = $_GET['numero'];
-$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
-
-
 require_once("../includes/db.php");
-$result = mysqli_query($conexion, "SELECT tc.id,tc.id_caja_origen,tc.id_caja_destino,tc.nro_comp, tc.descripcion,tc.fecha,tc.importe,co.descripcion as descripcajaorigen,cd.descripcion as descripcajadestino
-FROM transfer_cajas as tc, cajas as co, cajas as cd
-WHERE tc.id_caja_origen = co.id AND tc.id_caja_destino = cd.id AND tc.estado='2' AND tc.nro_comp = $numero");
 
 $result1 = mysqli_query($conexion, "SELECT id,id_caja_origen,id_caja_destino,importe,fecha,nro_comp,usuario
 FROM transfer_cajas WHERE nro_comp = $numero");
@@ -23,9 +17,15 @@ $cajadestino = $fila['id_caja_destino'];
 $cajaorigen = $fila['id_caja_origen'];
 $importee =$fila['importe'];
 $usuario = $fila['usuario'];
-$consulta1 = mysqli_query($conexion,"UPDATE cajas SET importe = importe + '$importee' Where id = '$cajadestino'");
-$consulta2 = mysqli_query($conexion,"UPDATE cajas SET importe = importe - '$importee' Where id = '$cajaorigen'");
 
+$consulta1 = mysqli_query($conexion,"UPDATE cajas as c, transfer_cajas as tc SET c.importe = c.importe + '$importee' Where c.id = '$cajadestino' AND tc.estado='1'");
+$consulta2 = mysqli_query($conexion,"UPDATE cajas as c, transfer_cajas as tc SET c.importe = c.importe - '$importee' Where c.id = '$cajaorigen' AND tc.estado='1'");
+
+$consulta = mysqli_query($conexion, "UPDATE transfer_cajas SET estado = '2'");
+
+$result = mysqli_query($conexion, "SELECT tc.id,tc.id_caja_origen,tc.id_caja_destino,tc.nro_comp, tc.descripcion,tc.fecha,tc.importe,co.descripcion as descripcajaorigen,cd.descripcion as descripcajadestino
+FROM transfer_cajas as tc, cajas as co, cajas as cd
+WHERE tc.id_caja_origen = co.id AND tc.id_caja_destino = cd.id AND tc.estado='2' AND tc.nro_comp = $numero");
 
 ?>
 

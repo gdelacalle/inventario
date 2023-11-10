@@ -2,25 +2,27 @@
 <title>ESTRUCTURAS VEGA - Sistema de Inventario</title>
 <?php
 include "db.php";
-
-$consulta = mysqli_query($conexion, "UPDATE egresos_caja SET estado = '2'");
-
 error_reporting(0);
 session_start();
 $granTotal=0;
 $numero = $_GET['numero'];
 
+$result1 = mysqli_query($conexion, "SELECT id,id_caja,importe,fecha,nro_comp,usuario
+FROM egresos_caja WHERE nro_comp = $numero");
+$fila = mysqli_fetch_assoc($result1);
+$fecha = $fila['fecha'];
+$cajadestino = $fila['id_caja'];
+$usuario = $fila['usuario'];
+$importee =$fila['importe'];
+
+$consulta1 = mysqli_query($conexion,"UPDATE cajas as c, egresos_caja as ec SET c.importe = c.importe -'$importee' Where c.id = '$cajadestino' AND ec.estado = '1'");
+
+$consulta = mysqli_query($conexion, "UPDATE egresos_caja SET estado = '2'");
+
 require_once("../includes/db.php");
 $result = mysqli_query($conexion, "SELECT ec.id,ec.id_caja,ec.nro_comp, ec.id_gasto, ec.comentarios, ec.fecha, ec.importe,c.descripcion,tg.descripcion as tgdescripcion 
 FROM egresos_caja as ec, cajas as c, tipo_gastos as tg
 WHERE ec.id_caja = c.id AND ec.id_gasto = tg.id AND ec.estado='2' AND ec.nro_comp = $numero");
-
-$result1 = mysqli_query($conexion, "SELECT id,importe,fecha,nro_comp,usuario
-FROM egresos_caja WHERE nro_comp = $numero");
-$fila = mysqli_fetch_assoc($result1);
-$fecha = $fila['fecha'];
-$usuario = $fila['usuario'];
-
 ?>
 
 <div><h5>ESTRUCTURAS VEGA S.R.L.
